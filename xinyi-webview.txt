@@ -1,0 +1,3 @@
+广东频道,#genre#
+信宜广播电台,webview://https://live.xytv.cc/radio/223?uin=1629
+信宜综合台,webview://https://live.xytv.cc/tv/643?uin=1629
