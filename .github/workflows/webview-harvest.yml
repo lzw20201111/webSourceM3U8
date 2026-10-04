@@ -5,13 +5,15 @@ name: 静态播放源抓取（webview → m3u8）
 # 本工作流每 30 分钟重扫一遍，把最新有效的流地址写进 channels.json，
 # 中转服务（Cloudflare Pages）每次请求实时读取，对外提供【永久不变】的静态播放地址。
 on:
-  schedule:
-    - cron: "17,47 * * * *"     # UTC 每半小时的 17 分 / 47 分
-  push:
-    paths:
-      - "scripts/harvest_webview.py"
-      - ".github/workflows/webview-harvest.yml"
-      - "webview.txt"
+  # ⚠️ 已停用自动触发（2026-10-04）。
+  # 原因：GitHub Actions runner 是【海外 IP】，源站会按 IP 返回海外线路
+  # （央视返回 outlivecloud-cdn.ysp.cctv.cn / 43.174.x.x 美国节点，
+  #   分片还是相对路径），国内播放器根本拉不动；且海外抓取成功率只有 195/417。
+  # 那次自动刷新把本机抓的 330 条好数据覆盖成 195 条海外线路，直接导致全站不可播。
+  #
+  # 正确做法：在【国内本机的 Windows 任务计划程序】里跑
+  #   python scripts/harvest_webview.py  &&  python scripts/publish_github.py
+  # 本文件保留，仅供将来在【国内自托管 runner】上手动触发。
   workflow_dispatch:
 
 permissions:
