@@ -13,8 +13,13 @@
 
 本脚本做的事：
   在一个长任务（默认约 5.5 小时）里，为每个频道各维持一个无头 Chrome 播放会话，
-  启动时把当前有效地址写入 xinyi_radio_local.m3u，期间地址变化则同步更新。
-  配合 workflow 每 3 小时触发一次，多个任务互相重叠，使直链长期可用。
+  启动时把当前有效地址写入 xinyi_radio_local.m3u（直连版），期间地址变化则同步更新。
+  另生成 xinyi_web.m3u（网页版，免维护）。配合 workflow 每 3 小时触发一次，
+  多个任务互相重叠，使直链长期可用。
+
+两个 M3U 文件（按播放方式拆分）：
+  xinyi_radio_local.m3u —— 直连版：广播 / 电视的真实 m3u8 地址（需云端会话保活）
+  xinyi_web.m3u         —— 网页版：webview:// 打开网页播放（完全免维护）
 
 实现说明：各频道用 asyncio 并发（Playwright 同步 API 不支持多线程，
   见 https://playwright.dev/python/docs/library#threading ），每个频道一个独立浏览器。
@@ -35,7 +40,10 @@ from playwright.async_api import async_playwright
 
 CST = timezone(timedelta(hours=8))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-M3U_FILE = os.path.join(ROOT, "xinyi_radio_local.m3u")
+
+# 输出两个文件，分别对应两种播放方式
+M3U_DIRECT = os.path.join(ROOT, "xinyi_radio_local.m3u")   # 直连版
+M3U_WEB = os.path.join(ROOT, "xinyi_web.m3u")              # 网页版
 
 WEB_BASE = "https://lzw20201111.github.io/webSourceM3U8/"
 
@@ -111,11 +119,11 @@ def sh(*args, quiet=False):
 
 
 def read_existing():
-    """从现有 m3u 读取各频道直链（tvg-id -> url），用于启动兜底，避免刷新空档"""
+    """从现有直连版 m3u 读取各频道直链（tvg-id -> url），用于启动兜底，避免刷新空档"""
     out = {}
-    if not os.path.exists(M3U_FILE):
+    if not os.path.exists(M3U_DIRECT):
         return out
-    with open(M3U_FILE, encoding="utf-8") as f:
+    with open(M3U_DIRECT, encoding="utf-8") as f:
         cur = None
         for raw in f:
             line = raw.strip()
@@ -128,30 +136,43 @@ def read_existing():
     return out
 
 
-def build_m3u():
-    """生成 m3u：每个频道两项 —— 直连（自动保活）+ 网页版（免维护）"""
+def _head(kind, note):
     now = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
-    lines = [
+    return [
         "#EXTM3U",
         "# 频道：信宜融媒综合广播 (FM98.9) ＋ 信宜综合电视台",
+        "# 类型：%s" % kind,
         "# 更新：%s (北京时间，由 GitHub Actions 自动刷新)" % now,
-        "# 说明：每组第 1 项「直连」为当前有效播放地址，云端会话自动保活，",
-        "#       播放器直接播放即可；第 2 项「网页版」不需要任何维护。",
+        note,
     ]
+
+
+def build_direct_m3u():
+    """直连版：各频道的真实 m3u8 地址（由云端会话保活）"""
+    lines = _head("直连（播放器直接播放，云端会话自动保活）",
+                  "# 说明：本文件只含「直连」；网页版见 xinyi_web.m3u。")
     for ch in CHANNELS:
         key = STATE.get(ch["id"])
-        if key:
-            lines += [
-                '#EXTINF:-1 tvg-id="%s" tvg-name="%s" tvg-logo="%s" '
-                'group-title="广东",%s · 直连'
-                % (ch["id"], ch["name"], ch["logo"], ch["label"]),
-                key,
-            ]
-        # 网页版为免维护项，始终保留（即使直链暂时未就绪）
+        if not key:
+            continue
+        lines += [
+            '#EXTINF:-1 tvg-id="%s" tvg-name="%s" tvg-logo="%s" group-title="广东",'
+            '%s' % (ch["id"], ch["name"], ch["logo"], ch["label"]),
+            key,
+        ]
+    lines.append("")
+    return "\n".join(lines)
+
+
+def build_web_m3u():
+    """网页版：webview:// 打开网页播放（完全免维护）"""
+    lines = _head("网页版（播放器内置浏览器打开，无需维护）",
+                  "# 说明：本文件只含「网页版」；直连版见 xinyi_radio_local.m3u。")
+    for ch in CHANNELS:
         lines += [
             '#EXTINF:-1 tvg-id="%s-web" tvg-name="%s(网页版)" tvg-logo="%s" '
-            'group-title="广东",%s · 网页版' % (ch["id"], ch["name"], ch["logo"],
-                                                 ch["label"]),
+            'group-title="广东",%s' % (ch["id"], ch["name"], ch["logo"],
+                                        ch["label"]),
             "webview://" + ch["web"],
         ]
     lines.append("")
@@ -159,28 +180,36 @@ def build_m3u():
 
 
 def publish():
-    """把当前地址写入 m3u 并推送；内容无变化则跳过（加锁，避免并发写冲突）"""
+    """把两个 m3u 写入文件并推送；内容无变化则跳过（加锁，避免并发写冲突）"""
     with PUB_LOCK:
-        content = build_m3u()
-        old = ""
-        if os.path.exists(M3U_FILE):
-            with open(M3U_FILE, encoding="utf-8") as f:
-                old = f.read()
-        if old == content:
+        changed = []
+        for path, content in ((M3U_DIRECT, build_direct_m3u()),
+                              (M3U_WEB, build_web_m3u())):
+            old = ""
+            if os.path.exists(path):
+                with open(path, encoding="utf-8") as f:
+                    old = f.read()
+            # 忽略「更新时间」行的差异，只在频道/地址真正变化时提交
+            if _strip_stamp(old) == _strip_stamp(content):
+                continue
+            with open(path, "w", encoding="utf-8", newline="\n") as f:
+                f.write(content)
+            changed.append(os.path.basename(path))
+        if not changed:
             return False
-        with open(M3U_FILE, "w", encoding="utf-8", newline="\n") as f:
-            f.write(content)
 
     with GIT_LOCK:
         sh("git", "config", "user.name", "github-actions[bot]", quiet=True)
         sh("git", "config", "user.email",
            "41898282+github-actions[bot]@users.noreply.github.com", quiet=True)
-        sh("git", "add", "xinyi_radio_local.m3u", quiet=True)
+        sh("git", "add", os.path.basename(M3U_DIRECT), os.path.basename(M3U_WEB),
+           quiet=True)
         if sh("git", "diff", "--cached", "--quiet", quiet=True) == 0:
             return False
         stamp = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
         sh("git", "commit", "-m",
-           "chore: 更新信宜融媒直播直链 %s CST" % stamp, quiet=True)
+           "chore: 更新信宜融媒直播源（%s） %s CST"
+           % ("/".join(changed), stamp), quiet=True)
         for attempt in range(3):
             sh("git", "pull", "--rebase", "--autostash", quiet=True)
             if sh("git", "push", quiet=True) == 0:
@@ -189,6 +218,12 @@ def publish():
             time.sleep(5)
         log("推送最终失败（本地文件已更新）")
         return True
+
+
+def _strip_stamp(text):
+    """去掉更新时间行，用于内容比对"""
+    return "\n".join(l for l in text.splitlines()
+                     if not l.startswith("# 更新："))
 
 
 async def start_session(p, url):

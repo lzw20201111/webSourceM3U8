@@ -149,34 +149,41 @@
     </div>
 
     <div class="sect">
-      <div class="cap"><span>① M3U 文件地址（固定不变，推荐）</span><span class="dot" id="srcDot"></span></div>
+      <div class="cap"><span>① 直连版 M3U（播放器直接播放，推荐）</span><span class="dot" id="srcDot"></span></div>
       <div class="urlbox" id="urlBox">生成中…</div>
     </div>
 
     <div class="sect">
-      <div class="cap"><span>② 当前直播直链（可直接播放）</span><span id="dirUpd"></span></div>
+      <div class="cap"><span>② 网页版 M3U（播放器内嵌浏览器打开，免维护）</span></div>
+      <div class="urlbox" id="webM3uBox">生成中…</div>
+    </div>
+
+    <div class="sect">
+      <div class="cap"><span>③ 广播当前直链（可直接播放）</span><span id="dirUpd"></span></div>
       <div class="urlbox direct" id="dirBox">读取中…</div>
     </div>
 
     <div class="sect">
-      <div class="cap"><span>③ 网页版地址（播放器内置浏览器打开）</span></div>
+      <div class="cap"><span>④ 本频道单个网页地址</span></div>
       <div class="urlbox" id="webBox">生成中…</div>
     </div>
 
     <div class="btns">
-      <button class="btn primary" id="copyBtn">复制 M3U 地址</button>
-      <button class="btn" id="copyDirBtn">复制直链</button>
-      <a class="btn" href="xinyi_radio_local.m3u" download>下载 M3U</a>
+      <button class="btn primary" id="copyBtn">复制直连版地址</button>
+      <button class="btn" id="copyWebM3uBtn">复制网页版地址</button>
+      <button class="btn" id="copyDirBtn">复制当前直链</button>
+      <a class="btn" href="xinyi_radio_local.m3u" download>下载直连版</a>
+      <a class="btn" href="xinyi_web.m3u" download>下载网页版</a>
       <button class="btn" id="rawBtn">原始播放页</button>
     </div>
   </div>
 
   <div class="note">
     <b>说明：</b>该平台的播放地址与「播放会话」绑定（会话一断即失效），因此本页在
-    <b>你的浏览器内</b>实时建立播放会话，保证随时可听可看。给电视盒子 / 影视仓 / TVBox 使用时：
-    填 <b>① M3U 文件地址</b>（一个文件内含<b>广播＋电视</b>两组共 4 个播放项，内容由云端自动刷新，
-    导入一次即可）；也可直接填 <b>② 当前直链</b>。若播放器支持内嵌网页，
-    <b>③ 网页版地址</b> 无需任何维护。
+    <b>你的浏览器内</b>实时建立播放会话，保证随时可听可看。播放方式分成两个文件：
+    <b>① 直连版</b>（广播＋电视的真实 m3u8，由云端会话自动保活，播放器直接播放）、
+    <b>② 网页版</b>（webview 打开网页播放，完全免维护）。给电视盒子 / 影视仓 / TVBox 使用时，
+    按播放器能力二选一，导入一次即可；也可直接填 <b>③ 当前直链</b>。
   </div>
 
   <div class="footer">Powered by GitHub Pages · 直链由云端会话保活自动刷新</div>
@@ -188,11 +195,13 @@
   var $ = function (id) { return document.getElementById(id); };
 
   var base = location.origin + location.pathname.replace(/[^/]*$/, '');
-  var M3U_URL = base + 'xinyi_radio_local.m3u';
+  var M3U_URL = base + 'xinyi_radio_local.m3u';   /* 直连版 */
+  var WEB_M3U_URL = base + 'xinyi_web.m3u';       /* 网页版 */
   var WEBVIEW = 'webview://' + base;
   var DIRECT = '';
 
   $('urlBox').textContent = M3U_URL;
+  $('webM3uBox').textContent = WEB_M3U_URL;
   $('webBox').textContent = WEBVIEW;
 
   /* 台标 */
@@ -278,9 +287,10 @@
     document.body.removeChild(ta);
   }
   $('copyBtn').addEventListener('click', function () { copyText(M3U_URL, this); });
+  $('copyWebM3uBtn').addEventListener('click', function () { copyText(WEB_M3U_URL, this); });
   $('copyDirBtn').addEventListener('click', function () {
     if (!DIRECT) { this.textContent = '暂无直链'; var b = this;
-      setTimeout(function () { b.textContent = '复制直链'; }, 1500); return; }
+      setTimeout(function () { b.textContent = '复制当前直链'; }, 1500); return; }
     copyText(DIRECT, this);
   });
 
@@ -288,7 +298,7 @@
   fetch('status.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (s) {
-      var okAll = s.page === 'ok' && s.pages === 'ok'
+      var okAll = s.page === 'ok' && s.pages === 'ok' && s.webm3u === 'ok'
                && s.m3u === 'ok' && s.direct === 'ok';
       $('chkTxt').innerHTML = okAll
         ? '<span class="dot"></span> 链路正常（' + (s.time || '') + '）'
