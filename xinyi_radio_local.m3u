@@ -1,11 +1,13 @@
 #EXTM3U
 # 频道：信宜融媒综合广播 (FM98.9) ＋ 信宜综合电视台
-# 更新：2026-10-04 13:13 (北京时间，由 GitHub Actions 自动刷新)
+# 更新：2026-10-04 13:14 (北京时间，由 GitHub Actions 自动刷新)
 # 说明：每组第 1 项「直连」为当前有效播放地址，云端会话自动保活，
 #       播放器直接播放即可；第 2 项「网页版」不需要任何维护。
 #EXTINF:-1 tvg-id="xinyi-radio" tvg-name="信宜融媒综合广播" tvg-logo="https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg" group-title="广东",信宜融媒综合广播 (FM98.9) · 直连
 https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/radio_channel_223.m3u8?auth_key=1791174139-0-0-f1fe1a90f6b620dbdbed744df0b5cbe4&extra_key=j-toLr0PUg8SGHQuAwdYj4sDlGVeAEWeoP66WKQdOu3TmHyi5cH4mP4yU73pYnwlZ8ED7ldYnW_QW1dtL-LQnGHyi1NBwv0vpq8UHP4uDhi3p_JDRnTkHV90DhS-1bMLvzfIPOf68vD6fdyha-_P5w
 #EXTINF:-1 tvg-id="xinyi-radio-web" tvg-name="信宜融媒综合广播(网页版)" tvg-logo="https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg" group-title="广东",信宜融媒综合广播 (FM98.9) · 网页版
 webview://https://lzw20201111.github.io/webSourceM3U8/
+#EXTINF:-1 tvg-id="xinyi-tv" tvg-name="信宜综合电视台" tvg-logo="https://static-pro.guangdianyun.tv/1629/mss/20241219/3b3aa73530526d817a02349a3a323f37.jpeg" group-title="广东",信宜综合电视台 · 直连
+https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/tv_channel_643.m3u8?auth_key=1791177263-0-0-a8196869d15dbc50e882ab5ed62d9b62&extra_key=KSYOkneRJYju3fwh_Bxy2yeigOQgmPBu6FnAXi7axPqW5ccvzSTvsXVAK5q02pAJvm2y0S8bmvBsg_yldoSgDVW5qOd1GPYf8-3GYolEvCYnfXIrZIyWf8PbsS4J65ssDBO_scs1jwxBd-8Ak6auw-xnj0BcUiolzx1_qW4mvlA
 #EXTINF:-1 tvg-id="xinyi-tv-web" tvg-name="信宜综合电视台(网页版)" tvg-logo="https://static-pro.guangdianyun.tv/1629/mss/20241219/3b3aa73530526d817a02349a3a323f37.jpeg" group-title="广东",信宜综合电视台 · 网页版
 webview://https://lzw20201111.github.io/webSourceM3U8/tv.html
