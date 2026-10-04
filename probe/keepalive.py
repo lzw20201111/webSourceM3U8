@@ -2,6 +2,7 @@
 """临时验证脚本（GitHub Actions 上运行）
 目的：在真实数据中心网络下抓取播放地址，并保持会话存活，
       供国内实测其可用性 —— 判定"云端抓取的直链能否在国内直接播放"。
+触发方式：变更本文件后推送（push paths: probe/**）。
 """
 import os
 import subprocess
