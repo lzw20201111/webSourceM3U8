@@ -37,5 +37,5 @@ jobs:
 
       - name: 维持播放会话并更新直链
         env:
-          RUN_MINUTES: "330"
+          RUN_MINUTES: "8"
         run: python scripts/keepalive.py
