@@ -84,6 +84,7 @@
     padding:11px 13px;font-size:12px;color:#4b5563;line-height:1.6;word-break:break-all;
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
   .urlbox.direct{background:#f2f8ff;border-color:#cfe2f5;color:#1d4f79}
+  .urlbox.pin{background:#eefaf1;border-color:#c6e9d1;color:#1a6b3c;font-weight:600}
   .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
   .btn{flex:1;min-width:132px;padding:11px 14px;border-radius:11px;font-size:13.5px;font-weight:600;
     border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;transition:.15s;
@@ -134,7 +135,15 @@
     </div>
 
     <div class="sect">
-      <div class="cap"><span>① 直连版 M3U（播放器直接播放，推荐）</span><span class="dot" id="srcDot"></span></div>
+      <div class="cap"><span>★ 电视永久播放地址（永不改变，播放器直接填这个）</span><span class="dot"></span></div>
+      <div class="urlbox pin" id="relayTv">生成中…</div>
+      <div class="btns" style="margin-top:10px">
+        <button class="btn primary" id="copyRelayTvBtn">复制电视永久地址</button>
+      </div>
+    </div>
+
+    <div class="sect">
+      <div class="cap"><span>① 直连版 M3U（内容已是指向永久地址，导入一次即可）</span><span class="dot" id="srcDot"></span></div>
       <div class="urlbox" id="urlBox">生成中…</div>
     </div>
 
@@ -144,7 +153,7 @@
     </div>
 
     <div class="sect">
-      <div class="cap"><span>③ 电视当前直链（可直接播放）</span><span id="dirUpd"></span></div>
+      <div class="cap"><span>③ 电视播放地址（永久不变，导入一次即可）</span><span id="dirUpd"></span></div>
       <div class="urlbox direct" id="dirBox">读取中…</div>
     </div>
 
@@ -166,12 +175,13 @@
   <div class="note">
     <b>说明：</b>点击「开始观看」后，本页会拉取云端刚刷新的<b>直连地址并直接播放</b>（hls.js 拉流，
     不必再打开原站）；若直连暂时不可用，会自动切回内嵌原始直播页兜底，保证一定能看。
-    播放方式分成两个文件：<b>① 直连版</b>（广播＋电视的真实 m3u8，由云端会话自动保活）、
-    <b>② 网页版</b>（webview 打开网页播放，完全免维护）。给电视盒子 / 影视仓 / TVBox 使用时，
-    按播放器能力二选一，导入一次即可；也可直接填 <b>③ 当前直链</b>。
+    <b>给电视盒子 / 影视仓 / TVBox 用：</b>填 <b>★ 永久播放地址</b>（永不改变，写一次终身可用），
+    或填 <b>① 直连版 M3U 文件地址</b>（导入一次即可）。该平台原始地址与「播放会话」绑定、
+    会随时轮换，因此上面这些地址由中转服务实时解析，播放器侧完全无感。
+    <b>② 网页版</b> 适合支持内嵌网页的播放器，免维护。
   </div>
 
-  <div class="footer">Powered by GitHub Pages · 直链由云端会话保活自动刷新</div>
+  <div class="footer">Powered by GitHub Pages · 静态地址由 Cloudflare Pages 中转提供</div>
 </div>
 
 <script>
@@ -186,9 +196,14 @@
   var PAGE = 'https://live.xytv.cc/tv/643?uin=1629&refererId=0';
   var DIRECT = '';
 
+  /* 中转服务：地址永久不变，请求时实时解析当前有效流 */
+  var RELAY = 'https://xinyi-relay.pages.dev';
+  var RELAY_TV = RELAY + '/xinyi/tv.m3u8';
+
   $('urlBox').textContent = M3U_URL;
   $('webM3uBox').textContent = WEB_M3U_URL;
   $('webBox').textContent = WEBVIEW;
+  $('relayTv').textContent = RELAY_TV;
 
   /* 台标 */
   $('logo').src = 'https://static-pro.guangdianyun.tv/1629/mss/20241219/3b3aa73530526d817a02349a3a323f37.jpeg';
@@ -366,6 +381,7 @@
   }
   $('copyBtn').addEventListener('click', function () { copyText(M3U_URL, this); });
   $('copyWebM3uBtn').addEventListener('click', function () { copyText(WEB_M3U_URL, this); });
+  $('copyRelayTvBtn').addEventListener('click', function () { copyText(RELAY_TV, this); });
   $('copyDirBtn').addEventListener('click', function () {
     if (!DIRECT) { this.textContent = '暂无直链'; var b = this;
       setTimeout(function () { b.textContent = '复制当前直链'; }, 1500); return; }
@@ -377,7 +393,8 @@
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (s) {
       var okAll = s.tvpage === 'ok' && s.pages === 'ok' && s.webm3u === 'ok'
-               && s.m3u === 'ok' && s.tvdirect === 'ok';
+               && s.m3u === 'ok' && s.tvdirect === 'ok'
+               && (s.relaytv === undefined || s.relaytv === 'ok');
       $('chkTxt').innerHTML = okAll
         ? '<span class="dot"></span> 链路正常（' + (s.time || '') + '）'
         : '<span class="dot warn"></span> 链路异常（' + (s.time || '') + '）';
