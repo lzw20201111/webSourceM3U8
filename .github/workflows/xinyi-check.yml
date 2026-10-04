@@ -1,7 +1,7 @@
-name: 信宜广播直播链路巡检
+name: 信宜融媒直播链路巡检
 
 # 每天北京时间 07:30 与 17:30 各巡检一次（UTC：23:30 / 09:30）
-# 检查直播页、频道接口、GitHub Pages 是否正常，结果写入 status.json 供网页展示
+# 检查广播页、电视页、GitHub Pages 及两条直链是否正常，结果写入 status.json 供网页展示
 on:
   schedule:
     - cron: "30 23 * * *"

@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="referrer" content="no-referrer">
-<title>信宜融媒综合广播 FM98.9 · 在线收听</title>
+<title>信宜综合电视台 · 在线直播</title>
 <style>
   :root{
     --bg:#f2f3f5; --card:#fff; --text:#1c1f23; --sub:#6b7280; --line:#e6e8eb;
-    --brand:#e0523c; --brand-2:#f08a5d; --ok:#16a34a; --warn:#d97706;
+    --brand:#1f6fb2; --brand-2:#4b9ad4; --ok:#16a34a; --warn:#d97706;
     --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -16,7 +16,7 @@
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
       "Hiragino Sans GB","Microsoft YaHei",sans-serif;
     background:
-      radial-gradient(1200px 500px at 50% -180px, #ffe9e2 0%, rgba(255,233,226,0) 70%),
+      radial-gradient(1200px 500px at 50% -180px, #e2eefb 0%, rgba(226,238,251,0) 70%),
       var(--bg);
     color:var(--text); -webkit-font-smoothing:antialiased;
     display:flex;justify-content:center; padding:28px 14px 46px;
@@ -27,34 +27,25 @@
   /* 顶部 */
   .hero{display:flex;align-items:center;gap:15px;padding:16px 18px}
   .logo{position:relative;width:58px;height:58px;border-radius:14px;flex:none;overflow:hidden;
-    background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 4px 12px rgba(224,82,60,.25)}
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 4px 12px rgba(31,111,178,.25)}
   .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .logo b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700}
+  .logo b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:700}
   .hero h1{font-size:18px;font-weight:650}
   .hero p{font-size:12.5px;color:var(--sub);margin-top:3px}
-  .tag{display:inline-flex;align-items:center;gap:5px;margin-top:7px;font-size:11px;color:#a4402f;
-    background:#fdece8;border-radius:999px;padding:3px 9px;font-weight:600}
+  .tag{display:inline-flex;align-items:center;gap:5px;margin-top:7px;font-size:11px;color:#17527f;
+    background:#e6f0fa;border-radius:999px;padding:3px 9px;font-weight:600}
   .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok)}
   .dot.off{background:#c3c7cc}.dot.warn{background:var(--warn)}
   .switch{margin-left:auto;flex:none;font-size:12px;color:var(--sub);text-decoration:none;
     border:1px solid var(--line);border-radius:999px;padding:6px 11px;background:#fff;transition:.15s}
   .switch:hover{background:#f7f8fa;color:var(--text)}
 
-  /* 电视台入口 */
-  .tvcard{margin-top:14px;padding:15px 18px 16px}
-  .tvhead{display:flex;align-items:center;gap:13px}
-  .tvlogo{position:relative;width:44px;height:44px;border-radius:11px;flex:none;overflow:hidden;
-    background:linear-gradient(135deg,#1f6fb2,#4b9ad4)}
-  .tvlogo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .tvcard h2{font-size:15px;font-weight:650}
-  .tvcard .sub2{font-size:12px;color:var(--sub);margin-top:2px}
-
   /* 播放器 */
   .player{margin-top:14px;overflow:hidden;position:relative}
   .cover{
     position:relative;height:300px;display:flex;flex-direction:column;
     align-items:center;justify-content:center;gap:18px;
-    background:linear-gradient(160deg,#fff7f4 0%,#fff 60%);
+    background:linear-gradient(160deg,#f4f9ff 0%,#fff 60%);
   }
   .viz{height:52px;display:flex;align-items:flex-end;gap:5px}
   .viz i{width:5px;height:14%;border-radius:3px;background:linear-gradient(180deg,var(--brand),var(--brand-2));opacity:.3}
@@ -66,15 +57,15 @@
     display:inline-flex;align-items:center;gap:9px;border:none;cursor:pointer;
     background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
     font-size:15px;font-weight:650;padding:13px 30px;border-radius:999px;
-    box-shadow:0 8px 22px rgba(224,82,60,.35);transition:.16s;
+    box-shadow:0 8px 22px rgba(31,111,178,.35);transition:.16s;
   }
   .start:hover{transform:translateY(-2px)}
   .start svg{width:18px;height:18px;fill:#fff}
   .hint{font-size:12.5px;color:var(--sub)}
   .framebox{display:none;background:#000}
   .framebox.on{display:block}
-  .framebox iframe{width:100%;height:600px;border:0;display:block}
-  @media (max-width:420px){ .framebox iframe{height:540px} .cover{height:260px} }
+  .framebox iframe{width:100%;height:620px;border:0;display:block}
+  @media (max-width:420px){ .framebox iframe{height:560px} .cover{height:260px} }
 
   /* 信息 */
   .info{margin-top:14px;padding:4px 18px 16px}
@@ -87,7 +78,7 @@
   .urlbox{margin-top:0;background:#f7f8fa;border:1px solid var(--line);border-radius:12px;
     padding:11px 13px;font-size:12px;color:#4b5563;line-height:1.6;word-break:break-all;
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-  .urlbox.direct{background:#fff8f0;border-color:#f3ddc6;color:#7a4a20}
+  .urlbox.direct{background:#f2f8ff;border-color:#cfe2f5;color:#1d4f79}
   .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
   .btn{flex:1;min-width:132px;padding:11px 14px;border-radius:11px;font-size:13.5px;font-weight:600;
     border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;transition:.15s;
@@ -107,38 +98,23 @@
   <div class="card hero">
     <div class="logo"><b>信宜</b><img id="logo" alt=""></div>
     <div>
-      <h1>信宜融媒综合广播</h1>
-      <p>FM98.9 &nbsp;·&nbsp; 广东 · 信宜 &nbsp;·&nbsp; 6:20 – 24:00</p>
+      <h1>信宜综合电视台</h1>
+      <p>信宜市融媒体中心 &nbsp;·&nbsp; 广东 · 信宜 &nbsp;·&nbsp; 全天直播</p>
       <span class="tag"><span class="dot" id="miniDot"></span><span id="miniTxt">待开始</span></span>
     </div>
-    <a class="switch" href="tv.html">电视 ›</a>
+    <a class="switch" href="./">广播 ›</a>
   </div>
 
   <div class="card player">
     <div class="cover" id="cover">
       <div class="viz" id="viz"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <button class="start" id="startBtn">
-        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>开始收听
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>开始观看
       </button>
       <div class="hint">点击后在页面内直接播放 · 无需安装任何软件</div>
     </div>
     <div class="framebox" id="frameBox">
-      <iframe id="frame" title="播放器" allow="autoplay; encrypted-media" referrerpolicy="no-referrer"></iframe>
-    </div>
-  </div>
-
-  <div class="card tvcard">
-    <div class="tvhead">
-      <div class="tvlogo"><img id="tvLogo" alt=""></div>
-      <div>
-        <h2>信宜综合电视台</h2>
-        <div class="sub2">信宜市融媒体中心 &nbsp;·&nbsp; 全天直播</div>
-      </div>
-      <a class="switch" href="tv.html">进入观看 ›</a>
-    </div>
-    <div class="sect">
-      <div class="cap"><span>电视当前直链（云端自动刷新）</span><span class="dot" id="tvDot"></span><span id="tvUpd"></span></div>
-      <div class="urlbox direct" id="tvDirBox">读取中…</div>
+      <iframe id="frame" title="播放器" allow="autoplay; encrypted-media; fullscreen" referrerpolicy="no-referrer"></iframe>
     </div>
   </div>
 
@@ -149,34 +125,33 @@
     </div>
 
     <div class="sect">
-      <div class="cap"><span>① M3U 文件地址（固定不变，推荐）</span><span class="dot" id="srcDot"></span></div>
+      <div class="cap"><span>① M3U 文件地址（含广播＋电视，推荐）</span><span class="dot" id="srcDot"></span></div>
       <div class="urlbox" id="urlBox">生成中…</div>
     </div>
 
     <div class="sect">
-      <div class="cap"><span>② 当前直播直链（可直接播放）</span><span id="dirUpd"></span></div>
+      <div class="cap"><span>② 电视当前直链（可直接播放）</span><span id="dirUpd"></span></div>
       <div class="urlbox direct" id="dirBox">读取中…</div>
     </div>
 
     <div class="sect">
-      <div class="cap"><span>③ 网页版地址（播放器内置浏览器打开）</span></div>
+      <div class="cap"><span>③ 本页地址（播放器内置浏览器打开）</span></div>
       <div class="urlbox" id="webBox">生成中…</div>
     </div>
 
     <div class="btns">
       <button class="btn primary" id="copyBtn">复制 M3U 地址</button>
-      <button class="btn" id="copyDirBtn">复制直链</button>
+      <button class="btn" id="copyDirBtn">复制电视直链</button>
       <a class="btn" href="xinyi_radio_local.m3u" download>下载 M3U</a>
-      <button class="btn" id="rawBtn">原始播放页</button>
+      <button class="btn" id="rawBtn">原始直播页</button>
     </div>
   </div>
 
   <div class="note">
-    <b>说明：</b>该平台的播放地址与「播放会话」绑定（会话一断即失效），因此本页在
-    <b>你的浏览器内</b>实时建立播放会话，保证随时可听可看。给电视盒子 / 影视仓 / TVBox 使用时：
-    填 <b>① M3U 文件地址</b>（一个文件内含<b>广播＋电视</b>两组共 4 个播放项，内容由云端自动刷新，
-    导入一次即可）；也可直接填 <b>② 当前直链</b>。若播放器支持内嵌网页，
-    <b>③ 网页版地址</b> 无需任何维护。
+    <b>说明：</b>该电视台的播放地址与「播放会话」绑定（会话一断即失效），因此本页在
+    <b>你的浏览器内</b>实时建立播放会话，保证随时可看。给电视盒子 / 影视仓 / TVBox 使用时：
+    填 <b>① M3U 文件地址</b>（内容由云端自动刷新，导入一次即可，同一文件里还有广播频道）；
+    也可直接填 <b>② 当前直链</b>。若播放器支持内嵌网页，<b>③ 本页地址</b> 无需任何维护。
   </div>
 
   <div class="footer">Powered by GitHub Pages · 直链由云端会话保活自动刷新</div>
@@ -189,73 +164,65 @@
 
   var base = location.origin + location.pathname.replace(/[^/]*$/, '');
   var M3U_URL = base + 'xinyi_radio_local.m3u';
-  var WEBVIEW = 'webview://' + base;
+  var WEBVIEW = 'webview://' + base + 'tv.html';
+  var PAGE = 'https://live.xytv.cc/tv/643?uin=1629&refererId=0';
   var DIRECT = '';
 
   $('urlBox').textContent = M3U_URL;
   $('webBox').textContent = WEBVIEW;
 
   /* 台标 */
-  $('logo').src = 'https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg';
+  $('logo').src = 'https://static-pro.guangdianyun.tv/1629/mss/20241219/3b3aa73530526d817a02349a3a323f37.jpeg';
   $('logo').addEventListener('error', function () { this.style.display = 'none'; });
-  $('tvLogo').src = 'https://static-pro.guangdianyun.tv/1629/mss/20241219/3b3aa73530526d817a02349a3a323f37.jpeg';
-  $('tvLogo').addEventListener('error', function () { this.style.display = 'none'; });
 
-  /* 读取 m3u，按 tvg-id 解析广播 / 电视各自的当前直链 */
+  /* 读取 m3u，取「电视」那条直链与更新时间 */
   fetch(M3U_URL + '?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.text(); })
     .then(function (txt) {
-      var direct = {}, upd = '', cid = '';
-      txt.split(/\r?\n/).forEach(function (raw) {
+      var lines = txt.split(/\r?\n/);
+      var cur = '', direct = '', upd = '', want = false;
+      lines.forEach(function (raw) {
         var l = raw.trim();
         if (!l) return;
         if (/^#\s*更新/.test(l)) {
           upd = l.replace(/^#\s*更新\s*[:：]?\s*/, '');
-          return;
-        }
-        if (l.indexOf('#EXTINF') === 0) {
-          var m = l.match(/tvg-id="([^"]+)"/);
-          cid = m ? m[1] : '';
-          return;
-        }
-        if (l.charAt(0) !== '#' && cid && /^https?:\/\//i.test(l)) {
-          if (!direct[cid]) { direct[cid] = l; }
-          cid = '';
+        } else if (l.indexOf('#EXTINF') === 0) {
+          want = /tvg-id="xinyi-tv"/.test(l);
+          cur = l;
+        } else if (!l.startsWith('#') && cur) {
+          if (want && !direct && /^https?:\/\//i.test(l)) { direct = l; }
+          cur = '';
         }
       });
-      DIRECT = direct['xinyi-radio'] || '';
-      $('dirBox').textContent = DIRECT || '（暂无，等待云端刷新）';
-      $('tvDirBox').textContent = direct['xinyi-tv'] || '（暂无，等待云端刷新）';
-      var stamp = upd ? ('更新 ' + upd.replace(/\(.*?\)/g, '').trim()) : '';
-      $('dirUpd').textContent = stamp;
-      $('tvUpd').textContent = stamp;
+      DIRECT = direct;
+      $('dirBox').textContent = direct || '（暂无，等待云端刷新）';
+      $('dirUpd').textContent = upd ? ('更新 ' + upd.replace(/\(.*?\)/g, '').trim()) : '';
     })
     .catch(function () {
       $('dirBox').textContent = '（读取失败，可稍后刷新）';
-      $('tvDirBox').textContent = '（读取失败，可稍后刷新）';
     });
 
-  /* 开始收听 */
+  /* 开始观看 */
   var started = false;
   $('startBtn').addEventListener('click', function () {
     if (started) return;
     started = true;
     $('miniTxt').textContent = '正在加载播放器…';
-    $('frame').src = 'https://live.xytv.cc/radio/223?uin=1629&refererId=0';
+    $('frame').src = PAGE;
     $('frameBox').classList.add('on');
     $('cover').style.display = 'none';
     $('viz').classList.add('on');
     $('miniDot').className = 'dot';
     $('miniTxt').textContent = '播放器已加载';
     setTimeout(function () {
-      $('miniTxt').textContent = '若未出声，请点击播放器中的 ▶ 按钮';
-      setTimeout(function () { $('miniTxt').textContent = '正在播放'; }, 6000);
+      $('miniTxt').textContent = '若未播放，请点击播放器中的 ▶ 按钮';
+      setTimeout(function () { $('miniTxt').textContent = '正在直播'; }, 6000);
     }, 8000);
   });
 
-  /* 原始播放页 */
+  /* 原始直播页 */
   $('rawBtn').addEventListener('click', function () {
-    window.open('https://live.xytv.cc/radio/223?uin=1629&refererId=0', '_blank');
+    window.open(PAGE, '_blank');
   });
 
   /* 复制 */
@@ -280,7 +247,7 @@
   $('copyBtn').addEventListener('click', function () { copyText(M3U_URL, this); });
   $('copyDirBtn').addEventListener('click', function () {
     if (!DIRECT) { this.textContent = '暂无直链'; var b = this;
-      setTimeout(function () { b.textContent = '复制直链'; }, 1500); return; }
+      setTimeout(function () { b.textContent = '复制电视直链'; }, 1500); return; }
     copyText(DIRECT, this);
   });
 
@@ -288,12 +255,11 @@
   fetch('status.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (s) {
-      var okAll = s.page === 'ok' && s.pages === 'ok'
-               && s.m3u === 'ok' && s.direct === 'ok';
+      var okAll = s.tvpage === 'ok' && s.pages === 'ok'
+               && s.m3u === 'ok' && s.tvdirect === 'ok';
       $('chkTxt').innerHTML = okAll
         ? '<span class="dot"></span> 链路正常（' + (s.time || '') + '）'
         : '<span class="dot warn"></span> 链路异常（' + (s.time || '') + '）';
-      $('tvDot').className = 'dot' + (s.tvdirect === 'ok' ? '' : ' warn');
     })
     .catch(function () {
       $('chkTxt').textContent = '暂无巡检数据';
