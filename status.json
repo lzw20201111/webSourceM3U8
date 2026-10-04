@@ -1,6 +1,7 @@
 {
-  "page": "fail:URLError",
-  "api": "ok",
+  "page": "ok",
   "pages": "ok",
-  "time": "2026-10-04 11:42"
+  "m3u": "ok",
+  "direct": "ok",
+  "time": "2026-10-04 12:28"
 }
