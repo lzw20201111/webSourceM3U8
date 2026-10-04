@@ -23,9 +23,14 @@
                             · 配置了 RELAY_BASE 后：写中转的【静态地址】，永久不变
   xinyi_web.m3u         —— 网页版：webview:// 打开网页播放（完全免维护）
 
+中转服务（让 m3u 里的播放地址永久不变）：
+  部署在 Cloudflare Pages 上（见 pages/_worker.js 与 pages/deploy.py）。
+  为什么是 Pages 而不是 Workers：*.workers.dev 在国内被 DNS 污染 + SNI 阻断，
+  而 *.pages.dev 国内直连正常（实测 HTTP 200）。Pages 免费、无需域名。
+
 环境变量：
   RUN_MINUTES   本次任务运行时长（分钟），默认 330
-  RELAY_BASE    中转服务地址（如 https://xinyi-relay.xxx.workers.dev）；
+  RELAY_BASE    中转服务地址（如 https://xinyi-relay.pages.dev）；
                 配置后直连版 m3u 转为静态地址，不再随会话刷新
   PW_CHANNEL    可选，指定浏览器通道（本地调试用 chrome，Actions 留空）
 """

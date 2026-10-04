@@ -18,7 +18,7 @@
 背景：该平台播放地址与「活跃播放会话」绑定。会话由 keepalive 工作流维持，
 本巡检用于第一时间发现链路异常（例如会话中断、平台改版等）。
 
-环境变量：RELAY_BASE —— 中转服务地址，例如 https://xinyi-relay.xxx.workers.dev
+环境变量：RELAY_BASE —— 中转服务地址，例如 https://xinyi-relay.pages.dev
 
 退出码：0=全部正常  1=存在异常（Actions 中会标红）
 """

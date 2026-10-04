@@ -3,8 +3,10 @@
   "tvpage": "ok",
   "pages": "ok",
   "m3u": "ok",
+  "webm3u": "ok",
   "direct": "ok",
   "tvdirect": "ok",
-  "webm3u": "ok",
-  "time": "2026-10-04 14:15"
+  "relay": "ok",
+  "relaytv": "ok",
+  "time": "2026-10-04 14:54"
 }
