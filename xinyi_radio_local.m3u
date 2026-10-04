@@ -1,9 +1,9 @@
 #EXTM3U
 # 频道：信宜融媒综合广播 (FM98.9) ＋ 信宜综合电视台
 # 类型：直连（播放器直接播放，云端会话自动保活）
-# 更新：2026-10-04 14:56 (北京时间，由 GitHub Actions 自动刷新)
+# 更新：2026-10-04 14:57 (北京时间，由 GitHub Actions 自动刷新)
 # 说明：本文件只含「直连」；网页版见 xinyi_web.m3u。
 #EXTINF:-1 tvg-id="xinyi-radio" tvg-name="信宜融媒综合广播" tvg-logo="https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg" group-title="广东",信宜融媒综合广播 (FM98.9)
 https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/radio_channel_223.m3u8?auth_key=1791183338-0-0-0419b96026ea586fa5a900a6d877d40a&extra_key=mn5rJOf6sKhAeGiavhCPWkGgaIrD8J0f7Qx5Y2-VWCoh-B4YcDLoqnAoY3bJiCwPERm5n-E5XQuImxQIk0e8hPMnW4RkdkdViUYAuK14TcOkY6YlRxCZ0FoGLASQczRXrNa2j06xgpGrVZl67nVtUJ1ynJecypXWH8yoUvom510
 #EXTINF:-1 tvg-id="xinyi-tv" tvg-name="信宜综合电视台" tvg-logo="https://static-pro.guangdianyun.tv/1629/mss/20241219/3b3aa73530526d817a02349a3a323f37.jpeg" group-title="广东",信宜综合电视台
-https://xinyi-relay.pages.dev/xinyi/tv.m3u8
+https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/tv_channel_643.m3u8?auth_key=1791183403-0-0-ca697e04c42a57a08e73d1a75de8a812&extra_key=Uz1-U3f3IniZInR0XmoHeTxB8FT6rK5RBiCWso0LF9SIxe4MUm0fShiQHIRePc5s8_LD_IplwWKer5hkI0G8nQYK5mCCnZSIgTn3ps0KVSsFOW0s9q7Pzh6Fepylgmpjkp9aUBEw472QQXUENY7I8ao03IFJh1VtHK_0Oe_WZQE
