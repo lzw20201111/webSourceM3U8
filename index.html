@@ -245,7 +245,8 @@
   fetch('status.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (s) {
-      var okAll = s.page === 'ok' && s.api === 'ok' && s.pages === 'ok';
+      var okAll = s.page === 'ok' && s.pages === 'ok'
+               && s.m3u === 'ok' && s.direct === 'ok';
       $('chkTxt').innerHTML = okAll
         ? '<span class="dot"></span> 链路正常（' + (s.time || '') + '）'
         : '<span class="dot warn"></span> 链路异常（' + (s.time || '') + '）';
