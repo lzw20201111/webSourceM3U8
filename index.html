@@ -65,16 +65,19 @@
   @media (max-width:420px){ .framebox iframe{height:540px} .cover{height:260px} }
 
   /* 信息 */
-  .info{margin-top:14px;padding:4px 18px 14px}
+  .info{margin-top:14px;padding:4px 18px 16px}
   .row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13.5px}
   .row:last-child{border-bottom:none}
   .row .k{color:var(--sub);flex:none}
   .row .v{text-align:right;word-break:break-all}
-  .urlbox{margin-top:10px;background:#f7f8fa;border:1px solid var(--line);border-radius:12px;
+  .sect{margin-top:14px}
+  .sect .cap{font-size:12.5px;color:var(--sub);margin-bottom:7px;display:flex;justify-content:space-between;gap:10px}
+  .urlbox{margin-top:0;background:#f7f8fa;border:1px solid var(--line);border-radius:12px;
     padding:11px 13px;font-size:12px;color:#4b5563;line-height:1.6;word-break:break-all;
     font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
-  .btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-  .btn{flex:1;min-width:140px;padding:11px 14px;border-radius:11px;font-size:13.5px;font-weight:600;
+  .urlbox.direct{background:#fff8f0;border-color:#f3ddc6;color:#7a4a20}
+  .btns{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .btn{flex:1;min-width:132px;padding:11px 14px;border-radius:11px;font-size:13.5px;font-weight:600;
     border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;transition:.15s;
     text-decoration:none;text-align:center}
   .btn:hover{background:#f7f8fa}
@@ -112,23 +115,42 @@
   </div>
 
   <div class="card info">
-    <div class="row"><span class="k">播放器导入地址</span><span class="v"><span class="dot" id="srcDot"></span> 固定不变</span></div>
-    <div class="urlbox" id="urlBox">生成中…</div>
-    <div class="row" style="border-bottom:none"><span class="k">服务巡检</span><span class="v" id="chkTxt">读取中…</span></div>
+    <div class="row" style="border-bottom:none;padding-bottom:2px">
+      <span class="k">播放器导入</span>
+      <span class="v" id="chkTxt">读取中…</span>
+    </div>
+
+    <div class="sect">
+      <div class="cap"><span>① M3U 文件地址（固定不变，推荐）</span><span class="dot" id="srcDot"></span></div>
+      <div class="urlbox" id="urlBox">生成中…</div>
+    </div>
+
+    <div class="sect">
+      <div class="cap"><span>② 当前直播直链（可直接播放）</span><span id="dirUpd"></span></div>
+      <div class="urlbox direct" id="dirBox">读取中…</div>
+    </div>
+
+    <div class="sect">
+      <div class="cap"><span>③ 网页版地址（播放器内置浏览器打开）</span></div>
+      <div class="urlbox" id="webBox">生成中…</div>
+    </div>
+
     <div class="btns">
-      <button class="btn primary" id="copyBtn">复制导入地址</button>
+      <button class="btn primary" id="copyBtn">复制 M3U 地址</button>
+      <button class="btn" id="copyDirBtn">复制直链</button>
       <a class="btn" href="xinyi_radio_local.m3u" download>下载 M3U</a>
       <button class="btn" id="rawBtn">原始播放页</button>
     </div>
   </div>
 
   <div class="note">
-    <b>说明：</b>该电台的播放签名与访问者网络绑定，因此本页直接在<b>你的浏览器内</b>建立播放会话，
-    播放地址永远新鲜、无需更新。电视盒子 / 影视仓 / TVBox 等播放器请使用上方
-    <code>webview://</code> 导入地址（固定不变），播放器会以内置网页方式打开本页并播放。
+    <b>说明：</b>该电台的播放地址与「播放会话」绑定（会话一断即失效），因此本页在
+    <b>你的浏览器内</b>实时建立播放会话，保证随时可听。给电视盒子 / 影视仓 / TVBox 使用时：
+    填 <b>① M3U 文件地址</b>（内容由云端自动刷新，导入一次即可）；也可直接填
+    <b>② 当前直链</b>。若播放器支持内嵌网页，<b>③ 网页版地址</b> 无需任何维护。
   </div>
 
-  <div class="footer">Powered by GitHub Pages · 每天 07:30 / 17:30 自动巡检</div>
+  <div class="footer">Powered by GitHub Pages · 直链由云端会话保活自动刷新</div>
 </div>
 
 <script>
@@ -136,15 +158,39 @@
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
 
-  /* 固定导入地址 */
   var base = location.origin + location.pathname.replace(/[^/]*$/, '');
-  var WEB_URL = base;                                 /* 网页本身 */
-  var WEBVIEW = 'webview://' + base;                  /* 播放器导入 */
-  $('urlBox').textContent = WEBVIEW;
+  var M3U_URL = base + 'xinyi_radio_local.m3u';
+  var WEBVIEW = 'webview://' + base;
+  var DIRECT = '';
+
+  $('urlBox').textContent = M3U_URL;
+  $('webBox').textContent = WEBVIEW;
 
   /* 台标 */
   $('logo').src = 'https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg';
   $('logo').addEventListener('error', function () { this.style.display = 'none'; });
+
+  /* 读取 m3u，解析当前直链与更新时间 */
+  fetch(M3U_URL + '?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+    .then(function (txt) {
+      var direct = '', upd = '';
+      txt.split(/\r?\n/).forEach(function (raw) {
+        var l = raw.trim();
+        if (!l) return;
+        if (/^#\s*更新/.test(l)) {
+          upd = l.replace(/^#\s*更新\s*[:：]?\s*/, '');
+        } else if (!direct && /^https?:\/\//i.test(l)) {
+          direct = l;
+        }
+      });
+      DIRECT = direct;
+      $('dirBox').textContent = direct || '（暂无，等待云端刷新）';
+      $('dirUpd').textContent = upd ? ('更新 ' + upd.replace(/\(.*?\)/g, '').trim()) : '';
+    })
+    .catch(function () {
+      $('dirBox').textContent = '（读取失败，可稍后刷新）';
+    });
 
   /* 开始收听 */
   var started = false;
@@ -158,7 +204,6 @@
     $('viz').classList.add('on');
     $('miniDot').className = 'dot';
     $('miniTxt').textContent = '播放器已加载';
-    /* iframe 内为第三方页面（跨域），若未自动播放请点击其中播放键 */
     setTimeout(function () {
       $('miniTxt').textContent = '若未出声，请点击播放器中的 ▶ 按钮';
       setTimeout(function () { $('miniTxt').textContent = '正在播放'; }, 6000);
@@ -171,17 +216,17 @@
   });
 
   /* 复制 */
-  $('copyBtn').addEventListener('click', function () {
-    var text = WEBVIEW;
+  function copyText(text, btn) {
+    if (!text) return;
     var done = function () {
-      var b = $('copyBtn'), o = b.textContent;
-      b.textContent = '已复制 ✓';
-      setTimeout(function () { b.textContent = o; }, 1500);
+      var o = btn.textContent;
+      btn.textContent = '已复制 ✓';
+      setTimeout(function () { btn.textContent = o; }, 1500);
     };
     if (navigator.clipboard && window.isSecureContext) {
       navigator.clipboard.writeText(text).then(done, function () { fb(text, done); });
     } else { fb(text, done); }
-  });
+  }
   function fb(t, cb) {
     var ta = document.createElement('textarea');
     ta.value = t; ta.style.cssText = 'position:fixed;opacity:0';
@@ -189,15 +234,21 @@
     try { document.execCommand('copy'); cb(); } catch (e) {}
     document.body.removeChild(ta);
   }
+  $('copyBtn').addEventListener('click', function () { copyText(M3U_URL, this); });
+  $('copyDirBtn').addEventListener('click', function () {
+    if (!DIRECT) { this.textContent = '暂无直链'; var b = this;
+      setTimeout(function () { b.textContent = '复制直链'; }, 1500); return; }
+    copyText(DIRECT, this);
+  });
 
-  /* 巡检状态（由 GitHub Actions 每天 07:30 / 17:30 更新） */
+  /* 巡检状态（由 GitHub Actions 定时更新） */
   fetch('status.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { if (!r.ok) throw 0; return r.json(); })
     .then(function (s) {
       var okAll = s.page === 'ok' && s.api === 'ok' && s.pages === 'ok';
       $('chkTxt').innerHTML = okAll
-        ? '<span class="dot"></span> 正常（' + (s.time || '') + '）'
-        : '<span class="dot warn"></span> 异常（' + (s.time || '') + '）';
+        ? '<span class="dot"></span> 链路正常（' + (s.time || '') + '）'
+        : '<span class="dot warn"></span> 链路异常（' + (s.time || '') + '）';
     })
     .catch(function () {
       $('chkTxt').textContent = '暂无巡检数据';
