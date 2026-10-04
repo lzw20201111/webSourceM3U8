@@ -13,23 +13,25 @@
 
 本脚本做的事：
   在一个长任务（默认约 5.5 小时）里，为每个频道各维持一个无头 Chrome 播放会话，
-  启动时把当前有效地址写入 xinyi_radio_local.m3u（直连版），期间地址变化则同步更新。
-  另生成 xinyi_web.m3u（网页版，免维护）。配合 workflow 每 3 小时触发一次，
-  多个任务互相重叠，使直链长期可用。
+  把当前有效地址写入 current.json（供 Cloudflare Worker 中转服务实时读取），
+  并按需生成 m3u。配合 workflow 每 3 小时触发一次，多个任务互相重叠，使直链长期可用。
 
-两个 M3U 文件（按播放方式拆分）：
-  xinyi_radio_local.m3u —— 直连版：广播 / 电视的真实 m3u8 地址（需云端会话保活）
+三个产出文件：
+  current.json          —— 当前有效直链（中转服务 / 网页读取，随会话自动刷新）
+  xinyi_radio_local.m3u —— 直连版
+                            · 未配置 RELAY_BASE 时：写真实 m3u8 地址（动态刷新）
+                            · 配置了 RELAY_BASE 后：写中转的【静态地址】，永久不变
   xinyi_web.m3u         —— 网页版：webview:// 打开网页播放（完全免维护）
-
-实现说明：各频道用 asyncio 并发（Playwright 同步 API 不支持多线程，
-  见 https://playwright.dev/python/docs/library#threading ），每个频道一个独立浏览器。
 
 环境变量：
   RUN_MINUTES   本次任务运行时长（分钟），默认 330
+  RELAY_BASE    中转服务地址（如 https://xinyi-relay.xxx.workers.dev）；
+                配置后直连版 m3u 转为静态地址，不再随会话刷新
   PW_CHANNEL    可选，指定浏览器通道（本地调试用 chrome，Actions 留空）
 """
 
 import asyncio
+import json
 import os
 import subprocess
 import threading
@@ -41,9 +43,13 @@ from playwright.async_api import async_playwright
 CST = timezone(timedelta(hours=8))
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# 输出两个文件，分别对应两种播放方式
+# 输出文件
 M3U_DIRECT = os.path.join(ROOT, "xinyi_radio_local.m3u")   # 直连版
 M3U_WEB = os.path.join(ROOT, "xinyi_web.m3u")              # 网页版
+JSON_FILE = os.path.join(ROOT, "current.json")             # 当前有效直链（中转服务用）
+
+# 中转服务地址；配置后「直连版」转为永久不变的静态地址
+RELAY_BASE = (os.environ.get("RELAY_BASE") or "").rstrip("/")
 
 WEB_BASE = "https://lzw20201111.github.io/webSourceM3U8/"
 
@@ -57,6 +63,7 @@ CHANNELS = [
         "name": "信宜融媒综合广播",
         "label": "信宜融媒综合广播 (FM98.9)",
         "web": WEB_BASE,
+        "relay": "/xinyi/radio.m3u8",
     },
     {
         "id": "xinyi-tv",
@@ -66,6 +73,7 @@ CHANNELS = [
         "name": "信宜综合电视台",
         "label": "信宜综合电视台",
         "web": WEB_BASE + "tv.html",
+        "relay": "/xinyi/tv.m3u8",
     },
 ]
 
@@ -148,7 +156,25 @@ def _head(kind, note):
 
 
 def build_direct_m3u():
-    """直连版：各频道的真实 m3u8 地址（由云端会话保活）"""
+    """直连版：中转静态地址（已配置 RELAY_BASE）或真实 m3u8 地址（未配置）"""
+    if RELAY_BASE:
+        lines = [
+            "#EXTM3U",
+            "# 频道：信宜融媒综合广播 (FM98.9) ＋ 信宜综合电视台",
+            "# 类型：静态直连（地址永久不变，由中转服务实时解析当前有效流）",
+            "# 说明：以下地址写一次终身可用，无需随直播会话刷新；"
+            "网页版见 xinyi_web.m3u。",
+        ]
+        for ch in CHANNELS:
+            lines += [
+                '#EXTINF:-1 tvg-id="%s" tvg-name="%s" tvg-logo="%s" '
+                'group-title="广东",%s' % (ch["id"], ch["name"], ch["logo"],
+                                            ch["label"]),
+                RELAY_BASE + ch["relay"],
+            ]
+        lines.append("")
+        return "\n".join(lines)
+
     lines = _head("直连（播放器直接播放，云端会话自动保活）",
                   "# 说明：本文件只含「直连」；网页版见 xinyi_web.m3u。")
     for ch in CHANNELS:
@@ -162,6 +188,13 @@ def build_direct_m3u():
         ]
     lines.append("")
     return "\n".join(lines)
+
+
+def build_current_json():
+    """当前有效直链（供中转服务实时读取）"""
+    data = {ch["id"]: STATE[ch["id"]] for ch in CHANNELS if ch["id"] in STATE}
+    data["time"] = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
+    return json.dumps(data, ensure_ascii=False, indent=2) + "\n"
 
 
 def build_web_m3u():
@@ -180,21 +213,29 @@ def build_web_m3u():
 
 
 def publish():
-    """把两个 m3u 写入文件并推送；内容无变化则跳过（加锁，避免并发写冲突）"""
+    """写出各产出文件并推送；只有内容真正变化（忽略时间戳）才提交"""
     with PUB_LOCK:
         changed = []
+
+        # 1) 两个 m3u：忽略「更新：」行的差异，只在频道/地址真正变化时提交
         for path, content in ((M3U_DIRECT, build_direct_m3u()),
                               (M3U_WEB, build_web_m3u())):
-            old = ""
-            if os.path.exists(path):
-                with open(path, encoding="utf-8") as f:
-                    old = f.read()
-            # 忽略「更新时间」行的差异，只在频道/地址真正变化时提交
+            old = _read(path)
             if _strip_stamp(old) == _strip_stamp(content):
                 continue
-            with open(path, "w", encoding="utf-8", newline="\n") as f:
-                f.write(content)
+            _write(path, content)
             changed.append(os.path.basename(path))
+
+        # 2) current.json：中转服务读它拿当前有效地址
+        jcontent = build_current_json()
+        jold = _read(JSON_FILE)
+        if _strip_json_time(jold) != _strip_json_time(jcontent):
+            _write(JSON_FILE, jcontent)
+            changed.append(os.path.basename(JSON_FILE))
+        elif jold != jcontent:
+            # 仅时间变化：就地刷新，不提交
+            _write(JSON_FILE, jcontent)
+
         if not changed:
             return False
 
@@ -202,8 +243,7 @@ def publish():
         sh("git", "config", "user.name", "github-actions[bot]", quiet=True)
         sh("git", "config", "user.email",
            "41898282+github-actions[bot]@users.noreply.github.com", quiet=True)
-        sh("git", "add", os.path.basename(M3U_DIRECT), os.path.basename(M3U_WEB),
-           quiet=True)
+        sh("git", "add", *changed, quiet=True)
         if sh("git", "diff", "--cached", "--quiet", quiet=True) == 0:
             return False
         stamp = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
@@ -218,6 +258,28 @@ def publish():
             time.sleep(5)
         log("推送最终失败（本地文件已更新）")
         return True
+
+
+def _read(path):
+    if not os.path.exists(path):
+        return ""
+    with open(path, encoding="utf-8") as f:
+        return f.read()
+
+
+def _write(path, content):
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        f.write(content)
+
+
+def _strip_json_time(text):
+    """忽略 current.json 里的 time 字段，用于内容比对"""
+    try:
+        d = json.loads(text)
+    except Exception:
+        return text
+    d.pop("time", None)
+    return json.dumps(d, ensure_ascii=False, sort_keys=True)
 
 
 def _strip_stamp(text):

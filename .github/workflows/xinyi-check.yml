@@ -35,6 +35,9 @@ jobs:
 
       - name: 巡检直播链路
         id: check
+        env:
+          # 中转服务地址（仓库 Settings → Variables）；留空则跳过中转链路检查
+          RELAY_BASE: ${{ vars.RELAY_BASE }}
         run: python scripts/health_check.py
 
       - name: 提交巡检结果

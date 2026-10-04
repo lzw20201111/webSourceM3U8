@@ -10,11 +10,15 @@
   pages    —— GitHub Pages 上的网页版是否正常
   m3u      —— 直连版文件（xinyi_radio_local.m3u）是否存在、格式是否正确
   webm3u   —— 网页版文件（xinyi_web.m3u）是否存在、是否含 webview 项
-  direct   —— 广播「直连」当前能否真正拉到 HLS 播放列表（最关键）
-  tvdirect —— 电视「直连」当前能否真正拉到 HLS 播放列表（最关键）
+  direct   —— 广播当前直链能否真正拉到 HLS 播放列表（最关键）
+  tvdirect —— 电视当前直链能否真正拉到 HLS 播放列表（最关键）
+  relay    —— 中转服务的广播静态地址能否拉到播放列表（配置 RELAY_BASE 后才有）
+  relaytv  —— 中转服务的电视静态地址能否拉到播放列表（配置 RELAY_BASE 后才有）
 
 背景：该平台播放地址与「活跃播放会话」绑定。会话由 keepalive 工作流维持，
 本巡检用于第一时间发现链路异常（例如会话中断、平台改版等）。
+
+环境变量：RELAY_BASE —— 中转服务地址，例如 https://xinyi-relay.xxx.workers.dev
 
 退出码：0=全部正常  1=存在异常（Actions 中会标红）
 """
@@ -38,9 +42,16 @@ TV_PAGE_URL = "https://live.xytv.cc/tv/643?uin=1629&refererId=0"
 BASE = "https://lzw20201111.github.io/webSourceM3U8/"
 DIRECT_M3U_URL = BASE + "xinyi_radio_local.m3u"
 WEB_M3U_URL = BASE + "xinyi_web.m3u"
+RAW = "https://raw.githubusercontent.com/lzw20201111/webSourceM3U8/main"
+CURRENT_JSON_URL = RAW + "/current.json"
 
-# status.json 中的直连字段 -> m3u 里的 tvg-id
+RELAY_BASE = (os.environ.get("RELAY_BASE") or "").rstrip("/")
+
+# 直连字段 -> current.json 中的频道键
 DIRECT_KEYS = [("direct", "xinyi-radio"), ("tvdirect", "xinyi-tv")]
+
+# 中转字段 -> 中转路径
+RELAY_KEYS = [("relay", "/xinyi/radio.m3u8"), ("relaytv", "/xinyi/tv.m3u8")]
 
 
 def fetch(url, timeout=20, extra_headers=None):
@@ -81,6 +92,16 @@ def parse_m3u(text):
     return out
 
 
+def parse_current(text):
+    """解析 current.json -> 频道键: 直链"""
+    try:
+        d = json.loads(text)
+    except Exception:
+        return {}
+    return {k: v for k, v in d.items()
+            if k != "time" and isinstance(v, str) and v.startswith("http")}
+
+
 def probe_stream(url):
     """真正拉一次播放列表，确认地址可用（失败重试一次，避免会话切换瞬间误报）"""
     s, body = fetch(url, timeout=20)
@@ -101,19 +122,22 @@ def main():
 
     stamp = "?t=%d" % int(time.time())
 
-    # 直连版文件 + 两条直链的可播性（加时间戳绕过 Pages/CDN 缓存）
+    # 直连版文件：只校验存在与格式（内容在静态模式下是固定地址）
     status, m3u_text = fetch(DIRECT_M3U_URL + stamp)
     if status != "ok":
         results["m3u"] = status
-        for key, _ in DIRECT_KEYS:
-            results[key] = "fail:无法读取源文件"
     elif "#EXTM3U" not in m3u_text:
         results["m3u"] = "fail:格式异常"
-        for key, _ in DIRECT_KEYS:
-            results[key] = "fail:无有效直链"
     else:
         results["m3u"] = "ok"
-        srcs = parse_m3u(m3u_text)
+
+    # 两条直链的可播性：从 current.json 取当前地址（加时间戳绕过 CDN 缓存）
+    jstatus, jtext = fetch(CURRENT_JSON_URL + stamp)
+    if jstatus != "ok":
+        for key, _ in DIRECT_KEYS:
+            results[key] = "fail:无法读取 current.json"
+    else:
+        srcs = parse_current(jtext)
         for key, cid in DIRECT_KEYS:
             url = srcs.get(cid)
             results[key] = probe_stream(url) if url else "fail:未找到直链"
@@ -128,6 +152,11 @@ def main():
         results["webm3u"] = "fail:webview 项不足"
     else:
         results["webm3u"] = "ok"
+
+    # 中转服务的静态地址（配置了 RELAY_BASE 才检查）
+    if RELAY_BASE:
+        for key, path in RELAY_KEYS:
+            results[key] = probe_stream(RELAY_BASE + path + "?h=%d" % int(time.time()))
 
     results["time"] = datetime.now(CST).strftime("%Y-%m-%d %H:%M")
     keys = [k for k in results if k != "time"]

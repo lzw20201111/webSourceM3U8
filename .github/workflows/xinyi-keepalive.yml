@@ -2,9 +2,11 @@ name: 信宜融媒直播直链保活
 
 # 该平台（广电云）的播放地址与「活跃播放会话」绑定，需要持续运行的播放会话才长期可用。
 # 本工作流每 3 小时触发一次，每次运行约 5.5 小时：
-#   - 多个任务互相重叠 → m3u 中的直连地址始终有活跃会话支撑，基本无空窗
+#   - 多个任务互相重叠 → 直链始终有活跃会话支撑，基本无空窗
 #   - 任务内为每个频道（广播 FM98.9 / 综合电视台）各维持一个无头 Chrome 播放会话
-#   - 启动时把最新有效地址写入 xinyi_radio_local.m3u 并提交
+#   - 把最新有效地址写入 current.json（供中转服务实时读取）并提交
+#   - 若仓库变量 RELAY_BASE 已设置，则 xinyi_radio_local.m3u 写入中转的【静态地址】，
+#     内容永久不变，播放器无需再更新
 on:
   schedule:
     - cron: "5 */3 * * *"      # UTC 每 3 小时的第 5 分钟（避开整点调度高峰）
@@ -39,4 +41,6 @@ jobs:
       - name: 维持播放会话并更新直链
         env:
           RUN_MINUTES: "330"
+          # 中转服务地址（仓库 Settings → Variables 里配置；留空则直连版仍写真实地址）
+          RELAY_BASE: ${{ vars.RELAY_BASE }}
         run: python scripts/keepalive.py

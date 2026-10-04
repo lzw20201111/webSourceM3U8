@@ -1,0 +1,12 @@
+name = "xinyi-relay"
+main = "worker.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+# ── 可选：绑定自定义域名（强烈建议）────────────────────────────────
+# workers.dev 域名在部分国内网络下不稳定；若你有域名并已托管在 Cloudflare，
+# 打开下面两行（把域名换成你自己的），部署后即可用 https://live.你的域名/... 访问。
+#
+# routes = [
+#   { pattern = "live.example.com", custom_domain = true }
+# ]
