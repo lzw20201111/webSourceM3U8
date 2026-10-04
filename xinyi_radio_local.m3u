@@ -1,9 +1,9 @@
 #EXTM3U
 # 频道：信宜融媒综合广播 (FM98.9)
-# 更新：2026-10-04 12:15 (北京时间，由 GitHub Actions 自动刷新)
-# 说明：第 1 项「直连」为当前有效播放地址，云端会话自动保活，播放器直接播放即可；
-#       第 2 项「网页版」不需要任何维护，播放器以内置浏览器打开本页播放。
+# 更新：2026-10-04 12:17 (北京时间，由 GitHub Actions 自动刷新)
+# 说明：第 1 项「直连」为当前有效播放地址，云端会话自动保活，
+#       播放器直接播放即可；第 2 项「网页版」不需要任何维护。
 #EXTINF:-1 tvg-id="xinyi-radio" tvg-name="信宜融媒综合广播" tvg-logo="https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg" group-title="广东",信宜融媒综合广播 (FM98.9) · 直连
-https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/radio_channel_223.m3u8?auth_key=1791172918-0-0-8cc0ec889ea040faf9b4ed57a556aebb&extra_key=tGmDBEI0xwzVJEXSIxaK6hiF3Gg2L39rvVRbaiXwwjQC0Hwe0A_klPxtDRGZSPVepZcVV72fggKGZ9-KK0kErGW9ykcdauOJ36yHLvPNxb1WpqZ4UsHYe2hlkuwRH41lQfHPxAHiobEpbOsa5ACptnsm3N1iz7-fNnMJD4_kcFk
+https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/radio_channel_223.m3u8?auth_key=1791173841-0-0-0dc065364ca479c98ad3baba185be4f5&extra_key=xmmPqM8X01oqeD3LCXvkLVfteeBPWocHy1TQEWK0c9BeUqmm9O7EcSdcEyL1Zq4ERSbKMSE1V3PzljvqW-8S8iVnre09RNOteJ6cDL6HMs02Sb1YmJNyGYV4-pITqov0Ky8vMahPC_38ymTdVNacMyUgtqdQSUkWNDTCCaFPxtc
 #EXTINF:-1 tvg-id="xinyi-radio-web" tvg-name="信宜融媒综合广播(网页版)" tvg-logo="https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg" group-title="广东",信宜融媒综合广播 (FM98.9) · 网页版
 webview://https://lzw20201111.github.io/webSourceM3U8/
