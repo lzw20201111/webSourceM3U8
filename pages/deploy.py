@@ -19,36 +19,11 @@ API = "https://api.cloudflare.com/client/v4"
 H = {"Authorization": "Bearer " + TOKEN, "User-Agent": "wb-deploy"}
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
-# 兼容「脚本在仓库根」与「脚本在 pages/ 目录」两种摆放
-_CANDS = [
-    os.path.join(ROOT, "_worker.js"),
-    os.path.join(ROOT, "pages", "_worker.js"),
-]
-SRC = next((p for p in _CANDS if os.path.exists(p)), _CANDS[0])
+SRC = os.path.join(ROOT, "webSourceM3U8", "pages", "_worker.js")
 
 COMPAT_DATE = "2024-09-23"
 MODULE_NAME = "index.mjs"
 MODULE_MIME = "application/javascript+module"
-
-SNAPSHOT_MARK = "/*__CHANNELS_SNAPSHOT__*/ null;"
-CHANNELS_JSON = os.path.join(os.path.dirname(ROOT), "channels.json")
-
-
-def inject_snapshot(js_source: bytes) -> bytes:
-    """把 channels.json 作为「最后已知可用」快照注入 _worker.js"""
-    payload = b"null;"
-    if os.path.exists(CHANNELS_JSON):
-        data = json.load(open(CHANNELS_JSON, encoding="utf-8"))
-        payload = json.dumps(data, ensure_ascii=False,
-                             separators=(",", ":")).encode() + b";"
-        print("注入快照：%d 个频道，%d 字节"
-              % (len(data.get("channels", {})), len(payload)))
-    else:
-        print("未找到 channels.json，快照置空")
-    if SNAPSHOT_MARK.encode() not in js_source:
-        print("⚠ 未找到快照标记，跳过注入")
-        return js_source
-    return js_source.replace(SNAPSHOT_MARK.encode(), payload)
 
 
 def build_inner_multipart(js_source: bytes) -> bytes:
@@ -76,7 +51,7 @@ def build_inner_multipart(js_source: bytes) -> bytes:
 
 
 def deploy():
-    js = inject_snapshot(open(SRC, "rb").read())
+    js = open(SRC, "rb").read()
     bundle = build_inner_multipart(js)
     print("模块 %s  %d 字节  →  _worker.bundle %d 字节" % (MODULE_NAME, len(js), len(bundle)))
 
