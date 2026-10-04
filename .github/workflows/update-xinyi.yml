@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: "30 23 * * *"
     - cron: "30 9 * * *"
+  push:
+    # 抓取脚本或本工作流变更时自动运行一次，便于改动后立即验证
+    paths:
+      - "scripts/**"
+      - ".github/workflows/update-xinyi.yml"
   workflow_dispatch:        # 支持在网页上手动点击运行
 
 permissions:
