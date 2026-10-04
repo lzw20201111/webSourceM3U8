@@ -1,0 +1,71 @@
+name: 静态播放源抓取（webview → m3u8）
+
+# 背景：webview.txt 里全是「网页源」，普通播放器放不了；
+# 而抓出来的真实流地址普遍带时效签名（auth_key / txTime / ysign…），过一段时间就失效。
+# 本工作流每 30 分钟重扫一遍，把最新有效的流地址写进 channels.json，
+# 中转服务（Cloudflare Pages）每次请求实时读取，对外提供【永久不变】的静态播放地址。
+on:
+  schedule:
+    - cron: "17,47 * * * *"     # UTC 每半小时的 17 分 / 47 分
+  push:
+    paths:
+      - "scripts/harvest_webview.py"
+      - ".github/workflows/webview-harvest.yml"
+      - "webview.txt"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: webview-harvest
+  cancel-in-progress: false
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装 Playwright 与 Chromium
+        run: |
+          pip install playwright
+          python -m playwright install --with-deps chromium
+
+      - name: 抓取真实流地址
+        env:
+          CONCURRENCY: "6"
+        run: python scripts/harvest_webview.py
+
+      - name: 提交结果
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add channels.json webview_static.m3u harvest_result.json
+          if git diff --cached --quiet; then
+            echo "内容无变化，跳过提交"
+            exit 0
+          fi
+          git commit -m "chore: 刷新静态播放源（$(date -u -d '+8 hours' '+%Y-%m-%d %H:%M') CST）"
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            sleep 5
+          done
+
+      - name: 结果摘要
+        run: |
+          python - <<'PY'
+          import json
+          d = json.load(open("channels.json", encoding="utf-8"))
+          print("可用频道：%d / %d" % (d["ok"], d["total"]))
+          for f in d.get("failed", [])[:15]:
+              print("  未抓到：%s（%s）%s" % (f["n"], f["g"], f["why"]))
+          PY
