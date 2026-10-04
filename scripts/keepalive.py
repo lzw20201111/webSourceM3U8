@@ -53,8 +53,11 @@ M3U_DIRECT = os.path.join(ROOT, "xinyi_radio_local.m3u")   # 直连版
 M3U_WEB = os.path.join(ROOT, "xinyi_web.m3u")              # 网页版
 JSON_FILE = os.path.join(ROOT, "current.json")             # 当前有效直链（中转服务用）
 
-# 中转服务地址；配置后「直连版」转为永久不变的静态地址
-RELAY_BASE = (os.environ.get("RELAY_BASE") or "").rstrip("/")
+# 中转服务地址；配置后「直连版」转为永久不变的静态地址。
+# 内置默认值，无需在仓库里配置任何变量/密钥；
+# 如需临时指向别处，设环境变量 RELAY_BASE 覆盖即可。
+DEFAULT_RELAY_BASE = "https://xinyi-relay.pages.dev"
+RELAY_BASE = (os.environ.get("RELAY_BASE") or DEFAULT_RELAY_BASE).rstrip("/")
 
 WEB_BASE = "https://lzw20201111.github.io/webSourceM3U8/"
 

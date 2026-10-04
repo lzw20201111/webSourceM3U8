@@ -45,7 +45,9 @@ WEB_M3U_URL = BASE + "xinyi_web.m3u"
 RAW = "https://raw.githubusercontent.com/lzw20201111/webSourceM3U8/main"
 CURRENT_JSON_URL = RAW + "/current.json"
 
-RELAY_BASE = (os.environ.get("RELAY_BASE") or "").rstrip("/")
+# 中转服务地址（内置默认值，与 keepalive.py 保持一致；可用环境变量覆盖）
+DEFAULT_RELAY_BASE = "https://xinyi-relay.pages.dev"
+RELAY_BASE = (os.environ.get("RELAY_BASE") or DEFAULT_RELAY_BASE).rstrip("/")
 
 # 直连字段 -> current.json 中的频道键
 DIRECT_KEYS = [("direct", "xinyi-radio"), ("tvdirect", "xinyi-tv")]
