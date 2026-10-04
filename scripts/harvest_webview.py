@@ -17,6 +17,9 @@ webview.txt 里 377 条是「网页源」（webview:// 后跟一个播放页地�
   ONLY_GROUP    只跑指定分类（调试用）
   LIMIT         只跑前 N 条（调试用）
   PW_CHANNEL    浏览器通道（本机调试用 chrome；Actions 留空）
+  REGEN=1       不重抓，只按最新规则重算 id 并重写产物
+  RESUME=1      沿用上次成功结果，只重跑失败的
+  KEEP_PREV=1   本轮抓失败的条目，若上轮成功过则沿用上轮地址（防止抓取环境变差时丢频道）
 """
 
 import asyncio
@@ -45,6 +48,10 @@ CONCURRENCY = int(os.environ.get("CONCURRENCY") or 5)
 ONLY_GROUP = os.environ.get("ONLY_GROUP") or ""
 LIMIT = int(os.environ.get("LIMIT") or 0)
 PW_CHANNEL = os.environ.get("PW_CHANNEL") or None
+KEEP_PREV = bool(os.environ.get("KEEP_PREV"))
+
+# 上一轮的成功结果（KEEP_PREV=1 时用于兜底）
+PREV_MAP = {}
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/154.0.0.0 Safari/537.36")
@@ -345,6 +352,13 @@ async def main():
         return
 
     prev, prev_ok = load_prev()
+
+    global PREV_MAP
+    if KEEP_PREV:
+        PREV_MAP = load_prev_map()
+        if PREV_MAP:
+            print("已载入上轮成功结果 %d 条作为兜底" % len(PREV_MAP), flush=True)
+
     results = []
     if prev_ok:
         results = [r for r in prev.values()]
@@ -401,7 +415,39 @@ def load_prev():
     return keep, set(keep)
 
 
+def load_prev_map():
+    """载入上一轮全部「成功」条目，供本轮失败时兜底沿用"""
+    if not os.path.exists(RAW_JSON):
+        return {}
+    try:
+        prev = json.load(open(RAW_JSON, encoding="utf-8"))
+    except Exception:
+        return {}
+    return {r["id"]: r for r in prev if r.get("ok")}
+
+
+def rescue(results):
+    """本轮抓失败的条目，若上轮成功过则沿用上轮地址（标记 stale）"""
+    n = 0
+    for r in results:
+        if r.get("ok") or r.get("stale"):
+            continue
+        p = PREV_MAP.get(r.get("id"))
+        if not p:
+            continue
+        r["url"] = p["url"]
+        r["signed"] = p.get("signed")
+        r["ok"] = True
+        r["stale"] = 1
+        r["reason"] = ""
+        n += 1
+    return n
+
+
 def save(results):
+    if KEEP_PREV and PREV_MAP:
+        rescue(results)
+
     ok_all = [r for r in results if r["ok"]]
     order = {r["id"]: i for i, r in enumerate(results)}
     ok_all.sort(key=lambda r: order[r["id"]])
@@ -420,7 +466,8 @@ def save(results):
         "total": len(results), "ok": len(ok),
         "channels": {r["id"]: {"n": r["name"], "g": r["group"],
                                "p": r["page"], "u": r["url"],
-                               "s": 1 if r.get("signed") else 0}
+                               "s": 1 if r.get("signed") else 0,
+                               "st": 1 if r.get("stale") else 0}
                      for r in ok},
         "failed": [{"n": r["name"], "g": r["group"], "p": r["page"],
                     "why": r.get("reason", "")}
