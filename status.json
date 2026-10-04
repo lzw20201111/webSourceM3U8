@@ -3,8 +3,8 @@
   "tvpage": "ok",
   "pages": "ok",
   "m3u": "ok",
+  "webm3u": "ok",
   "direct": "ok",
   "tvdirect": "ok",
-  "webm3u": "fail:HTTP 404",
-  "time": "2026-10-04 13:20"
+  "time": "2026-10-04 13:25"
 }
