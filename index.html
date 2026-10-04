@@ -191,6 +191,15 @@
       <div class="urlbox" id="webBox">生成中…</div>
     </div>
 
+    <div class="sect">
+      <div class="cap"><span>⑤ 全国网页源 · 静态播放源清单（330 个频道，导入一次即可）</span></div>
+      <div class="urlbox pin" id="webviewM3uBox">生成中…</div>
+      <div class="btns" style="margin-top:10px">
+        <button class="btn primary" id="copyWebviewM3uBtn">复制清单地址</button>
+        <a class="btn" id="webviewM3uDl" href="#" target="_blank" rel="noopener">打开清单</a>
+      </div>
+    </div>
+
     <div class="btns">
       <button class="btn primary" id="copyBtn">复制直连版地址</button>
       <button class="btn" id="copyWebM3uBtn">复制网页版地址</button>
@@ -207,7 +216,10 @@
     <b>给电视盒子 / 影视仓 / TVBox 用：</b>填 <b>★ 永久播放地址</b>（永不改变，写一次终身可用），
     或填 <b>① 直连版 M3U 文件地址</b>（导入一次即可）。该平台原始地址与「播放会话」绑定、
     会随时轮换，因此上面这些地址由中转服务实时解析，播放器侧完全无感。
-    <b>② 网页版</b> 适合支持内嵌网页的播放器，免维护。
+    <b>② 网页版</b> 适合支持内嵌网页的播放器，免维护。<br>
+    <b>⑤ 全国网页源清单：</b>把 <code>webview.txt</code> 里 417 条「网页源」逐条用浏览器打开、
+    抓到真实 HLS 后转成的 <b>330 个静态播放源</b>（央视 / 卫视 / 各省市县频道）。
+    每条地址都走同一中转，永久不变，导入一次即可。
   </div>
 
   <div class="footer">Powered by GitHub Pages · 静态地址由 Cloudflare Pages 中转提供</div>
@@ -228,12 +240,16 @@
   var RELAY = 'https://xinyi-relay.pages.dev';
   var RELAY_RADIO = RELAY + '/xinyi/radio.m3u8';
   var RELAY_TV = RELAY + '/xinyi/tv.m3u8';
+  /* 全国网页源（webview.txt）转成的静态播放源清单 */
+  var WEBVIEW_M3U = RELAY + '/webview.m3u';
 
   $('urlBox').textContent = M3U_URL;
   $('webM3uBox').textContent = WEB_M3U_URL;
   $('webBox').textContent = WEBVIEW;
   $('relayRadio').textContent = RELAY_RADIO;
   $('relayTv').textContent = RELAY_TV;
+  $('webviewM3uBox').textContent = WEBVIEW_M3U;
+  $('webviewM3uDl').href = WEBVIEW_M3U;
 
   /* 台标 */
   $('logo').src = 'https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg';
@@ -421,6 +437,7 @@
   $('copyBtn').addEventListener('click', function () { copyText(M3U_URL, this); });
   $('copyWebM3uBtn').addEventListener('click', function () { copyText(WEB_M3U_URL, this); });
   $('copyRelayBtn').addEventListener('click', function () { copyText(RELAY_RADIO, this); });
+  $('copyWebviewM3uBtn').addEventListener('click', function () { copyText(WEBVIEW_M3U, this); });
   $('copyRelayTvBtn').addEventListener('click', function () { copyText(RELAY_TV, this); });
   $('copyDirBtn').addEventListener('click', function () {
     if (!DIRECT) { this.textContent = '暂无直链'; var b = this;
