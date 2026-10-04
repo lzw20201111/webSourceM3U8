@@ -62,6 +62,11 @@
   .start:hover{transform:translateY(-2px)}
   .start svg{width:18px;height:18px;fill:#fff}
   .hint{font-size:12.5px;color:var(--sub)}
+  .playbox{display:none;padding-bottom:16px}
+  .playbox.on{display:block}
+  .playbox video{width:100%;aspect-ratio:16/9;max-height:420px;display:block;background:#000}
+  .playtip{font-size:12.5px;color:var(--sub);margin-top:12px;
+    display:flex;align-items:center;justify-content:center;gap:6px}
   .framebox{display:none;background:#000}
   .framebox.on{display:block}
   .framebox iframe{width:100%;height:620px;border:0;display:block}
@@ -111,7 +116,11 @@
       <button class="start" id="startBtn">
         <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>开始观看
       </button>
-      <div class="hint">点击后在页面内直接播放 · 无需安装任何软件</div>
+      <div class="hint">点击后直接播放直播流 · 无需安装任何软件</div>
+    </div>
+    <div class="playbox" id="playBox">
+      <video id="player" playsinline controls preload="none"></video>
+      <div class="playtip"><span class="dot" id="modeDot"></span><span id="playTip">正在播放</span></div>
     </div>
     <div class="framebox" id="frameBox">
       <iframe id="frame" title="播放器" allow="autoplay; encrypted-media; fullscreen" referrerpolicy="no-referrer"></iframe>
@@ -155,9 +164,9 @@
   </div>
 
   <div class="note">
-    <b>说明：</b>该电视台的播放地址与「播放会话」绑定（会话一断即失效），因此本页在
-    <b>你的浏览器内</b>实时建立播放会话，保证随时可看。播放方式分成两个文件：
-    <b>① 直连版</b>（广播＋电视的真实 m3u8，由云端会话自动保活，播放器直接播放）、
+    <b>说明：</b>点击「开始观看」后，本页会拉取云端刚刷新的<b>直连地址并直接播放</b>（hls.js 拉流，
+    不必再打开原站）；若直连暂时不可用，会自动切回内嵌原始直播页兜底，保证一定能看。
+    播放方式分成两个文件：<b>① 直连版</b>（广播＋电视的真实 m3u8，由云端会话自动保活）、
     <b>② 网页版</b>（webview 打开网页播放，完全免维护）。给电视盒子 / 影视仓 / TVBox 使用时，
     按播放器能力二选一，导入一次即可；也可直接填 <b>③ 当前直链</b>。
   </div>
@@ -212,22 +221,123 @@
       $('dirBox').textContent = '（读取失败，可稍后刷新）';
     });
 
-  /* 开始观看 */
-  var started = false;
+  /* —— 播放：点击后优先播放「直连」，不可用则自动切回原始播放页 —— */
+  var CID = 'xinyi-tv';
+  var HLS_CDN = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js';
+
+  var started = false, hls = null, watchdog = null, fellBack = false;
+
+  function setTip(text, ok) {
+    $('playTip').textContent = text;
+    $('miniTxt').textContent = text;
+    $('modeDot').className = 'dot' + (ok ? '' : ' warn');
+    $('miniDot').className = 'dot' + (ok ? '' : ' warn');
+  }
+
+  /* 现取一次最新直链（绕缓存），保证点击时用的是云端刚刷新的地址 */
+  function fetchDirect(cid) {
+    return fetch(M3U_URL + '?t=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw 0; return r.text(); })
+      .then(function (txt) {
+        var hit = '', cur = '';
+        txt.split(/\r?\n/).forEach(function (raw) {
+          var l = raw.trim();
+          if (!l) return;
+          if (l.indexOf('#EXTINF') === 0) {
+            var m = l.match(/tvg-id="([^"]+)"/);
+            cur = m ? m[1] : '';
+          } else if (l.charAt(0) !== '#' && cur && /^https?:\/\//i.test(l)) {
+            if (cur === cid && !hit) { hit = l; }
+            cur = '';
+          }
+        });
+        return hit || null;
+      })
+      .catch(function () { return null; });
+  }
+
+  function loadHls(cb) {
+    if (window.Hls) return cb(true);
+    var s = document.createElement('script');
+    s.src = HLS_CDN;
+    s.onload = function () { cb(!!window.Hls); };
+    s.onerror = function () { cb(false); };
+    document.head.appendChild(s);
+  }
+
+  /* 直连不可用：切回内嵌原始直播页（原站页面自建会话，同样能看） */
+  function fallback(reason) {
+    if (watchdog) { clearTimeout(watchdog); watchdog = null; }
+    if (hls) { try { hls.destroy(); } catch (e) {} hls = null; }
+    $('playBox').classList.remove('on');
+    $('cover').style.display = 'none';
+    $('viz').classList.add('on');
+    if (!fellBack) { fellBack = true; $('frame').src = PAGE; }
+    $('frameBox').classList.add('on');
+    setTip(reason || '直连暂不可用，已切回原始直播页（可点播放器 ▶）', false);
+  }
+
+  function playUrl(url) {
+    var v = $('player');
+    $('playBox').classList.add('on');
+    setTip('正在连接直播流…', true);
+
+    var settled = false;
+    watchdog = setTimeout(function () { if (!settled) { fallback('直连响应超时，已切回原始直播页'); } }, 15000);
+
+    function ok() {
+      settled = true;
+      if (watchdog) { clearTimeout(watchdog); watchdog = null; }
+      setTip('正在直播 · 直连', true);
+      v.muted = false;
+      var pm = v.play();
+      if (pm && pm.catch) { pm.catch(function () { /* 需用户再点一次 ▶ */ }); }
+    }
+
+    /* Safari / iOS 原生 HLS */
+    function useNative() {
+      v.src = url;
+      v.addEventListener('loadedmetadata', ok, { once: true });
+      v.addEventListener('error', function () {
+        if (!settled) { fallback('直连暂时失效，已切回原始直播页'); }
+      }, { once: true });
+    }
+
+    /* hls.js（MSE）播放 */
+    function useHls() {
+      try {
+        if (hls) { try { hls.destroy(); } catch (e) {} }
+        hls = new window.Hls({ enableWorker: true });
+        hls.on(window.Hls.Events.MANIFEST_PARSED, ok);
+        hls.on(window.Hls.Events.ERROR, function (evt, data) {
+          if (data && data.fatal && !settled) {
+            fallback('直连暂时失效，已切回原始直播页');
+          }
+        });
+        hls.loadSource(url);
+        hls.attachMedia(v);
+      } catch (e) {
+        fallback('直连播放出错，已切回原始直播页');
+      }
+    }
+
+    /* 注意：Chrome 对 application/vnd.apple.mpegurl 也回 "maybe" 却放不了 HLS，
+       所以必须先判断 hls.js（MSE）是否可用，再退到原生 */
+    loadHls(function (hasHls) {
+      if (hasHls && window.Hls.isSupported()) { useHls(); return; }
+      if (v.canPlayType('application/vnd.apple.mpegurl')) { useNative(); return; }
+      fallback('当前浏览器不支持 HLS 播放，已切回原始直播页');
+    });
+  }
+
   $('startBtn').addEventListener('click', function () {
     if (started) return;
     started = true;
-    $('miniTxt').textContent = '正在加载播放器…';
-    $('frame').src = PAGE;
-    $('frameBox').classList.add('on');
     $('cover').style.display = 'none';
-    $('viz').classList.add('on');
-    $('miniDot').className = 'dot';
-    $('miniTxt').textContent = '播放器已加载';
-    setTimeout(function () {
-      $('miniTxt').textContent = '若未播放，请点击播放器中的 ▶ 按钮';
-      setTimeout(function () { $('miniTxt').textContent = '正在直播'; }, 6000);
-    }, 8000);
+    setTip('正在获取最新直播地址…', true);
+    fetchDirect(CID).then(function (url) {
+      if (url) { playUrl(url); } else { fallback(); }
+    });
   });
 
   /* 原始直播页 */
