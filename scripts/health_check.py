@@ -18,6 +18,7 @@
 import json
 import os
 import sys
+import time
 import urllib.request
 import urllib.error
 from datetime import datetime, timedelta, timezone
@@ -63,8 +64,8 @@ def main():
     results["page"] = check(PAGE_URL, "<div", "直播页")
     results["pages"] = check(INDEX_URL, "信宜", "收听页")
 
-    # 直播源文件 + 直链可播性
-    status, m3u_text = fetch(M3U_URL)
+    # 直播源文件 + 直链可播性（加时间戳绕过 Pages/CDN 缓存）
+    status, m3u_text = fetch(M3U_URL + "?t=%d" % int(time.time()))
     if status != "ok":
         results["m3u"] = status
         results["direct"] = "fail:无法读取源文件"
@@ -82,8 +83,11 @@ def main():
         if not direct:
             results["direct"] = "fail:未找到直链"
         else:
-            # 真正拉一次播放列表，确认地址可用
+            # 真正拉一次播放列表，确认地址可用（失败重试一次，避免会话切换瞬间误报）
             s, body = fetch(direct, timeout=20)
+            if not (s == "ok" and "#EXTM3U" in body):
+                time.sleep(6)
+                s, body = fetch(direct, timeout=20)
             results["direct"] = "ok" if (s == "ok" and "#EXTM3U" in body) else (
                 s if s != "ok" else "fail:返回内容异常")
 
