@@ -1,0 +1,51 @@
+name: 信宜广播直播链路巡检
+
+# 每天北京时间 07:30 与 17:30 各巡检一次（UTC：23:30 / 09:30）
+# 检查直播页、频道接口、GitHub Pages 是否正常，结果写入 status.json 供网页展示
+on:
+  schedule:
+    - cron: "30 23 * * *"
+    - cron: "30 9 * * *"
+  push:
+    paths:
+      - "scripts/**"
+      - ".github/workflows/xinyi-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: xinyi-check
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 巡检直播链路
+        id: check
+        run: python scripts/health_check.py
+
+      - name: 提交巡检结果
+        if: always()
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- status.json; then
+            echo "巡检结果无变化"
+            exit 0
+          fi
+          git add status.json
+          git commit -m "chore: 巡检结果更新 $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M') CST"
+          git push

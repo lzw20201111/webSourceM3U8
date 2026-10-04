@@ -7,360 +7,201 @@
 <title>信宜融媒综合广播 FM98.9 · 在线收听</title>
 <style>
   :root{
-    --bg:#f2f3f5;
-    --card:#ffffff;
-    --text:#1c1f23;
-    --sub:#6b7280;
-    --line:#e6e8eb;
-    --brand:#e0523c;
-    --brand-2:#f08a5d;
-    --ok:#16a34a;
-    --warn:#d97706;
+    --bg:#f2f3f5; --card:#fff; --text:#1c1f23; --sub:#6b7280; --line:#e6e8eb;
+    --brand:#e0523c; --brand-2:#f08a5d; --ok:#16a34a; --warn:#d97706;
     --shadow:0 1px 2px rgba(16,24,40,.04),0 8px 24px rgba(16,24,40,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html,body{height:100%}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",
       "Hiragino Sans GB","Microsoft YaHei",sans-serif;
     background:
       radial-gradient(1200px 500px at 50% -180px, #ffe9e2 0%, rgba(255,233,226,0) 70%),
       var(--bg);
-    color:var(--text);
-    -webkit-font-smoothing:antialiased;
-    display:flex;justify-content:center;
-    padding:32px 16px 48px;
+    color:var(--text); -webkit-font-smoothing:antialiased;
+    display:flex;justify-content:center; padding:28px 14px 46px;
   }
-  .wrap{width:100%;max-width:520px}
-
-  /* ---------- 顶部频道卡 ---------- */
+  .wrap{width:100%;max-width:560px}
   .card{background:var(--card);border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--line)}
-  .hero{display:flex;align-items:center;gap:16px;padding:18px}
-  .logo{
-    position:relative;width:62px;height:62px;border-radius:14px;flex:none;overflow:hidden;
-    background:linear-gradient(135deg,var(--brand),var(--brand-2));
-    box-shadow:0 4px 12px rgba(224,82,60,.25);
-  }
+
+  /* 顶部 */
+  .hero{display:flex;align-items:center;gap:15px;padding:16px 18px}
+  .logo{position:relative;width:58px;height:58px;border-radius:14px;flex:none;overflow:hidden;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 4px 12px rgba(224,82,60,.25)}
   .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .logo b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
-    color:#fff;font-size:19px;font-weight:700;letter-spacing:1px}
-  .hero h1{font-size:19px;font-weight:650;letter-spacing:.2px}
-  .hero p{font-size:13px;color:var(--sub);margin-top:4px}
-  .tag{
-    display:inline-flex;align-items:center;gap:5px;margin-top:8px;
-    font-size:11.5px;color:#a4402f;background:#fdece8;border-radius:999px;padding:3px 9px;font-weight:600;
-  }
+  .logo b{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:700}
+  .hero h1{font-size:18px;font-weight:650}
+  .hero p{font-size:12.5px;color:var(--sub);margin-top:3px}
+  .tag{display:inline-flex;align-items:center;gap:5px;margin-top:7px;font-size:11px;color:#a4402f;
+    background:#fdece8;border-radius:999px;padding:3px 9px;font-weight:600}
+  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok)}
+  .dot.off{background:#c3c7cc}.dot.warn{background:var(--warn)}
 
-  /* ---------- 播放器 ---------- */
-  .player{margin-top:16px;padding:26px 20px 22px;text-align:center;position:relative;overflow:hidden}
-  .viz{height:66px;display:flex;align-items:flex-end;justify-content:center;gap:5px;margin-bottom:20px}
-  .viz i{
-    width:5px;border-radius:3px;background:linear-gradient(180deg,var(--brand),var(--brand-2));
-    height:10%;opacity:.35;transition:opacity .3s;
+  /* 播放器 */
+  .player{margin-top:14px;overflow:hidden;position:relative}
+  .cover{
+    position:relative;height:300px;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:18px;
+    background:linear-gradient(160deg,#fff7f4 0%,#fff 60%);
   }
+  .viz{height:52px;display:flex;align-items:flex-end;gap:5px}
+  .viz i{width:5px;height:14%;border-radius:3px;background:linear-gradient(180deg,var(--brand),var(--brand-2));opacity:.3}
   .viz.on i{opacity:1;animation:bounce 1s ease-in-out infinite}
-  .viz i:nth-child(1){animation-delay:0s}   .viz i:nth-child(2){animation-delay:.12s}
-  .viz i:nth-child(3){animation-delay:.24s} .viz i:nth-child(4){animation-delay:.06s}
-  .viz i:nth-child(5){animation-delay:.3s}  .viz i:nth-child(6){animation-delay:.18s}
-  .viz i:nth-child(7){animation-delay:.09s} .viz i:nth-child(8){animation-delay:.27s}
-  .viz i:nth-child(9){animation-delay:.15s} .viz i:nth-child(10){animation-delay:.03s}
-  .viz i:nth-child(11){animation-delay:.21s}.viz i:nth-child(12){animation-delay:.12s}
-  @keyframes bounce{0%,100%{height:12%}50%{height:88%}}
-
-  .play{
-    width:76px;height:76px;border-radius:50%;border:none;cursor:pointer;
-    background:linear-gradient(135deg,var(--brand),var(--brand-2));
-    box-shadow:0 8px 22px rgba(224,82,60,.35);
-    display:inline-flex;align-items:center;justify-content:center;
-    transition:transform .16s ease, box-shadow .16s ease;
+  .viz i:nth-child(2n){animation-delay:.15s}.viz i:nth-child(3n){animation-delay:.3s}
+  .viz i:nth-child(5n){animation-delay:.08s}
+  @keyframes bounce{0%,100%{height:14%}50%{height:92%}}
+  .start{
+    display:inline-flex;align-items:center;gap:9px;border:none;cursor:pointer;
+    background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff;
+    font-size:15px;font-weight:650;padding:13px 30px;border-radius:999px;
+    box-shadow:0 8px 22px rgba(224,82,60,.35);transition:.16s;
   }
-  .play:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(224,82,60,.42)}
-  .play:active{transform:scale(.96)}
-  .play svg{width:30px;height:30px;fill:#fff}
-  .state{font-size:13.5px;color:var(--sub);margin-top:14px;min-height:20px}
-  .state.live{color:var(--ok);font-weight:600}
-  .state.err{color:var(--brand);font-weight:600}
+  .start:hover{transform:translateY(-2px)}
+  .start svg{width:18px;height:18px;fill:#fff}
+  .hint{font-size:12.5px;color:var(--sub)}
+  .framebox{display:none;background:#000}
+  .framebox.on{display:block}
+  .framebox iframe{width:100%;height:600px;border:0;display:block}
+  @media (max-width:420px){ .framebox iframe{height:540px} .cover{height:260px} }
 
-  /* ---------- 信息区 ---------- */
-  .info{margin-top:16px;padding:6px 18px 14px}
-  .row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+  /* 信息 */
+  .info{margin-top:14px;padding:4px 18px 14px}
+  .row{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);font-size:13.5px}
   .row:last-child{border-bottom:none}
   .row .k{color:var(--sub);flex:none}
-  .row .v{text-align:right;word-break:break-all;font-variant-numeric:tabular-nums}
-  .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:middle}
-  .dot.off{background:#c3c7cc}
-  .dot.warn{background:var(--warn)}
-
-  .urlbox{
-    margin-top:10px;background:#f7f8fa;border:1px solid var(--line);border-radius:12px;
-    padding:12px 14px;font-size:12px;color:#4b5563;line-height:1.6;
-    word-break:break-all;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
-    max-height:96px;overflow:auto;
-  }
+  .row .v{text-align:right;word-break:break-all}
+  .urlbox{margin-top:10px;background:#f7f8fa;border:1px solid var(--line);border-radius:12px;
+    padding:11px 13px;font-size:12px;color:#4b5563;line-height:1.6;word-break:break-all;
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
   .btns{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap}
-  .btn{
-    flex:1;min-width:130px;padding:11px 14px;border-radius:11px;font-size:13.5px;font-weight:600;
-    border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;
-    transition:.15s;text-decoration:none;text-align:center;
-  }
+  .btn{flex:1;min-width:140px;padding:11px 14px;border-radius:11px;font-size:13.5px;font-weight:600;
+    border:1px solid var(--line);background:#fff;color:var(--text);cursor:pointer;transition:.15s;
+    text-decoration:none;text-align:center}
   .btn:hover{background:#f7f8fa}
   .btn.primary{background:var(--text);color:#fff;border-color:var(--text)}
   .btn.primary:hover{opacity:.88}
 
-  .note{margin-top:18px;font-size:12px;color:var(--sub);line-height:1.75;padding:0 4px}
+  .note{margin-top:16px;font-size:12px;color:var(--sub);line-height:1.8;padding:0 4px}
   .note b{color:#4b5563}
-  .footer{margin-top:22px;text-align:center;font-size:11.5px;color:#9aa1a9}
-  .footer a{color:#9aa1a9}
-  @media (max-width:420px){ .hero h1{font-size:17px} .player{padding:20px 14px} }
+  .footer{margin-top:20px;text-align:center;font-size:11.5px;color:#9aa1a9}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <div class="card hero">
-    <div class="logo"><b>信宜</b><img id="logo" alt="台标"></div>
+    <div class="logo"><b>信宜</b><img id="logo" alt=""></div>
     <div>
       <h1>信宜融媒综合广播</h1>
-      <p>FM98.9 &nbsp;·&nbsp; 广东 · 信宜</p>
-      <span class="tag"><span class="dot" id="miniDot"></span><span id="miniTxt">正在连接…</span></span>
+      <p>FM98.9 &nbsp;·&nbsp; 广东 · 信宜 &nbsp;·&nbsp; 6:20 – 24:00</p>
+      <span class="tag"><span class="dot" id="miniDot"></span><span id="miniTxt">待开始</span></span>
     </div>
   </div>
 
   <div class="card player">
-    <div class="viz" id="viz">
-      <i></i><i></i><i></i><i></i><i></i><i></i>
-      <i></i><i></i><i></i><i></i><i></i><i></i>
+    <div class="cover" id="cover">
+      <div class="viz" id="viz"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <button class="start" id="startBtn">
+        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>开始收听
+      </button>
+      <div class="hint">点击后在页面内直接播放 · 无需安装任何软件</div>
     </div>
-    <button class="play" id="playBtn" aria-label="播放">
-      <svg id="icon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-    </button>
-    <div class="state" id="state">点击播放按钮开始收听</div>
-    <div class="btns">
-      <button class="btn" id="volHalf">音量适中</button>
-      <button class="btn" id="openSrc">备用网页</button>
+    <div class="framebox" id="frameBox">
+      <iframe id="frame" title="播放器" allow="autoplay; encrypted-media" referrerpolicy="no-referrer"></iframe>
     </div>
   </div>
 
   <div class="card info">
-    <div class="row"><span class="k">直播源状态</span><span class="v"><span class="dot off" id="srcDot"></span><span id="srcTxt">读取中…</span></span></div>
-    <div class="row"><span class="k">源更新时间</span><span class="v" id="updTxt">—</span></div>
-    <div class="row"><span class="k">有效期至</span><span class="v" id="expTxt">—</span></div>
-    <div class="urlbox" id="urlBox">加载中…</div>
+    <div class="row"><span class="k">播放器导入地址</span><span class="v"><span class="dot" id="srcDot"></span> 固定不变</span></div>
+    <div class="urlbox" id="urlBox">生成中…</div>
+    <div class="row" style="border-bottom:none"><span class="k">服务巡检</span><span class="v" id="chkTxt">读取中…</span></div>
     <div class="btns">
-      <button class="btn primary" id="copyBtn">复制直播源地址</button>
-      <a class="btn" id="m3uLink" href="xinyi_radio_local.m3u" download>下载 M3U 文件</a>
+      <button class="btn primary" id="copyBtn">复制导入地址</button>
+      <a class="btn" href="xinyi_radio_local.m3u" download>下载 M3U</a>
+      <button class="btn" id="rawBtn">原始播放页</button>
     </div>
   </div>
 
   <div class="note">
-    <b>播放器导入地址（固定不变）：</b><br>
-    <span id="fixedUrl">—</span><br><br>
-    本页面与 <code>xinyi_radio_local.m3u</code> 中的直播地址由 GitHub Actions
-    每天 <b>07:30</b> 与 <b>17:30</b>（北京时间）自动刷新，播放器只需配置一次，长期有效。
+    <b>说明：</b>该电台的播放签名与访问者网络绑定，因此本页直接在<b>你的浏览器内</b>建立播放会话，
+    播放地址永远新鲜、无需更新。电视盒子 / 影视仓 / TVBox 等播放器请使用上方
+    <code>webview://</code> 导入地址（固定不变），播放器会以内置网页方式打开本页并播放。
   </div>
 
-  <div class="footer">
-    Powered by GitHub Actions &amp; GitHub Pages
-  </div>
+  <div class="footer">Powered by GitHub Pages · 每天 07:30 / 17:30 自动巡检</div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
 <script>
 (function () {
   'use strict';
   var $ = function (id) { return document.getElementById(id); };
-  var M3U = 'xinyi_radio_local.m3u';
 
-  var audio = new Audio();
-  audio.preload = 'none';
-  audio.crossOrigin = 'anonymous';
+  /* 固定导入地址 */
+  var base = location.origin + location.pathname.replace(/[^/]*$/, '');
+  var WEB_URL = base;                                 /* 网页本身 */
+  var WEBVIEW = 'webview://' + base;                  /* 播放器导入 */
+  $('urlBox').textContent = WEBVIEW;
 
-  var hls = null, streamUrl = '', playing = false;
+  /* 台标 */
+  $('logo').src = 'https://static-pro.guangdianyun.tv/1629/program/20190102/b782f17ee2606a6df9f4de06aa988a6e.jpeg';
+  $('logo').addEventListener('error', function () { this.style.display = 'none'; });
 
-  /* ---------- 界面状态 ---------- */
-  function setState(text, cls) {
-    var e = $('state');
-    e.textContent = text;
-    e.className = 'state' + (cls ? ' ' + cls : '');
-  }
-  function setMini(text, cls) {
-    $('miniTxt').textContent = text;
-    $('miniDot').className = 'dot' + (cls ? ' ' + cls : '');
-  }
-  function icon(play) {
-    $('icon').innerHTML = play
-      ? '<path d="M6 5h4v14H6zM14 5h4v14h-4z"/>'
-      : '<path d="M8 5v14l11-7z"/>';
-  }
-
-  /* ---------- 读取 m3u ---------- */
-  // 从 "# 更新时间：2026-10-04 11:08（北京时间）" 中取出 "2026-10-04 11:08"
-  function pickTime(s) {
-    var m = s.match(/(\d{4}-\d{2}-\d{2})[ T](\d{2}:\d{2})/);
-    return m ? m[1] + ' ' + m[2] : '';
-  }
-  function toDate(s) {
-    var m = s.match(/(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);
-    return m ? new Date(+m[1], +m[2] - 1, +m[3], +m[4], +m[5]) : null;
-  }
-
-  function parseM3U(text) {
-    var info = { url: '', upd: '', exp: '', name: '', logo: '' };
-    text.split(/\r?\n/).forEach(function (raw) {
-      var line = raw.trim();
-      if (!line) return;
-      if (line.indexOf('# 更新') === 0 || line.indexOf('#更新') === 0) {
-        info.upd = pickTime(line);
-      } else if (line.indexOf('# 有效期') === 0 || line.indexOf('#有效期') === 0) {
-        info.exp = pickTime(line);
-      } else if (line.indexOf('#EXTINF') === 0) {
-        var m = line.match(/tvg-logo="([^"]+)"/); if (m) info.logo = m[1];
-        var c = line.split(','); info.name = (c[c.length - 1] || '').trim();
-      } else if (line.indexOf('#') !== 0 && /^https?:\/\//.test(line)) {
-        info.url = line;
-      }
-    });
-    return info;
-  }
-
-  function loadSource() {
-    return fetch(M3U + '?t=' + Date.now(), { cache: 'no-store' })
-      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
-      .then(function (txt) {
-        var i = parseM3U(txt);
-        if (!i.url) throw new Error('未找到播放地址');
-        streamUrl = i.url;
-        $('updTxt').textContent = i.upd || '—';
-        $('expTxt').textContent = i.exp || '—';
-        $('urlBox').textContent = i.url;
-        $('m3uLink').href = M3U;
-        if (i.logo) { $('logo').src = i.logo; }
-        if (i.name) { document.title = i.name + ' · 在线收听'; }
-
-        // 有效期判断
-        var exp = i.exp ? toDate(i.exp) : null;
-        if (exp && !isNaN(exp)) {
-          var left = exp - Date.now();
-          if (left <= 0) {
-            $('srcDot').className = 'dot warn';
-            $('srcTxt').textContent = '已过期，等待自动刷新';
-          } else {
-            $('srcDot').className = 'dot';
-            $('srcTxt').textContent = '正常（剩余 ' + Math.round(left / 3600000) + ' 小时）';
-          }
-        } else {
-          $('srcDot').className = 'dot';
-          $('srcTxt').textContent = '已获取';
-        }
-        setMini('直播源已就绪', '');
-        return i;
-      });
-  }
-
-  /* ---------- 播放 ---------- */
-  function play() {
-    if (!streamUrl) { setState('正在获取直播源…'); return; }
-    setState('正在连接…');
-
-    if (window.Hls && window.Hls.isSupported()) {
-      if (hls) { hls.destroy(); hls = null; }
-      hls = new window.Hls({
-        lowLatencyMode: false,
-        maxBufferLength: 20,
-        manifestLoadingMaxRetry: 4,
-        manifestLoadingRetryDelay: 1500
-      });
-      hls.loadSource(streamUrl);
-      hls.attachMedia(audio);
-      hls.on(window.Hls.Events.MANIFEST_PARSED, function () { audio.play().catch(function(){}); });
-      hls.on(window.Hls.Events.ERROR, function (_, d) {
-        if (!d.fatal) return;
-        setState('播放失败（' + (d.details || '错误') + '）', 'err');
-        setMini('播放异常', 'warn');
-        stopUi();
-      });
-    } else if (audio.canPlayType('application/vnd.apple.mpegurl')) {
-      audio.src = streamUrl;
-      audio.play().catch(function(){});
-    } else {
-      setState('当前浏览器不支持 HLS 播放', 'err');
-    }
-  }
-
-  function pause() {
-    if (hls) { hls.destroy(); hls = null; }
-    audio.pause();
-    audio.removeAttribute('src');
-    audio.load();
-  }
-
-  function stopUi() {
-    playing = false; icon(false);
-    $('viz').className = 'viz';
-  }
-
-  audio.addEventListener('playing', function () {
-    playing = true; icon(true);
-    $('viz').className = 'viz on';
-    setState('正在直播', 'live');
-    setMini('正在直播', '');
-  });
-  audio.addEventListener('pause', function () {
-    playing = false; icon(false);
-    $('viz').className = 'viz';
-  });
-  audio.addEventListener('waiting', function () { setState('缓冲中…'); });
-  audio.addEventListener('error', function () {
-    setState('播放失败，可能直播源已过期', 'err'); stopUi();
+  /* 开始收听 */
+  var started = false;
+  $('startBtn').addEventListener('click', function () {
+    if (started) return;
+    started = true;
+    $('miniTxt').textContent = '正在加载播放器…';
+    $('frame').src = 'https://live.xytv.cc/radio/223?uin=1629&refererId=0';
+    $('frameBox').classList.add('on');
+    $('cover').style.display = 'none';
+    $('viz').classList.add('on');
+    $('miniDot').className = 'dot';
+    $('miniTxt').textContent = '播放器已加载';
+    /* iframe 内为第三方页面（跨域），若未自动播放请点击其中播放键 */
+    setTimeout(function () {
+      $('miniTxt').textContent = '若未出声，请点击播放器中的 ▶ 按钮';
+      setTimeout(function () { $('miniTxt').textContent = '正在播放'; }, 6000);
+    }, 8000);
   });
 
-  $('playBtn').addEventListener('click', function () { playing ? pause() : play(); });
-
-  $('volHalf').addEventListener('click', function () {
-    var next = audio.volume > 0.6 ? 0.5 : 1;
-    audio.volume = next;
-    this.textContent = next > 0.6 ? '音量最大' : '音量适中';
+  /* 原始播放页 */
+  $('rawBtn').addEventListener('click', function () {
+    window.open('https://live.xytv.cc/radio/223?uin=1629&refererId=0', '_blank');
   });
 
+  /* 复制 */
   $('copyBtn').addEventListener('click', function () {
-    var text = streamUrl || $('urlBox').textContent;
+    var text = WEBVIEW;
     var done = function () {
-      var b = $('copyBtn'), old = b.textContent;
+      var b = $('copyBtn'), o = b.textContent;
       b.textContent = '已复制 ✓';
-      setTimeout(function () { b.textContent = old; }, 1600);
+      setTimeout(function () { b.textContent = o; }, 1500);
     };
     if (navigator.clipboard && window.isSecureContext) {
-      navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
-    } else { fallbackCopy(text, done); }
+      navigator.clipboard.writeText(text).then(done, function () { fb(text, done); });
+    } else { fb(text, done); }
   });
-
-  function fallbackCopy(text, cb) {
+  function fb(t, cb) {
     var ta = document.createElement('textarea');
-    ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    ta.value = t; ta.style.cssText = 'position:fixed;opacity:0';
     document.body.appendChild(ta); ta.select();
     try { document.execCommand('copy'); cb(); } catch (e) {}
     document.body.removeChild(ta);
   }
 
-  // 台标加载失败时隐藏 img，露出渐变兜底字
-  $('logo').addEventListener('error', function () { this.style.display = 'none'; });
-  $('logo').addEventListener('load', function () { this.style.display = ''; });
-
-  // 备用网页（原站播放页，播放器内嵌/新窗口）
-  $('openSrc').addEventListener('click', function () {
-    window.open('https://live.xytv.cc/radio/223?uin=1629&refererId=0', '_blank');
-  });
-
-  /* ---------- 启动 ---------- */
-  $('fixedUrl').textContent = location.origin + location.pathname.replace(/index\.html$/, '') + M3U;
-
-  loadSource().catch(function (e) {
-    $('srcDot').className = 'dot warn';
-    $('srcTxt').textContent = '读取失败：' + e.message;
-    $('urlBox').textContent = '请确认 xinyi_radio_local.m3u 与本页面在同一目录';
-    setMini('直播源读取失败', 'warn');
-    setState('未能获取直播源信息', 'err');
-  });
+  /* 巡检状态（由 GitHub Actions 每天 07:30 / 17:30 更新） */
+  fetch('status.json?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+    .then(function (s) {
+      var okAll = s.page === 'ok' && s.api === 'ok' && s.pages === 'ok';
+      $('chkTxt').innerHTML = okAll
+        ? '<span class="dot"></span> 正常（' + (s.time || '') + '）'
+        : '<span class="dot warn"></span> 异常（' + (s.time || '') + '）';
+    })
+    .catch(function () {
+      $('chkTxt').textContent = '暂无巡检数据';
+    });
 })();
 </script>
 </body>
