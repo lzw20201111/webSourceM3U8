@@ -1,5 +1,115 @@
 [
  {
+  "id": "ch-a8d478",
+  "name": "宿州新闻综合",
+  "group": "安徽频道",
+  "page": "https://live.ahsz.tv/video/s10001-szzh/index.m3u8",
+  "url": "https://live.ahsz.tv/video/s10001-szzh/index.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 1.3
+ },
+ {
+  "id": "ch-3df0de",
+  "name": "广东新闻",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/45",
+  "url": "https://tcdn.itouchtv.cn/live/xwpd.m3u8?t_token=5d06a02c40a3e07d2d94a24a218e992a-IEmf6V1B30Ug%2Bg9RqJEW61YAy6eegfTuS6uKKqiXwuOoMCFnj%2Fkqx%2F0ViiPJyTJDB%2FASeWmnKbM6BI9tvhpSRIpyh%2B4uShqmHC1wi1h4bLb%2FZKM3qWEdUAKi%2FEOyoMQNmas8mVP9rTjdeBNyX3kB2h1iZ%2FmZdZ6ih5E6uZLnnCE8MAUBdG%2FtyQvE%2BvH%2FDgzDlX4gerYdo4U5aMyIYal6oW0oxp2KoI8pCR4WH1MouZa3fZUOOnJVbyyQCf%2BDLwMz5ltl%2FZ3sCDkpuuy%2FhmkjhWV3H8yJCPoNeYaCuTs0KNzbb1vK11hbpZTuzooDucE3PYVWJNtgUey0iIHGuUXbL3tcKKg%2BXn3LDJlK4paLy8He7CzU8WcKC2N7yEZcd7sH1YyvKkLu8Gsvx9vRKiIABA%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.4
+ },
+ {
+  "id": "ch-efdbda",
+  "name": "广东卫视",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/43",
+  "url": "https://tcdn.itouchtv.cn/live/gdws.m3u8?t_token=d5b76b04d845209b95a2b17642a0ab4c-IEmf6V1B30Ug%2Bg9RqJEW61YAy6eegfTuS6uKKqiXwuOoMCFnj%2Fkqx%2F0ViiPJyTJDB%2FASeWmnKbM6BI9tvhpSRIpyh%2B4uShqmHC1wi1h4bLb%2FZKM3qWEdUAKi%2FEOyoMQNmas8mVP9rTjdeBNyX3kB2h1iZ%2FmZdZ6ih5E6uZLnnCE8MAUBdG%2FtyQvE%2BvH%2FDgzDlX4gerYdo4U5aMyIYal6oWk05jtXiwENdfFu66q65EJGlkL%2BZtBfIMlXPn63xggV6OeenKJvOhuDcEF391wQmMB9yeGSHy1c5bvA8Yn1toovsnlVhbVtAOk0GxGxppNJrbXJhsN7Xl4RPy4JbIupWSz5qOc11yEps3d%2BIBMxCKQdmztvJ1Cfce96SwGhL%2BkwTCRy4I3kzh5keyT3c2l8gQ%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.5
+ },
+ {
+  "id": "ch-70c5b3",
+  "name": "广东珠江",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/44",
+  "url": "https://tcdn.itouchtv.cn/live/gdzj.m3u8?t_token=09f7b807359a213ff12b7058a2d5db08-IEmf6V1B30Ug%2Bg9RqJEW61YAy6eegfTuS6uKKqiXwuOoMCFnj%2Fkqx%2F0ViiPJyTJDB%2FASeWmnKbM6BI9tvhpSRIpyh%2B4uShqmHC1wi1h4bLb%2FZKM3qWEdUAKi%2FEOyoMQNmas8mVP9rTjdeBNyX3kB2lEqKjSRbL%2B7Lp7NbA4vKfBBwRpR2KNWOzzDWIuxyxGFWcaPhyv0Zqnjl%2BhQeftBdN5Rrd3jGlpbbpbxhcOEULI2Zo4NxMZVcnJuT6heoQ8Rnn%2BW905dvC1s4HNuXb%2FT9rT37ppMBdhSCiFKn%2BGK6K7J5yI2m5oKoo9RCRLA9Khkxuj%2FOm5j0jIOmheDjFOt1WejlNpG4aOga7ZaCYSi9qORmvLpQ9w0965FV%2FfGEHTWezctJRKJgKb4UWa3mq6SiA%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 7.0
+ },
+ {
+  "id": "ch-d8bc67",
+  "name": "阜阳生活",
+  "group": "安徽频道",
+  "page": "https://web.guangdianyun.tv/tv/2853?uin=2577",
+  "url": "https://41007-live.hlsplay.aodianyun.com/tv_radio_41007/tv_channel_2853.m3u8?auth_key=1791188422-0-0-fc9efa280e77e6b2e5da6d108e1b673a&extra_key=dfRi6aYT31-Jb2OBb5pQT9ms4IUZCPSyBYNbatAJYX1RTSezwKXsADKc_YPyNWshVgFn_SrIvA4mxH_ly2w4ORmVvpehRWbj4kMTGsQCcEsR64cl9KYwynuSveAfCxyKnFhbSo6UIEhUaXUfUIWnQrLJa53tnlTiOpzPnW8A-ZY",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 7.2
+ },
+ {
+  "id": "ch-1952b8",
+  "name": "阜阳新闻综合",
+  "group": "安徽频道",
+  "page": "https://web.guangdianyun.tv/tv/2851?uin=2577",
+  "url": "https://41007-live.hlsplay.aodianyun.com/tv_radio_41007/tv_channel_2851.m3u8?auth_key=1791188422-0-0-a95ce6bbbc5feaa35bb319cab452c2c2&extra_key=lHiUcElEsYw4fijbNlh_t3dDeNsBxlcsUHcOUtHfEsi64HK-MWM1XPacETeI5w5gEfgIwEd4LR9dwA9OI5jYC9FOR9BisgHmpu_sSitomFjx_1qn2XnZ3TlkvDTzm-8axX9Gtar3FDGOv71zDIMScy-UMMNOBfCr1Mk79knjah8",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 7.8
+ },
+ {
+  "id": "ch-b9fd9c",
+  "name": "亳州综合",
+  "group": "安徽频道",
+  "page": "https://www.ahbztv.com/televisi0n.html",
+  "url": "https://bzlivetv1.ahbztv.com/live/416.m3u8?t=1791102022&k=3607ae35b035663c730f9f13e40239b5",
+  "ok": true,
+  "cands": 2,
+  "signed": false,
+  "cost": 11.7
+ },
+ {
+  "id": "ch-32e1de",
+  "name": "广东民生",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/48",
+  "url": "https://tcdn.itouchtv.cn/live/gdgg.m3u8?t_token=15f2073be61b883ef4fa5af814834cb8-iUF4JrVRJeasiwnvVfenYh4ErfdtE%2FTijI%2F3vd9MFZjMSsAXMiP8lTVjBjlT1vefkLd1wD%2BApmVwvNPzNSPMUeHenKWVeZcQI7kLD3d1E4BcJkeSTqFH5Nuf7lsa2QLsdNWlZ%2F%2B4OUwv1uTwQjwwD3BIzRVYXRgc%2Fr9KWTbkFiOS%2BvlFZ%2B0qMTaFhUIZWZaY7dh3NGfVBw5F%2FzLBwBj0GqxDPFHIurMsynHZURtVs4v886ayDSTeDD54XGISEptfkHzr9UJqYhzN%2FWrn19oqoC1vTMU9nbWNb53aZZQpOoj%2FzSpwvfL99k44vp%2FxdImq37vuzhkXzzPIuKyfKSvUI7xaXEiG59rCurXNdSQ%2B190Ta2Ao9jAF%2FRdwMWr6gzmCDDtGsH5s43h%2BGeYQiL%2Fu0Q%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.9
+ },
+ {
+  "id": "ch-5ac953",
+  "name": "广东体育",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/47",
+  "url": "https://tcdn.itouchtv.cn/live/gdty.m3u8?t_token=5a75bbde223572dda65abb5e86030d4d-pbSfNGbdjJmwkzwvNtpIaXzb37xLnzkUZ9uU51sxkNjZnUtFFrIwxt8cQB8tV3k%2FVYyCiL9rabSIZsITJT3Sj5FVyHjZGpMqmmmubH4UZl%2FpT5SfER7d2fKj8tDeo6jdraQu4CnHXuSOoPcsHwndENNgMVdyAlzBSaX4if5aQeCx4EOg884CzZVXNuyRJb3JHeThAa%2BRN98yzo6xH%2B4bJjh%2B45x4A2CSJAKCW2ZLVvGE3uLAFDNScMEiLTKzL4dZWI9C1enFsY6xiiUfpwbvjE8fmn4PzrgRN7YpJxbOvDQIoajjLFVf0%2BA1hg5uyIn44E0i4%2Bt89zH%2Bk2KTYeBn6IsQ7vQR5mClaJjfFVf0ekOoYrfkQw1PxcEU%2FHUvuYlPDT1kxkkmJvlLH0BsKwmufA%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.1
+ },
+ {
+  "id": "ch-5379e2",
+  "name": "大湾区卫视",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/51",
+  "url": "https://tcdn.itouchtv.cn/live/nfws.m3u8?t_token=4574f76affa294831e89b1e906b62140-pbSfNGbdjJmwkzwvNtpIaXzb37xLnzkUZ9uU51sxkNjZnUtFFrIwxt8cQB8tV3k%2FVYyCiL9rabSIZsITJT3Sj5FVyHjZGpMqmmmubH4UZl%2FpT5SfER7d2fKj8tDeo6jdraQu4CnHXuSOoPcsHwndEHlQW7MKWLcR4yUOykdAJu%2BHbNWTkGjO4uW%2FSL3T4zzpdYl61AU1%2Bkk1NlyIKcpedRufoF59wkb3y8GiYNV%2BW200W3vApWbn5%2BBfKFR%2FfitcOxSe2RSY8PYYAdkEMSi5goiU2DvRGm9F5qBqa5R86QdTw6j93nfDvqptZB6LOlEci4n64E3rzvIYvoAt5XbvS2adxLYBC81GC40JyLiar7%2BqIvgiaN8OAwqWUwDD3OUiYt1aVVbGtjR14qc%2BS%2FL0Iw%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.3
+ },
+ {
   "id": "cctv8",
   "name": "CCTV8",
   "group": "央视频道",
@@ -8,7 +118,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.5
+  "cost": 7.5,
+  "stale": 1
  },
  {
   "id": "cctv5",
@@ -19,7 +130,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.6
+  "cost": 7.6,
+  "stale": 1
  },
  {
   "id": "cctv2",
@@ -30,7 +142,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.6
+  "cost": 7.6,
+  "stale": 1
  },
  {
   "id": "cctv3",
@@ -41,7 +154,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.8
+  "cost": 7.8,
+  "stale": 1
  },
  {
   "id": "cctv1",
@@ -52,7 +166,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.9
+  "cost": 7.9,
+  "stale": 1
  },
  {
   "id": "cctv7",
@@ -63,7 +178,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.9
+  "cost": 7.9,
+  "stale": 1
  },
  {
   "id": "cctv4",
@@ -74,7 +190,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.0
+  "cost": 8.0,
+  "stale": 1
  },
  {
   "id": "cctv6",
@@ -85,7 +202,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.0
+  "cost": 8.0,
+  "stale": 1
  },
  {
   "id": "cctv10",
@@ -96,7 +214,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.8
+  "cost": 5.8,
+  "stale": 1
  },
  {
   "id": "cctv9",
@@ -107,7 +226,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.2
+  "cost": 6.2,
+  "stale": 1
  },
  {
   "id": "cctv11",
@@ -118,7 +238,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.3
+  "cost": 6.3,
+  "stale": 1
  },
  {
   "id": "cctv16",
@@ -129,7 +250,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "cctv12",
@@ -140,7 +262,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.5
+  "cost": 7.5,
+  "stale": 1
  },
  {
   "id": "cctv13",
@@ -151,7 +274,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.5
+  "cost": 7.5,
+  "stale": 1
  },
  {
   "id": "cctv15",
@@ -162,7 +286,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.4
+  "cost": 7.4,
+  "stale": 1
  },
  {
   "id": "cctv14",
@@ -173,7 +298,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.6
+  "cost": 7.6,
+  "stale": 1
  },
  {
   "id": "cctv5-2",
@@ -184,7 +310,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "cctv4k",
@@ -195,7 +322,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.6
+  "cost": 6.6,
+  "stale": 1
  },
  {
   "id": "cctv8k",
@@ -206,7 +334,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.9
+  "cost": 6.9,
+  "stale": 1
  },
  {
   "id": "cctv3-2",
@@ -217,7 +346,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "cctv4-2",
@@ -228,7 +358,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "cctv2-2",
@@ -239,7 +370,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "cctv17",
@@ -250,7 +382,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.9
+  "cost": 8.9,
+  "stale": 1
  },
  {
   "id": "cctv1-2",
@@ -261,7 +394,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.7
+  "cost": 7.7,
+  "stale": 1
  },
  {
   "id": "cctv6-2",
@@ -272,7 +406,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.4
+  "cost": 5.4,
+  "stale": 1
  },
  {
   "id": "cctv9-2",
@@ -283,7 +418,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.8
+  "cost": 4.8,
+  "stale": 1
  },
  {
   "id": "cctv12-2",
@@ -294,7 +430,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.6
+  "cost": 4.6,
+  "stale": 1
  },
  {
   "id": "cctv7-2",
@@ -305,7 +442,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.6
+  "cost": 7.6,
+  "stale": 1
  },
  {
   "id": "cctv5-3",
@@ -316,7 +454,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.6
+  "cost": 8.6,
+  "stale": 1
  },
  {
   "id": "cctv8-2",
@@ -327,7 +466,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.5
+  "cost": 7.5,
+  "stale": 1
  },
  {
   "id": "cctv10-2",
@@ -338,7 +478,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.5
+  "cost": 7.5,
+  "stale": 1
  },
  {
   "id": "cctv13-2",
@@ -349,7 +490,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.3
+  "cost": 4.3,
+  "stale": 1
  },
  {
   "id": "cctv14-2",
@@ -360,7 +502,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "cctv11-2",
@@ -371,7 +514,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.2
+  "cost": 8.2,
+  "stale": 1
  },
  {
   "id": "cctv15-2",
@@ -382,7 +526,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "cctv16-2",
@@ -393,7 +538,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.7
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "cctv4-4",
@@ -404,7 +550,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.6
+  "cost": 6.6,
+  "stale": 1
  },
  {
   "id": "cctv4-3",
@@ -415,7 +562,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.4
+  "cost": 7.4,
+  "stale": 1
  },
  {
   "id": "cctv17-2",
@@ -426,7 +574,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.8
+  "cost": 7.8,
+  "stale": 1
  },
  {
   "id": "cctv-3",
@@ -437,7 +586,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.7
+  "cost": 5.7,
+  "stale": 1
  },
  {
   "id": "cctv",
@@ -448,7 +598,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.1
+  "cost": 7.1,
+  "stale": 1
  },
  {
   "id": "cctv-2",
@@ -459,7 +610,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.8
+  "cost": 7.8,
+  "stale": 1
  },
  {
   "id": "cgtn",
@@ -470,7 +622,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "cctv5-4",
@@ -481,7 +634,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 9.9
+  "cost": 9.9,
+  "stale": 1
  },
  {
   "id": "cgtn-4",
@@ -492,7 +646,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "ch-9f3588",
@@ -503,7 +658,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "cgtn-2",
@@ -514,7 +670,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.7
+  "cost": 7.7,
+  "stale": 1
  },
  {
   "id": "cgtn-3",
@@ -525,7 +682,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.3
+  "cost": 7.3,
+  "stale": 1
  },
  {
   "id": "cgtn-5",
@@ -536,7 +694,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.4
+  "cost": 7.4,
+  "stale": 1
  },
  {
   "id": "cgtn-6",
@@ -547,7 +706,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.0
+  "cost": 7.0,
+  "stale": 1
  },
  {
   "id": "ch-1484ad",
@@ -558,7 +718,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.8
+  "cost": 5.8,
+  "stale": 1
  },
  {
   "id": "ch-0eaaf3",
@@ -569,7 +730,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.1
+  "cost": 6.1,
+  "stale": 1
  },
  {
   "id": "ch-448180",
@@ -580,7 +742,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-9da23e",
@@ -591,7 +754,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-e75893",
@@ -602,7 +766,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.7
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "ch-2a2439",
@@ -613,7 +778,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.1
+  "cost": 7.1,
+  "stale": 1
  },
  {
   "id": "ch-3b752f",
@@ -624,7 +790,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.8
+  "cost": 7.8,
+  "stale": 1
  },
  {
   "id": "ch-d777f9",
@@ -635,7 +802,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.2
+  "cost": 8.2,
+  "stale": 1
  },
  {
   "id": "ch-e4def6",
@@ -646,7 +814,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-ef1cf3",
@@ -657,7 +826,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.6
+  "cost": 8.6,
+  "stale": 1
  },
  {
   "id": "ch-8c0ef9",
@@ -668,7 +838,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-82965e",
@@ -679,7 +850,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.2
+  "cost": 6.2,
+  "stale": 1
  },
  {
   "id": "ch-49fee2",
@@ -690,7 +862,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.6
+  "cost": 5.6,
+  "stale": 1
  },
  {
   "id": "ch-90d706",
@@ -701,7 +874,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-528b14",
@@ -712,7 +886,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.3
+  "cost": 6.3,
+  "stale": 1
  },
  {
   "id": "ch-7ecf30",
@@ -723,7 +898,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "ch-ebf829",
@@ -734,7 +910,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.6
+  "cost": 5.6,
+  "stale": 1
  },
  {
   "id": "ch-4309db",
@@ -745,7 +922,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-4b0955",
@@ -756,7 +934,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-b9e9f6",
@@ -767,7 +946,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-a660c6",
@@ -778,7 +958,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.2
+  "cost": 6.2,
+  "stale": 1
  },
  {
   "id": "ch-ccccb7",
@@ -789,7 +970,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.7
+  "cost": 5.7,
+  "stale": 1
  },
  {
   "id": "ch-efa80e",
@@ -800,7 +982,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-f261d3",
@@ -811,7 +994,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.2
+  "cost": 7.2,
+  "stale": 1
  },
  {
   "id": "ch-12eb1e",
@@ -822,7 +1006,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.1
+  "cost": 6.1,
+  "stale": 1
  },
  {
   "id": "ch-10fcd2",
@@ -833,7 +1018,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.1
+  "cost": 8.1,
+  "stale": 1
  },
  {
   "id": "ch-b4dbe4",
@@ -844,7 +1030,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.2
+  "cost": 6.2,
+  "stale": 1
  },
  {
   "id": "ch-d3e95a",
@@ -855,7 +1042,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.8
+  "cost": 6.8,
+  "stale": 1
  },
  {
   "id": "ch-413aaa",
@@ -866,7 +1054,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 5.6
+  "cost": 5.6,
+  "stale": 1
  },
  {
   "id": "ch-a0c733",
@@ -877,7 +1066,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.3
+  "cost": 7.3,
+  "stale": 1
  },
  {
   "id": "ch-abfa1b",
@@ -888,7 +1078,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.4
+  "cost": 7.4,
+  "stale": 1
  },
  {
   "id": "ch-927ce9",
@@ -899,18 +1090,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.1
- },
- {
-  "id": "ch-b9fd9c",
-  "name": "亳州综合",
-  "group": "安徽频道",
-  "page": "https://www.ahbztv.com/televisi0n.html",
-  "url": "https://bzlivetv1.ahbztv.com/live/416.m3u8?t=1791098321&k=d81baf4f0492e6accd3f6f8c5a9d120e",
-  "ok": true,
-  "cands": 2,
-  "signed": false,
-  "cost": 9.5
+  "cost": 8.1,
+  "stale": 1
  },
  {
   "id": "ch-04c329",
@@ -921,7 +1102,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.2
+  "cost": 7.2,
+  "stale": 1
  },
  {
   "id": "ch-aa14bd",
@@ -932,7 +1114,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.9
+  "cost": 6.9,
+  "stale": 1
  },
  {
   "id": "ch-7fb841",
@@ -943,7 +1126,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.2
+  "cost": 7.2,
+  "stale": 1
  },
  {
   "id": "ch-e92a35",
@@ -954,40 +1138,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.2
- },
- {
-  "id": "ch-a8d478",
-  "name": "宿州新闻综合",
-  "group": "安徽频道",
-  "page": "https://live.ahsz.tv/video/s10001-szzh/index.m3u8",
-  "url": "https://live.ahsz.tv/video/s10001-szzh/index.m3u8",
-  "ok": true,
-  "cands": 1,
-  "signed": false,
-  "cost": 4.3
- },
- {
-  "id": "ch-1952b8",
-  "name": "阜阳新闻综合",
-  "group": "安徽频道",
-  "page": "https://web.guangdianyun.tv/tv/2851?uin=2577",
-  "url": "https://41007-live.hlsplay.aodianyun.com/tv_radio_41007/tv_channel_2851.m3u8?auth_key=1791184858-0-0-763cd1a974e131d1b76182ed46bfee32&extra_key=Yxvq8PPYlCtCuWA-ncmJZq0Hr_3NIZnKTh0pjmMZLI2NyjN1Nehu2FxVx1M-L9RWt1lnYuX6BQgV8GHewD8mUOBRjif3ob4iUDy5suthD1Rz6zPXQwG5wOFT_QG4NJ1a9-wiU527hVng-XvZyI_gZHIIMSBwB6xr2XADPbEsLzE",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 7.9
- },
- {
-  "id": "ch-d8bc67",
-  "name": "阜阳生活",
-  "group": "安徽频道",
-  "page": "https://web.guangdianyun.tv/tv/2853?uin=2577",
-  "url": "https://41007-live.hlsplay.aodianyun.com/tv_radio_41007/tv_channel_2853.m3u8?auth_key=1791184860-0-0-2582e870cd527de6517dc47dd8e0218d&extra_key=_3UGY1hremRfGU1-HZY38tu6Lw2HZloKo8VFdxbohmblpQKZm7iKq6mgM1LXNz0lmZ1CfPr1CrI1ZzCYziUbT2GN8_PJJXkH0XPctsof1PH_b2GLfmk5U5JWSQaVZMxov3tpnuCUXUVf9zRc3CrZc5RF0a11O61V9ewRjSFxM5U",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 6.1
+  "cost": 7.2,
+  "stale": 1
  },
  {
   "id": "ch-5b7d31",
@@ -998,7 +1150,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-eabdd9",
@@ -1009,7 +1162,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-711dcf",
@@ -1020,7 +1174,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-c6fd51",
@@ -1031,7 +1186,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-7da5f4",
@@ -1042,7 +1198,8 @@
   "ok": true,
   "cands": 5,
   "signed": false,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-fd372e",
@@ -1053,7 +1210,8 @@
   "ok": true,
   "cands": 5,
   "signed": false,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-f0a206",
@@ -1064,7 +1222,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.1
+  "cost": 4.1,
+  "stale": 1
  },
  {
   "id": "ch-bfa6df",
@@ -1075,40 +1234,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.7
- },
- {
-  "id": "ch-efdbda",
-  "name": "广东卫视",
-  "group": "广东频道",
-  "page": "https://www.gdtv.cn/tvChannelDetail/43",
-  "url": "https://tcdn.itouchtv.cn/live/gdws.m3u8?t_token=cab724e78aff65a7ef009102f5d3558d-oqQqdbvOviFDrDIWgw%2BVdTs1MBfJ%2Bv7g%2F2mLXbLVcLf3y%2BtPVq8aiv%2F0pT91VQ9OESQ0LtBzGoaUsmVYs9VIitkpDwTOObN45e43569PVMO8xWLFYmZtOtluW4BO8LiJ0CS9RKP5TkKxqIU3%2BJ%2FrLb8TYWQ287tz1JQS3IRVKdekxd1m12uwNY0vt8IQRtS1xhPB499nnDSM2UphYKd2PCSi5A3h%2FtKsbyZo2HcwVsGsYlzo60Gqy5VVUftQRkRW3diiKC0rraYax7bCvM%2BWC6n1ygckSD4WCgIP1TAKEQ2HcsrazV62OqLV7zxbRJrIuVQTrJ0GM%2FyZuxzhpluoyHw7Ph4xGDMqytbgg350VZf3kV2hTtetZXw4R%2FJDVNISfqHCtcfuU4mAneJQ7E7I%2Fg%3D%3D",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 5.6
- },
- {
-  "id": "ch-70c5b3",
-  "name": "广东珠江",
-  "group": "广东频道",
-  "page": "https://www.gdtv.cn/tvChannelDetail/44",
-  "url": "https://tcdn.itouchtv.cn/live/gdzj.m3u8?t_token=238e1c4a967575824f06ec32d85a2307-oqQqdbvOviFDrDIWgw%2BVdTs1MBfJ%2Bv7g%2F2mLXbLVcLf3y%2BtPVq8aiv%2F0pT91VQ9OESQ0LtBzGoaUsmVYs9VIitkpDwTOObN45e43569PVMO8xWLFYmZtOtluW4BO8LiJ0CS9RKP5TkKxqIU3%2BJ%2FrLb8TYWQ287tz1JQS3IRVKdekxd1m12uwNY0vt8IQRtS1xhPB499nnDSM2UphYKd2PNulqTnvC9rbDh4aHisjFXqVPS30dnDdmDkpSYQSnyuxUCNr2qsZhZn9U%2FIZLTOVzDoFF1bXuDqRQUNUfEYDHVwlbKLxPXjkMqCDWcF%2FNpevDRTBpwOZ%2Fr2RDtoHw%2B8RdG%2B%2B1OupK%2Fy1Og2PQ8w2UzwligKYXHEe%2FWqO%2BKdrJVKGWeD3MRTVqb3fnl66asRreA%3D%3D",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 4.9
- },
- {
-  "id": "ch-3df0de",
-  "name": "广东新闻",
-  "group": "广东频道",
-  "page": "https://www.gdtv.cn/tvChannelDetail/45",
-  "url": "https://tcdn.itouchtv.cn/live/xwpd.m3u8?t_token=0f18b12344f8c934fc370ef29415a0f9-A9kf%2BODwUmocEN4Vlpq5znVNYAeqN%2F0A6QXLgHp68Ud4v%2BM3jrpYvi%2F7kfPWHVcZL5cU3pzJkCJKmHpFwQryrWVGYFHauXHt7YbgH0eENN%2FoO7YAfjlM%2Bp0Go9YLO73V9bN222lQXjcZQhSCtmKCmx5HNl6xkt9b%2FHmLFE%2Bc9ySXPLm5xZceyLI7Rl6XJioP2%2FPEFSLJbTXM1zcSpK1dHNBvMCe%2BXFp3j0zYUNQhSefTVb7dqYFcB9be1z1KY%2F87Q4dvb0hwDXiiJegeO%2BXEu2eta%2BpEswWJc023TBKE9w38vF0zHTkLNmwpkZ9mCMIVp%2B3tA9CbMSnSfPY%2BfRICNLsUbV9GgxZJlPWfhG6OI%2BoloMJ893qtGwkS7%2F1XJXsDPshIZgq2wQzfPTODSHU4Lg%3D%3D",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 4.0
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "ch-91dec5",
@@ -1119,7 +1246,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 9.6
+  "cost": 9.6,
+  "stale": 1
  },
  {
   "id": "ch-400bef",
@@ -1130,29 +1258,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 11.0
- },
- {
-  "id": "ch-32e1de",
-  "name": "广东民生",
-  "group": "广东频道",
-  "page": "https://www.gdtv.cn/tvChannelDetail/48",
-  "url": "https://tcdn.itouchtv.cn/live/gdgg.m3u8?t_token=daf03b99f145421df640ffeb722b318f-UdJMVUyi%2B3%2FAOShdYjdmoZnxAkRDKdHDGzOEnspLh%2BKWFBSrqsEd%2Bb%2FsxtjRIPs8yt9KwwqtIe1dPH7kL1jPKb9MMWCu1gntm9VzmUMbCG9SplSo%2FhdfNUrXjD1uKVHkJ6Vu8%2BH2cMcaFTUcurEwwoDUY1apBd1bf6G9W84oKHRfoq8bB5GnEgDBhaqsnEKZsO%2BvCngjs3VIM3XEFouCw607g6mpIwMdHl36qQTN8N7IC%2BZiK8%2B%2FyGCAxmOE65y%2FzcFFLgQAxz87Ikv%2B3x3MGGB7gO%2BDSxSzi3jvJVBjVyZfkqgz8Dox3q3AHXDnfNUFkk5o0COX40T5wqY9xRgZ4b9Es502tj4XHBwuGVRpX0yzQlA2OWebAxxJxo9puq7YuNUIJk3Wt4fbAhM%2F4m%2Fp9g%3D%3D",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 3.9
- },
- {
-  "id": "ch-5ac953",
-  "name": "广东体育",
-  "group": "广东频道",
-  "page": "https://www.gdtv.cn/tvChannelDetail/47",
-  "url": "https://tcdn.itouchtv.cn/live/gdty.m3u8?t_token=31d3ecd2a9bb2f9d1a85c34a9a5832f9-GKyeLB93RJMdhbKYdiVupcgjyB1CRozjcEO9ISaerbmYP%2BQ0NJT6O6ZZlQTe2QN422nibeNBEX47O%2BRrAvMH%2Bx2noJD3cQ23p1%2BlnEUZwM5qOrY0jw2X44jtV%2BEB6%2FI%2BkpUw5JgaNYvBJwW1aCvWu85RfmVonUBIi%2FTWG7AyIzYjujSrzN2eKa7QBqFRDsqZc8q5WGLT8yShW0HIjqPIMZyQ4tXoZwNpl5%2B1UZW1Ekf83tcRhzOepT%2BjJLF8hjLXmwY5PRfhYDDpmBm6v%2BXOC35gH%2FnnTJCBkakITfHWVE%2B43Qh4xTDoB1cW23olEW9ilvPq3i1uLaf4XR4nubyX9v3Upw49N1N3IhCy02lrwOYrFhZmRs3%2BgGbrAIjJ5466WFE17Bz6XxJLniTCGCilog%3D%3D",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 3.7
+  "cost": 11.0,
+  "stale": 1
  },
  {
   "id": "ch-96bffe",
@@ -1163,18 +1270,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.9
- },
- {
-  "id": "ch-5379e2",
-  "name": "大湾区卫视",
-  "group": "广东频道",
-  "page": "https://www.gdtv.cn/tvChannelDetail/51",
-  "url": "https://tcdn.itouchtv.cn/live/nfws.m3u8?t_token=88a1220f822452df94ed912deb3a80b8-WNdx6sRfUfwKOz6ti2XZK%2FvUI%2FSf9bODwP%2FZchL451trtCVMWWza1ciMBhD4HqN8I1kYDxMZZKd8owz0z5oCfOS%2FsWH5XeszE0TOnDQhedmK%2FFRB0PXPDUdX%2BT46q2G7jemIjRLnl6yQa2%2FQN7qWqm6qTgjza5J%2BPbon3ZSLnflbkBWNiz%2BO7C2fUz5xs7GkL%2FpsF%2FFRxeWYRlDq0%2B%2BWsKFqv%2FhaBsomA6nVZJ1UNYzArg46lBAsEv1ubQrPyNilT72t7W%2BZfcE6c6ThWpV4z%2BKWbrNwba11ZMG5GXsFrbVeClRPhrwkp2nVhdm1bHwjQkOKxagQJbkBDzMZlXtaZp4QTSU%2BESR8uap9SEg3Iwg1pLYMWmYmTp44Da3KjpjpT8Vpe%2FXF1D3TG7m9eSJb6w%3D%3D",
-  "ok": true,
-  "cands": 1,
-  "signed": true,
-  "cost": 4.1
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-a92a9e",
@@ -1185,7 +1282,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-04dd25",
@@ -1196,7 +1294,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "4k",
@@ -1207,7 +1306,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.1
+  "cost": 4.1,
+  "stale": 1
  },
  {
   "id": "ch-e8d1be",
@@ -1218,7 +1318,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-40a3cf",
@@ -1229,7 +1330,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-f5537e",
@@ -1240,7 +1342,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-2fdef5",
@@ -1251,7 +1354,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-493fd5",
@@ -1262,7 +1366,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-3f75bd",
@@ -1273,7 +1378,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.2
+  "cost": 5.2,
+  "stale": 1
  },
  {
   "id": "grtn",
@@ -1284,7 +1390,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-a020e4",
@@ -1295,7 +1402,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.6
+  "cost": 7.6,
+  "stale": 1
  },
  {
   "id": "ch-dcedfb",
@@ -1306,7 +1414,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.1
+  "cost": 8.1,
+  "stale": 1
  },
  {
   "id": "ch-3db814",
@@ -1317,7 +1426,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.8
+  "cost": 4.8,
+  "stale": 1
  },
  {
   "id": "ch-f6e274",
@@ -1328,7 +1438,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.5
+  "cost": 4.5,
+  "stale": 1
  },
  {
   "id": "ch-f0eef3",
@@ -1339,7 +1450,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.2
+  "cost": 5.2,
+  "stale": 1
  },
  {
   "id": "ch-575ab8",
@@ -1350,7 +1462,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.2
+  "cost": 5.2,
+  "stale": 1
  },
  {
   "id": "ch-56a7a6",
@@ -1361,7 +1474,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.9
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-2ac509",
@@ -1372,7 +1486,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-98da9a",
@@ -1383,7 +1498,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-ed47ad",
@@ -1394,7 +1510,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-76ddd8",
@@ -1405,7 +1522,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.0
+  "cost": 3.0,
+  "stale": 1
  },
  {
   "id": "ch-806231",
@@ -1416,7 +1534,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.4
+  "cost": 4.4,
+  "stale": 1
  },
  {
   "id": "ch-1bc3f5",
@@ -1427,7 +1546,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "ch-f1fe3a",
@@ -1438,7 +1558,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.4
+  "cost": 4.4,
+  "stale": 1
  },
  {
   "id": "ch-349cb2",
@@ -1449,7 +1570,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-4ac54c",
@@ -1460,7 +1582,8 @@
   "ok": true,
   "cands": 5,
   "signed": false,
-  "cost": 5.5
+  "cost": 5.5,
+  "stale": 1
  },
  {
   "id": "ch-a88609",
@@ -1471,7 +1594,8 @@
   "ok": true,
   "cands": 5,
   "signed": false,
-  "cost": 5.8
+  "cost": 5.8,
+  "stale": 1
  },
  {
   "id": "ch-280f49",
@@ -1482,7 +1606,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.2
+  "cost": 4.2,
+  "stale": 1
  },
  {
   "id": "ch-087489",
@@ -1493,7 +1618,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.1
+  "cost": 3.1,
+  "stale": 1
  },
  {
   "id": "ch-877e6c",
@@ -1504,7 +1630,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.0
+  "cost": 3.0,
+  "stale": 1
  },
  {
   "id": "ch-c91235",
@@ -1515,7 +1642,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.5
+  "cost": 4.5,
+  "stale": 1
  },
  {
   "id": "ch-73747b",
@@ -1526,7 +1654,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-f1ae04",
@@ -1537,7 +1666,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 15.1
+  "cost": 15.1,
+  "stale": 1
  },
  {
   "id": "ch-e7e2d1",
@@ -1548,7 +1678,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.9
+  "cost": 6.9,
+  "stale": 1
  },
  {
   "id": "ch-954362",
@@ -1559,7 +1690,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.8
+  "cost": 5.8,
+  "stale": 1
  },
  {
   "id": "ch-fcdbcc",
@@ -1570,7 +1702,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-5ea9fc",
@@ -1581,7 +1714,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.2
+  "cost": 5.2,
+  "stale": 1
  },
  {
   "id": "ch-6b041d",
@@ -1592,7 +1726,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.1
+  "cost": 4.1,
+  "stale": 1
  },
  {
   "id": "ch-77d9a0",
@@ -1603,7 +1738,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-b0ec15",
@@ -1614,7 +1750,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-94e95a",
@@ -1625,7 +1762,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-aee3e7",
@@ -1636,7 +1774,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-41059e",
@@ -1647,7 +1786,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-a1fc44",
@@ -1658,7 +1798,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-5b129d",
@@ -1669,7 +1810,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.1
+  "cost": 6.1,
+  "stale": 1
  },
  {
   "id": "ch-df882a",
@@ -1680,7 +1822,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-063958",
@@ -1691,7 +1834,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.3
+  "cost": 7.3,
+  "stale": 1
  },
  {
   "id": "ch-082f9d",
@@ -1702,7 +1846,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-5b7bc9",
@@ -1713,7 +1858,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-3b20fe",
@@ -1724,7 +1870,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-bf1136",
@@ -1735,7 +1882,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-16feef",
@@ -1746,7 +1894,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-be03b6",
@@ -1757,7 +1906,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-4bd324",
@@ -1768,7 +1918,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-014e8c",
@@ -1779,7 +1930,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-e03b74",
@@ -1790,7 +1942,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 14.8
+  "cost": 14.8,
+  "stale": 1
  },
  {
   "id": "ch-173df1",
@@ -1801,7 +1954,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 10.1
+  "cost": 10.1,
+  "stale": 1
  },
  {
   "id": "ch-7a4cc5",
@@ -1812,7 +1966,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.1
+  "cost": 4.1,
+  "stale": 1
  },
  {
   "id": "ch-b727a1",
@@ -1823,7 +1978,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.2
+  "cost": 4.2,
+  "stale": 1
  },
  {
   "id": "ch-f508e1",
@@ -1834,7 +1990,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.1
+  "cost": 5.1,
+  "stale": 1
  },
  {
   "id": "ch-17425e",
@@ -1845,7 +2002,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.3
+  "cost": 6.3,
+  "stale": 1
  },
  {
   "id": "ch-d7511f",
@@ -1856,7 +2014,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-53f281",
@@ -1867,7 +2026,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.6
+  "cost": 6.6,
+  "stale": 1
  },
  {
   "id": "ch-9aef6e",
@@ -1878,7 +2038,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-ff84b0",
@@ -1889,7 +2050,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-aa5cc4",
@@ -1900,7 +2062,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-6f1e03",
@@ -1911,7 +2074,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 16.6
+  "cost": 16.6,
+  "stale": 1
  },
  {
   "id": "ch-88698a",
@@ -1922,7 +2086,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 14.9
+  "cost": 14.9,
+  "stale": 1
  },
  {
   "id": "ch-96ce59",
@@ -1933,7 +2098,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 9.1
+  "cost": 9.1,
+  "stale": 1
  },
  {
   "id": "ch-341b3d",
@@ -1944,7 +2110,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 9.3
+  "cost": 9.3,
+  "stale": 1
  },
  {
   "id": "ch-aba189",
@@ -1955,7 +2122,8 @@
   "ok": true,
   "cands": 3,
   "signed": false,
-  "cost": 5.7
+  "cost": 5.7,
+  "stale": 1
  },
  {
   "id": "ch-aa818b",
@@ -1966,7 +2134,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-387689",
@@ -1977,7 +2146,8 @@
   "ok": true,
   "cands": 3,
   "signed": false,
-  "cost": 4.1
+  "cost": 4.1,
+  "stale": 1
  },
  {
   "id": "ch-fd3222",
@@ -1988,7 +2158,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.6
+  "cost": 8.6,
+  "stale": 1
  },
  {
   "id": "ch-4d6136",
@@ -1999,7 +2170,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.9
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-e62b5d",
@@ -2010,7 +2182,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 9.0
+  "cost": 9.0,
+  "stale": 1
  },
  {
   "id": "ch-418781",
@@ -2021,7 +2194,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-ba9a8e",
@@ -2032,7 +2206,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.3
+  "cost": 4.3,
+  "stale": 1
  },
  {
   "id": "ch-e249d5",
@@ -2043,7 +2218,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.4
+  "cost": 4.4,
+  "stale": 1
  },
  {
   "id": "ch-24be3c",
@@ -2054,7 +2230,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.0
+  "cost": 3.0,
+  "stale": 1
  },
  {
   "id": "ch-ffd503",
@@ -2065,7 +2242,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.0
+  "cost": 3.0,
+  "stale": 1
  },
  {
   "id": "ch-7c6d42",
@@ -2076,7 +2254,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 9.3
+  "cost": 9.3,
+  "stale": 1
  },
  {
   "id": "ch-30acc9",
@@ -2087,7 +2266,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 8.1
+  "cost": 8.1,
+  "stale": 1
  },
  {
   "id": "ch-7589e8",
@@ -2098,7 +2278,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 9.9
+  "cost": 9.9,
+  "stale": 1
  },
  {
   "id": "ch-cba28f",
@@ -2109,7 +2290,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 11.9
+  "cost": 11.9,
+  "stale": 1
  },
  {
   "id": "ch-b38faf",
@@ -2120,7 +2302,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-7b585b",
@@ -2131,7 +2314,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.0
+  "cost": 6.0,
+  "stale": 1
  },
  {
   "id": "ch-ee2752",
@@ -2142,7 +2326,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 13.2
+  "cost": 13.2,
+  "stale": 1
  },
  {
   "id": "ch-fa7146",
@@ -2153,7 +2338,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 12.2
+  "cost": 12.2,
+  "stale": 1
  },
  {
   "id": "ch-bec4bd",
@@ -2164,7 +2350,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 12.3
+  "cost": 12.3,
+  "stale": 1
  },
  {
   "id": "ch-4e6cb7",
@@ -2175,7 +2362,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.2
+  "cost": 8.2,
+  "stale": 1
  },
  {
   "id": "ch-414a32",
@@ -2186,7 +2374,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.6
+  "cost": 5.6,
+  "stale": 1
  },
  {
   "id": "ch-8be482",
@@ -2197,7 +2386,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 5.2
+  "cost": 5.2,
+  "stale": 1
  },
  {
   "id": "ch-e6d060",
@@ -2208,7 +2398,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.7
+  "cost": 5.7,
+  "stale": 1
  },
  {
   "id": "ch-b6d894",
@@ -2219,7 +2410,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.3
+  "cost": 8.3,
+  "stale": 1
  },
  {
   "id": "ch-4fff4e",
@@ -2230,7 +2422,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.9
+  "cost": 7.9,
+  "stale": 1
  },
  {
   "id": "ch-3203c7",
@@ -2241,7 +2434,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-8d7d58",
@@ -2252,7 +2446,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 4.2
+  "cost": 4.2,
+  "stale": 1
  },
  {
   "id": "4k-2",
@@ -2263,7 +2458,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-06fee0",
@@ -2274,7 +2470,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-0046c0",
@@ -2285,7 +2482,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-da2562",
@@ -2296,7 +2494,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.7
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "ch-502c30",
@@ -2307,7 +2506,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-445863",
@@ -2318,7 +2518,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.0
+  "cost": 5.0,
+  "stale": 1
  },
  {
   "id": "ch-585c76",
@@ -2329,7 +2530,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.3
+  "cost": 4.3,
+  "stale": 1
  },
  {
   "id": "ch-48a7ca",
@@ -2340,7 +2542,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 8.6
+  "cost": 8.6,
+  "stale": 1
  },
  {
   "id": "ch-4e0779",
@@ -2351,7 +2554,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.3
+  "cost": 4.3,
+  "stale": 1
  },
  {
   "id": "ch-26769d",
@@ -2362,7 +2566,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-aaa7b1",
@@ -2373,7 +2578,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-0172b5",
@@ -2384,7 +2590,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-2-8f43ce",
@@ -2395,7 +2602,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-3-ead265",
@@ -2406,7 +2614,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-29c5cf",
@@ -2417,7 +2626,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-a549f7",
@@ -2428,7 +2638,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-e66185",
@@ -2439,7 +2650,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-a14c8c",
@@ -2450,7 +2662,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.2
+  "cost": 3.2,
+  "stale": 1
  },
  {
   "id": "4k-3",
@@ -2461,7 +2674,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-823766",
@@ -2472,7 +2686,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-f7201c",
@@ -2483,7 +2698,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-04203f",
@@ -2494,7 +2710,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.8
+  "cost": 6.8,
+  "stale": 1
  },
  {
   "id": "ch-e532dd",
@@ -2505,7 +2722,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.9
+  "cost": 6.9,
+  "stale": 1
  },
  {
   "id": "ch-a142f3",
@@ -2516,7 +2734,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-47cfb5",
@@ -2527,7 +2746,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.0
+  "cost": 7.0,
+  "stale": 1
  },
  {
   "id": "ch-527f45",
@@ -2538,7 +2758,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.8
+  "cost": 7.8,
+  "stale": 1
  },
  {
   "id": "ch-1-e0c3f6",
@@ -2549,7 +2770,8 @@
   "ok": true,
   "cands": 5,
   "signed": false,
-  "cost": 4.6
+  "cost": 4.6,
+  "stale": 1
  },
  {
   "id": "ch-3-d08896",
@@ -2560,7 +2782,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.6
+  "cost": 6.6,
+  "stale": 1
  },
  {
   "id": "ch-c66981",
@@ -2571,7 +2794,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.9
+  "cost": 7.9,
+  "stale": 1
  },
  {
   "id": "ch-2-a9991f",
@@ -2582,7 +2806,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 7.8
+  "cost": 7.8,
+  "stale": 1
  },
  {
   "id": "ch-2-1c0152",
@@ -2593,7 +2818,8 @@
   "ok": true,
   "cands": 7,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-1-69165a",
@@ -2604,7 +2830,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.4
+  "cost": 8.4,
+  "stale": 1
  },
  {
   "id": "ch-3-c94bc0",
@@ -2615,7 +2842,8 @@
   "ok": true,
   "cands": 7,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-4-d7b7e0",
@@ -2626,7 +2854,8 @@
   "ok": true,
   "cands": 5,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-1b3f07",
@@ -2637,7 +2866,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.9
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-79e2ad",
@@ -2648,7 +2878,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.1
+  "cost": 4.1,
+  "stale": 1
  },
  {
   "id": "ch-8db054",
@@ -2659,7 +2890,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-13f80f",
@@ -2670,7 +2902,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.2
+  "cost": 6.2,
+  "stale": 1
  },
  {
   "id": "ch-251e11",
@@ -2681,7 +2914,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-502c2d",
@@ -2692,7 +2926,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-ce34b7",
@@ -2703,7 +2938,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.6
+  "cost": 4.6,
+  "stale": 1
  },
  {
   "id": "ch-1bfcf9",
@@ -2714,7 +2950,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.7
+  "cost": 5.7,
+  "stale": 1
  },
  {
   "id": "ch-a10c41",
@@ -2725,7 +2962,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-f2ff72",
@@ -2736,7 +2974,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-03495d",
@@ -2747,7 +2986,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-32c636",
@@ -2758,7 +2998,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-4ab731",
@@ -2769,7 +3010,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.4
+  "cost": 5.4,
+  "stale": 1
  },
  {
   "id": "ch-8b7e4c",
@@ -2780,7 +3022,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.5
+  "cost": 5.5,
+  "stale": 1
  },
  {
   "id": "ch-e23c4b",
@@ -2791,7 +3034,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.8
+  "cost": 5.8,
+  "stale": 1
  },
  {
   "id": "ch-b712de",
@@ -2802,7 +3046,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-d4d691",
@@ -2813,7 +3058,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-72a7f3",
@@ -2824,7 +3070,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.2
+  "cost": 3.2,
+  "stale": 1
  },
  {
   "id": "ch-283484",
@@ -2835,7 +3082,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 10.2
+  "cost": 10.2,
+  "stale": 1
  },
  {
   "id": "ch-8936a8",
@@ -2846,7 +3094,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.2
+  "cost": 3.2,
+  "stale": 1
  },
  {
   "id": "ch-793be1",
@@ -2857,7 +3106,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-3159e9",
@@ -2868,7 +3118,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 9.4
+  "cost": 9.4,
+  "stale": 1
  },
  {
   "id": "ch-3c347d",
@@ -2879,7 +3130,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 9.5
+  "cost": 9.5,
+  "stale": 1
  },
  {
   "id": "ch-d4383a",
@@ -2890,7 +3142,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-0ed6b2",
@@ -2901,7 +3154,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-795993",
@@ -2912,7 +3166,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-d00a0e",
@@ -2923,7 +3178,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.6
+  "cost": 4.6,
+  "stale": 1
  },
  {
   "id": "ch-ec0927",
@@ -2934,7 +3190,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 5.4
+  "cost": 5.4,
+  "stale": 1
  },
  {
   "id": "ch-8ba700",
@@ -2945,7 +3202,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.7
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "ch-d1f2fc",
@@ -2956,7 +3214,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.0
+  "cost": 8.0,
+  "stale": 1
  },
  {
   "id": "ch-ae4c9d",
@@ -2967,7 +3226,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "ch-e30be2",
@@ -2978,7 +3238,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 8.1
+  "cost": 8.1,
+  "stale": 1
  },
  {
   "id": "ch-ff6b7d",
@@ -2989,7 +3250,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-a84d8d",
@@ -3000,7 +3262,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.2
+  "cost": 4.2,
+  "stale": 1
  },
  {
   "id": "ch-7e45b1",
@@ -3011,7 +3274,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.4
+  "cost": 5.4,
+  "stale": 1
  },
  {
   "id": "ch-2189f9",
@@ -3022,7 +3286,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.6
+  "cost": 5.6,
+  "stale": 1
  },
  {
   "id": "ch-2-4a7565",
@@ -3033,7 +3298,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-3-a70b70",
@@ -3044,7 +3310,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-8-b2496f",
@@ -3055,7 +3322,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-fe8b69",
@@ -3066,7 +3334,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.7
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "ch-48bc58",
@@ -3077,7 +3346,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 22.6
+  "cost": 22.6,
+  "stale": 1
  },
  {
   "id": "ch-c45f43",
@@ -3088,7 +3358,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.4
+  "cost": 4.4,
+  "stale": 1
  },
  {
   "id": "ch-f19ddf",
@@ -3099,7 +3370,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.8
+  "cost": 4.8,
+  "stale": 1
  },
  {
   "id": "ch-084883",
@@ -3110,7 +3382,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.2
+  "cost": 4.2,
+  "stale": 1
  },
  {
   "id": "ch-1-ef5c92",
@@ -3121,7 +3394,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 13.5
+  "cost": 13.5,
+  "stale": 1
  },
  {
   "id": "ch-bcc5b1",
@@ -3132,7 +3406,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.2
+  "cost": 4.2,
+  "stale": 1
  },
  {
   "id": "ch-f27db0",
@@ -3143,7 +3418,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.7
+  "cost": 4.7,
+  "stale": 1
  },
  {
   "id": "ch-99a0ce",
@@ -3154,7 +3430,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-18830b",
@@ -3165,7 +3442,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.8
+  "cost": 3.8,
+  "stale": 1
  },
  {
   "id": "ch-4a47cb",
@@ -3176,7 +3454,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-7a0595",
@@ -3187,7 +3466,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-3f3f81",
@@ -3198,7 +3478,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-f0bf56",
@@ -3209,7 +3490,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.7
+  "cost": 3.7,
+  "stale": 1
  },
  {
   "id": "ch-506f53",
@@ -3220,7 +3502,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.9
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-91b8ff",
@@ -3231,7 +3514,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.8
+  "cost": 4.8,
+  "stale": 1
  },
  {
   "id": "ch-3-c0efcc",
@@ -3242,7 +3526,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.1
+  "cost": 5.1,
+  "stale": 1
  },
  {
   "id": "ch-2-271c16",
@@ -3253,7 +3538,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-1-ee8d99",
@@ -3264,7 +3550,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-4-e6bd6c",
@@ -3275,7 +3562,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.3
+  "cost": 5.3,
+  "stale": 1
  },
  {
   "id": "ch-f7fda8",
@@ -3286,7 +3574,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.1
+  "cost": 6.1,
+  "stale": 1
  },
  {
   "id": "ch-1cffb4",
@@ -3297,7 +3586,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-e70946",
@@ -3308,7 +3598,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-938b88",
@@ -3319,7 +3610,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.3
+  "cost": 4.3,
+  "stale": 1
  },
  {
   "id": "ch-db5c7f",
@@ -3330,7 +3622,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.2
+  "cost": 3.2,
+  "stale": 1
  },
  {
   "id": "ch-fd5024",
@@ -3341,7 +3634,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.6
+  "cost": 4.6,
+  "stale": 1
  },
  {
   "id": "ch-4b1836",
@@ -3352,7 +3646,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.9
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-1-f12e21",
@@ -3363,7 +3658,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.9
+  "cost": 7.9,
+  "stale": 1
  },
  {
   "id": "ch-07e6dc",
@@ -3374,7 +3670,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.9
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-cbeca1",
@@ -3385,7 +3682,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 8.2
+  "cost": 8.2,
+  "stale": 1
  },
  {
   "id": "4k-4",
@@ -3396,7 +3694,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.5
+  "cost": 5.5,
+  "stale": 1
  },
  {
   "id": "ch-3f603f",
@@ -3407,7 +3706,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.1
+  "cost": 5.1,
+  "stale": 1
  },
  {
   "id": "ch-8c2d56",
@@ -3418,7 +3718,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.6
+  "cost": 5.6,
+  "stale": 1
  },
  {
   "id": "ch-12cfda",
@@ -3429,7 +3730,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.4
+  "cost": 7.4,
+  "stale": 1
  },
  {
   "id": "ch-f54fe0",
@@ -3440,7 +3742,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.5
+  "cost": 5.5,
+  "stale": 1
  },
  {
   "id": "ch-e2e258",
@@ -3451,7 +3754,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.5
+  "cost": 5.5,
+  "stale": 1
  },
  {
   "id": "ch-d8e590",
@@ -3462,7 +3766,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 5.9
+  "cost": 5.9,
+  "stale": 1
  },
  {
   "id": "ch-b9e3cc",
@@ -3473,7 +3778,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.5
+  "cost": 3.5,
+  "stale": 1
  },
  {
   "id": "ch-c544a9",
@@ -3484,7 +3790,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.6
+  "cost": 4.6,
+  "stale": 1
  },
  {
   "id": "ch-cd2db8",
@@ -3495,7 +3802,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 5.8
+  "cost": 5.8,
+  "stale": 1
  },
  {
   "id": "ch-fdc5fc",
@@ -3506,7 +3814,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 4.4
+  "cost": 4.4,
+  "stale": 1
  },
  {
   "id": "ch-d0e7ea",
@@ -3517,7 +3826,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.0
+  "cost": 7.0,
+  "stale": 1
  },
  {
   "id": "ch-477075",
@@ -3528,7 +3838,8 @@
   "ok": true,
   "cands": 3,
   "signed": false,
-  "cost": 5.5
+  "cost": 5.5,
+  "stale": 1
  },
  {
   "id": "ch-521e0d",
@@ -3539,7 +3850,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-99937b",
@@ -3550,7 +3862,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.4
+  "cost": 6.4,
+  "stale": 1
  },
  {
   "id": "ch-09f496",
@@ -3561,7 +3874,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.3
+  "cost": 7.3,
+  "stale": 1
  },
  {
   "id": "ch-5cf23e",
@@ -3572,7 +3886,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.6
+  "cost": 3.6,
+  "stale": 1
  },
  {
   "id": "ch-0b9ae8",
@@ -3583,7 +3898,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 7.2
+  "cost": 7.2,
+  "stale": 1
  },
  {
   "id": "ch-70f986",
@@ -3594,7 +3910,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 25.1
+  "cost": 25.1,
+  "stale": 1
  },
  {
   "id": "ch-4c0869",
@@ -3605,7 +3922,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 6.5
+  "cost": 6.5,
+  "stale": 1
  },
  {
   "id": "ch-563204",
@@ -3616,67 +3934,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 6.6
- },
- {
-  "id": "ch-468307",
-  "name": "三沙卫视",
-  "group": "海南频道",
-  "page": "https://www.hnntv.cn/live.html?playType=livePlay&channelId=5&referPage=home",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 35.4
- },
- {
-  "id": "ch-492361",
-  "name": "海南卫视",
-  "group": "海南频道",
-  "page": "http://tc.hnntv.cn/",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 36.3
- },
- {
-  "id": "ch-cfa941",
-  "name": "广州影视",
-  "group": "广东频道",
-  "page": "http://tencentplaygzrb01.gztv.com/live/yingshi.m3u8",
-  "url": "",
-  "ok": false,
-  "reason": "goto:Error",
-  "cost": 40.0
- },
- {
-  "id": "ch-1e91af",
-  "name": "广州法治",
-  "group": "广东频道",
-  "page": "http://tencentplaygzrb01.gztv.com/live/fazhi.m3u8",
-  "url": "",
-  "ok": false,
-  "reason": "goto:Error",
-  "cost": 39.8
- },
- {
-  "id": "ch-87a8ee",
-  "name": "海南少儿",
-  "group": "海南频道",
-  "page": "https://www.hnntv.cn/live.html?playType=livePlay&channelId=7&referPage=home",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-e2c231",
-  "name": "海南社会与法",
-  "group": "海南频道",
-  "page": "https://www.hnntv.cn/live.html?playType=livePlay&channelId=4&referPage=home",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.9
+  "cost": 6.6,
+  "stale": 1
  },
  {
   "id": "ch-5e181e",
@@ -3687,7 +3946,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 4.0
+  "cost": 4.0,
+  "stale": 1
  },
  {
   "id": "ch-7e234f",
@@ -3698,7 +3958,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 6.2
+  "cost": 6.2,
+  "stale": 1
  },
  {
   "id": "ch-44276a",
@@ -3709,7 +3970,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 14.2
+  "cost": 14.2,
+  "stale": 1
  },
  {
   "id": "ch-96dc03",
@@ -3720,7 +3982,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 11.7
+  "cost": 11.7,
+  "stale": 1
  },
  {
   "id": "ch-1abf8e",
@@ -3731,7 +3994,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 11.8
+  "cost": 11.8,
+  "stale": 1
  },
  {
   "id": "ch-e72d00",
@@ -3742,7 +4006,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 6.1
+  "cost": 6.1,
+  "stale": 1
  },
  {
   "id": "ch-0eb487",
@@ -3753,7 +4018,8 @@
   "ok": true,
   "cands": 3,
   "signed": true,
-  "cost": 6.8
+  "cost": 6.8,
+  "stale": 1
  },
  {
   "id": "ch-7444e1",
@@ -3764,7 +4030,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 16.7
+  "cost": 16.7,
+  "stale": 1
  },
  {
   "id": "ch-82f4c6",
@@ -3775,17 +4042,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 16.8
- },
- {
-  "id": "ch-78a7f8",
-  "name": "海南自贸",
-  "group": "海南频道",
-  "page": "https://www.hnntv.cn/live.html?playType=livePlay&channelId=1&referPage=home",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
+  "cost": 16.8,
+  "stale": 1
  },
  {
   "id": "ch-cc3a12",
@@ -3796,17 +4054,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 16.9
- },
- {
-  "id": "ch-e6adab",
-  "name": "河南都市",
-  "group": "河南频道",
-  "page": "https://www.hntv2.net/index.html#/pages/tv/index",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 35.3
+  "cost": 16.9,
+  "stale": 1
  },
  {
   "id": "ch-7e6fec",
@@ -3817,7 +4066,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 6.8
+  "cost": 6.8,
+  "stale": 1
  },
  {
   "id": "ch-9d518e",
@@ -3828,7 +4078,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 6.8
+  "cost": 6.8,
+  "stale": 1
  },
  {
   "id": "ch-9d594c",
@@ -3839,7 +4090,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 6.7
+  "cost": 6.7,
+  "stale": 1
  },
  {
   "id": "ch-3b48e3",
@@ -3850,7 +4102,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 12.3
+  "cost": 12.3,
+  "stale": 1
  },
  {
   "id": "ch-e57df2",
@@ -3861,7 +4114,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 6.8
+  "cost": 6.8,
+  "stale": 1
  },
  {
   "id": "ch-53d6fc",
@@ -3872,7 +4126,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 8.8
+  "cost": 8.8,
+  "stale": 1
  },
  {
   "id": "ch-3242ae",
@@ -3883,7 +4138,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 12.2
+  "cost": 12.2,
+  "stale": 1
  },
  {
   "id": "ch-8d72e4",
@@ -3894,27 +4150,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 7.3
- },
- {
-  "id": "ch-5797ed",
-  "name": "洛阳综合",
-  "group": "河南频道",
-  "page": "https://static.hntv.tv/total/television/?id=204&u-link=1",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.4
- },
- {
-  "id": "ch-b3b4a6",
-  "name": "齐齐哈尔新闻综合",
-  "group": "黑龙江频道",
-  "page": "https://www.qqhrnews.cn/p/qiqihaerxinwen.html",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 4.4
+  "cost": 7.3,
+  "stale": 1
  },
  {
   "id": "ch-f6465c",
@@ -3925,17 +4162,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 16.7
- },
- {
-  "id": "ch-8f5b32",
-  "name": "齐齐哈尔经济·法治",
-  "group": "黑龙江频道",
-  "page": "https://www.qqhrnews.cn/p/jingjifazhipindao.html",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 3.4
+  "cost": 16.7,
+  "stale": 1
  },
  {
   "id": "ch-21eca6",
@@ -3946,7 +4174,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 16.8
+  "cost": 16.8,
+  "stale": 1
  },
  {
   "id": "ch-8e8271",
@@ -3957,7 +4186,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 16.7
+  "cost": 16.7,
+  "stale": 1
  },
  {
   "id": "ch-1bd58b",
@@ -3968,7 +4198,8 @@
   "ok": true,
   "cands": 2,
   "signed": true,
-  "cost": 17.2
+  "cost": 17.2,
+  "stale": 1
  },
  {
   "id": "ch-ef9c44",
@@ -3979,47 +4210,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 16.7
- },
- {
-  "id": "ch-1-20683e",
-  "name": "娄底1",
-  "group": "湖南频道",
-  "page": "http://www.ldntv.cn/folder51/folder154/folder171",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.8
- },
- {
-  "id": "ch-8bef4d",
-  "name": "延边朝语综合",
-  "group": "吉林频道",
-  "page": "https://www.iyb983.cn/live/index.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.8
- },
- {
-  "id": "ch-e0c9ac",
-  "name": "延边汉语综合",
-  "group": "吉林频道",
-  "page": "https://www.iyb983.cn/ybtv2/",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 36.9
- },
- {
-  "id": "ch-36978d",
-  "name": "延边卫视",
-  "group": "吉林频道",
-  "page": "https://www.iyb983.cn/cys/",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.7
+  "cost": 16.7,
+  "stale": 1
  },
  {
   "id": "ch-bc7c42",
@@ -4030,17 +4222,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 6.9
- },
- {
-  "id": "ch-7b8638",
-  "name": "南京少年儿童频道",
-  "group": "江苏频道",
-  "page": "https://www.nbs.cn/live/?id=110095",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.7
+  "cost": 6.9,
+  "stale": 1
  },
  {
   "id": "ch-bbf5e7",
@@ -4051,7 +4234,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-33b6c6",
@@ -4062,27 +4246,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.9
- },
- {
-  "id": "ch-b9c3ee",
-  "name": "西宁生活服务",
-  "group": "青海频道",
-  "page": "https://xiningbcnew.zainanjing365.com/share/live/detailTv?resourceId=6&appscheme=gdmm-zhangshangxining",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 8.4
- },
- {
-  "id": "ch-04b18b",
-  "name": "铜川公共",
-  "group": "江苏频道",
-  "page": "https://www.tcsrm.cn/tvradio/tcggpd.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 37.7
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-0daeef",
@@ -4093,7 +4258,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-4aee79",
@@ -4104,17 +4270,8 @@
   "ok": true,
   "cands": 1,
   "signed": false,
-  "cost": 3.3
- },
- {
-  "id": "ch-f9b3fa",
-  "name": "西安商务资讯",
-  "group": "陕西频道",
-  "page": "https://v.xiancity.cn/folder8/folder39/folder31/",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 3.8
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-3e0308",
@@ -4125,27 +4282,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.8
- },
- {
-  "id": "ch-c1444f",
-  "name": "聊城综合",
-  "group": "山东频道",
-  "page": "https://www.lcxw.cn/kands/?tag=0",
-  "url": "",
-  "ok": false,
-  "reason": "goto:Error",
-  "cost": 21.5
- },
- {
-  "id": "ch-1ad35b",
-  "name": "聊城民生",
-  "group": "山东频道",
-  "page": "https://www.lcxw.cn/kands/?tag=1",
-  "url": "",
-  "ok": false,
-  "reason": "goto:Error",
-  "cost": 20.2
+  "cost": 4.8,
+  "stale": 1
  },
  {
   "id": "ch-f45df0",
@@ -4156,7 +4294,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.5
+  "cost": 4.5,
+  "stale": 1
  },
  {
   "id": "ch-4d4c75",
@@ -4167,7 +4306,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
   "id": "ch-a71693",
@@ -4178,7 +4318,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.2
+  "cost": 3.2,
+  "stale": 1
  },
  {
   "id": "ch-22f346",
@@ -4189,7 +4330,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.2
+  "cost": 3.2,
+  "stale": 1
  },
  {
   "id": "ch-08fd22",
@@ -4200,7 +4342,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.4
+  "cost": 3.4,
+  "stale": 1
  },
  {
   "id": "ch-308047",
@@ -4211,257 +4354,8 @@
   "ok": true,
   "cands": 1,
   "signed": true,
-  "cost": 3.3
- },
- {
-  "id": "ch-4-a1bb2d",
-  "name": "新疆4套",
-  "group": "新疆频道",
-  "page": "https://www.xjtvs.com.cn/column/tv/434?channelId=16",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 35.2
- },
- {
-  "id": "ch-a18824",
-  "name": "上海新闻综合",
-  "group": "上海频道",
-  "page": "https://live.kankanews.com/huikan?id=2",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 38.4
- },
- {
-  "id": "ch-78f4f4",
-  "name": "五星体育",
-  "group": "上海频道",
-  "page": "https://live.kankanews.com/huikan?id=10",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 38.1
- },
- {
-  "id": "ch-fb8ea9",
-  "name": "第一财经",
-  "group": "上海频道",
-  "page": "https://live.kankanews.com/huikan?id=5",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 38.4
- },
- {
-  "id": "ch-5-b65583",
-  "name": "新疆5套",
-  "group": "新疆频道",
-  "page": "https://www.xjtvs.com.cn/column/tv/434?channelId=17",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.8
- },
- {
-  "id": "ch-1c3caa",
-  "name": "杭州文化",
-  "group": "浙江频道",
-  "page": "https://tv.hoolo.tv/whpd/",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 36.5
- },
- {
-  "id": "ch-d31022",
-  "name": "成都新闻综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-563.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-477469",
-  "name": "成都经济咨询",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-562.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-16f647",
-  "name": "成都都市生活",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-561.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-c68c2f",
-  "name": "成都影视文艺",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-560.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-6fe524",
-  "name": "成都生活",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-559.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-4407bf",
-  "name": "成都少儿",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-558.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-bff402",
-  "name": "成都蓉城先锋",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4845-592.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.1
- },
- {
-  "id": "ch-5f6c0c",
-  "name": "简阳新闻综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-578.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-225f4e",
-  "name": "彭州综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-576.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-8c0214",
-  "name": "青白江电视",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-584.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-2ba313",
-  "name": "浦江电视",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-571.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-86534c",
-  "name": "大邑电视",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-572.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 33.7
- },
- {
-  "id": "ch-4f9795",
-  "name": "金堂电视",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-573.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-0f998e",
-  "name": "邛崃综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-575.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-5392c4",
-  "name": "郫都新闻综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-580.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-6c3962",
-  "name": "双流综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-581.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.3
- },
- {
-  "id": "ch-0b522c",
-  "name": "新都综合",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-583.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
- },
- {
-  "id": "ch-69560d",
-  "name": "南江综合",
-  "group": "四川频道",
-  "page": "https://web.guangdianyun.tv/tv/?id=1670&uin=1822",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 6.9
- },
- {
-  "id": "ch-d2bbb2",
-  "name": "泸县综合",
-  "group": "四川频道",
-  "page": "https://web.guangdianyun.tv/tv/?id=1645&uin=2392",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 7.4
+  "cost": 3.3,
+  "stale": 1
  },
  {
   "id": "ch-ea9a62",
@@ -4472,17 +4366,8 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 4.9
- },
- {
-  "id": "ch-f019e1",
-  "name": "遂宁综合",
-  "group": "四川频道",
-  "page": "https://www.snxw.com/suinMini/site/6642bf8360b26293fe689f04/6642d21860b26293fe689f4c",
-  "url": "",
-  "ok": false,
-  "reason": "拉流失败:HTTPError",
-  "cost": 8.5
+  "cost": 4.9,
+  "stale": 1
  },
  {
   "id": "ch-ea9312",
@@ -4493,46 +4378,362 @@
   "ok": true,
   "cands": 2,
   "signed": false,
-  "cost": 3.9
+  "cost": 3.9,
+  "stale": 1
  },
  {
-  "id": "ch-ac12bf",
-  "name": "成华有线",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-586.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.1
+  "id": "ch-96bffe",
+  "name": "广东影视",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/53",
+  "url": "https://tcdn.itouchtv.cn/live/gdys.m3u8?t_token=933efbf6529241b96e62f45ed1d38185-pbSfNGbdjJmwkzwvNtpIaXzb37xLnzkUZ9uU51sxkNjZnUtFFrIwxt8cQB8tV3k%2FVYyCiL9rabSIZsITJT3Sj5FVyHjZGpMqmmmubH4UZl%2FpT5SfER7d2fKj8tDeo6jdraQu4CnHXuSOoPcsHwndEK2PIf9Slk5c8C0Wb75zDesMhfxbJ0xSLpbdCcA44jRUf5iSkcfA%2Bm03LRevm%2FMcbuxaFUWqFjWP9%2FLwzfTscR%2B3%2BLNbkPpI08gdrR2M2G%2Br%2B0mE8xMXMnfZzmqKUdtwpDDPQFNvt2O%2BJM9WmPnATjCHjXv%2BNBv%2BSeuCeGDWa4q7PjQAkjDHdxnjdihxAyP54OsTzZKhyYTTGo%2F4pephT7DI7ac%2BseE2lv%2BtJ6BUOdcdkvUp7udp5O2fLDsO8OWYrA%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.8
  },
  {
-  "id": "ch-1f323e",
-  "name": "武侯电视",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-587.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.1
+  "id": "ch-a92a9e",
+  "name": "大湾区卫视（海外版）",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/46",
+  "url": "https://tcdn.itouchtv.cn/live/gdgj.m3u8?t_token=08e547b417eb1aa67f4d3a456a85168b-pbSfNGbdjJmwkzwvNtpIaXzb37xLnzkUZ9uU51sxkNjZnUtFFrIwxt8cQB8tV3k%2FVYyCiL9rabSIZsITJT3Sj5FVyHjZGpMqmmmubH4UZl%2FpT5SfER7d2fKj8tDeo6jdraQu4CnHXuSOoPcsHwndEHlQW7MKWLcR4yUOykdAJu%2BHbNWTkGjO4uW%2FSL3T4zzpdYl61AU1%2Bkk1NlyIKcpedeHEsXfwk1pfRRjL1IheAClQDWLb7GB6D6YJfEdbwJW3qZMVJ0F3CwdxEcXacyj2KPukqYweXKRiaPUuLZLcwSARTJgpV0rycyPqH%2BCw4d5RGxcxchR2EDSbfqble60tfepfXvtH7jUxZOGPNscWRaoe7HKS5OFlAUrN4E6eLRMsoOBKINk%2BsTdUggThXCCagg%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.5
  },
  {
-  "id": "ch-1a2f5a",
-  "name": "金牛",
-  "group": "四川频道",
-  "page": "https://www.cditv.cn/show/4844-588.html",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.2
+  "id": "4k",
+  "name": "4K超高清",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/16",
+  "url": "https://tcdn.itouchtv.cn/live/gdzy.m3u8?t_token=e1b462ac13306aaadb37c7c99358b98d-9numyh3AqjmcLk5CbrVzGETkeKq%2BoWRFFZmwJgcHT3YVbcRWanyv9VRRUI9J26kFNN%2FB8%2FP8TxdoghSQobQWM7RMHuz%2FqHlt9nX6Anth4WK2zsboIroeiZXHy3iJEuecoP998QlqxfXH%2FECN1BXRF1Dzv0qtPStStAqtBHVLp0SwXUEXjWZIB3DD2mVA8DEAHVJrm%2BNq4nV3vJlaZI1ObjV6GzeAesj90iJmDuPlRrbzjWUt58cllIQ3wqV%2BCHKS0ceSE5azO1B7ktm1spbWcafeTkwPfREaVvuW1cOYJTqPK9Y9u5bCmfpRTPs6h%2F3430%2Fc%2FZutr0Cb%2B3Zx7%2BwQCe%2B%2FhLybzP9kil1mUH%2FuNfZOxt6AVPoCRM7lSzSrCU7GqP7TW7djkosYF5JmgNuiGg%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.1
  },
  {
-  "id": "ch-511b68",
-  "name": "雅安新闻综合",
+  "id": "ch-04dd25",
+  "name": "广东少儿",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/54",
+  "url": "https://tcdn.itouchtv.cn/live/gdse.m3u8?t_token=47e018a0fa64fe3f5d818b930ab498a7-9numyh3AqjmcLk5CbrVzGETkeKq%2BoWRFFZmwJgcHT3YVbcRWanyv9VRRUI9J26kFNN%2FB8%2FP8TxdoghSQobQWM7RMHuz%2FqHlt9nX6Anth4WK2zsboIroeiZXHy3iJEuecoP998QlqxfXH%2FECN1BXRF6pk0veAbW6WMKlOv%2BCOiriYCi6B5x8sLsMpH3jt2UZoASrtwzfniMTderZKNJAPyB1PIe3S5hQuhzVBBf%2BMwm5IZplKQo3ZIGGJCcccOVZqni5BAXsLxwnGmJB0zVgOeyQnM9iyxuN4FJcnKmfJJeBGvrzSadUyOVsQY4lYfxkfaVpl5YFjIzTYKgfS48VCJs7yk21z47vOSUKcJqSvlBk8YCNJa0uoTUzZE3ZpGUErZzMlCWC1z1oDjCt2QpYWLQ%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.1
+ },
+ {
+  "id": "ch-e8d1be",
+  "name": "嘉佳卡通",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/66",
+  "url": "https://tcdn.itouchtv.cn/live/jjkt.m3u8?t_token=c3cf3899492194ce334b721795706b81-fZzAgmMVKldX0g%2F8WBRpIVDc2cHuXMC%2FEBWLa5LuiaIxDlA5ZGn7w4i5ic73FErPTWhk88pqrlYw9zx55QIJdIulen8742vXSn04eaj1cD5ZLDKzuyYoLhS9Kw87o4%2FA0xk01KaKFR4oVZ7o7o414gk0wlkHfAB483rnWTbQAcaglrCu34nEVXoG6ojHmZX5lUIaSEWuDb2DU3vOH2J5J47%2FLaQ7jmJOBo0Yls5t39I0pfXHpg9vI96xgId4fgNkMoSSFXa4gbKWQjBbrWCJjkYNSXaQsU4xSc954SMEpZ2J91T8YrthCl3Ks9NT2PtXJhzB6ZNBRVUpLyre5DwLtyz9RzGISs5gDhCeG6Ln7gLuuezXmQH9HU6ETXi0CbkdU1m8PRBc3c9wTGvgoprbsQ%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.1
+ },
+ {
+  "id": "ch-2fdef5",
+  "name": "岭南戏曲",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/15",
+  "url": "https://tcdn.itouchtv.cn/live/lnxq.m3u8?t_token=88f939c75f59b6e13246a5b0ee2e3af9-QR9h7w7X55Mm5XrYjD6dvUDuh9%2FpzGBYIR%2FUgNqVsE86VCdoI26zr1Un0DgSgqIIOO8NfwysI09q7kUrCOL8nhk3j3lx281CXluh7KpHHb2Rm7xsKDt372CPFlQWTPVYNKsZhZmLGflOs5fLuDlJqPjnq0Nn6Y%2FsHVv%2BjA4553VZD5%2F8%2FWIJVboATRR8%2B5L%2BtHktF7RlgLAGPd%2FZ02KI5VGXFWLymvgwV8ef9pMs5%2F6QLSrX0KSfzG2WOz4o5fsGKK%2BFlmZRjtdJ3xj7sRQUsaYskBXPOZQlVFtTqoZZgX46T95Fd18ofDPHxrB4FS3kxB1LBHP6WENCQS7ZbDwkoW0aX1U8iHu%2BV60k%2FapmoaRYy9YDcFEABHDvw0Z6Yn%2Fci4N8zmIy%2BxQ51h1hGUtfNw%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.7
+ },
+ {
+  "id": "ch-f5537e",
+  "name": "广东移动",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/74",
+  "url": "https://tcdn.itouchtv.cn/live/ydpd.m3u8?t_token=65ef7a4f671c4e0afa88e3810c8328e0-QR9h7w7X55Mm5XrYjD6dvUDuh9%2FpzGBYIR%2FUgNqVsE86VCdoI26zr1Un0DgSgqIIOO8NfwysI09q7kUrCOL8nhk3j3lx281CXluh7KpHHb2Rm7xsKDt372CPFlQWTPVYNKsZhZmLGflOs5fLuDlJqJb1BNYIJxu2sX9t6giDMkgkSlPxqzm70NdZPARQYdWslsCS7gkRu4Ly0h%2BC33%2F7CW7Fy9%2BSZezfnRniQCHnpfoAbmitY7GZxYgYd%2BOb%2FqODMHF6UPPNTi9tAm8De%2FIrFDQYW%2BDgFaTDiWlEUDpYN47tlu6TnAwfLB5kMVE%2BdhGRLH2dn%2F6uiyBSlqAc5C1xQtoHnUGnhyEIU7zwg27jaYcQkXSBjFlo8WMkkbESELAQfpEP7ZVNKSONgh4JwPEE1g%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.8
+ },
+ {
+  "id": "ch-40a3cf",
+  "name": "南方购物",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/42",
+  "url": "https://tcdn.itouchtv.cn/live/nfgw.m3u8?t_token=ef0b4151f6d6660d5db96ee43774ebc6-QR9h7w7X55Mm5XrYjD6dvUDuh9%2FpzGBYIR%2FUgNqVsE86VCdoI26zr1Un0DgSgqIIOO8NfwysI09q7kUrCOL8nhk3j3lx281CXluh7KpHHb2Rm7xsKDt372CPFlQWTPVYNKsZhZmLGflOs5fLuDlJqNGo8Jm7su16EObB31sllbUGayxQnsg0MFZcSDgumXnIk08WO58JcNekNeVr3maDaGBYYmCBYyfsZWRtq%2FmRI9OQVu6V%2BB4%2B5bXvsebOQ6A2Z5tkM%2BF%2FDSxmE4uDe%2FGF3qx5O8kqCkhcXjKnSwV4BWNl8mjilemNaUFbAYmANYyFIVAa1ahVrOFFbQRo2wcxSGi7Ct111YG8aHBnM8OTDQTEKR3N2W7zXTL4iFts9kpyCL7RekwBUsqYw9RJCwlb%2FQ%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.0
+ },
+ {
+  "id": "ch-493fd5",
+  "name": "荔枝台",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/100",
+  "url": "https://tcdn.itouchtv.cn/live/lizhi.m3u8?t_token=d0319943669efe95beaea760b55d68de-tDptYjPs2RMP8WBZW0tFYvqn5guhAGpzVEDOz6NA1QBPMI3w%2FREPEOVH2R0IxvsyNPFyGhwrSLkI%2B3NAjr22%2BCx3eQxm7oAHmRupwrJJ0nrlEikTjy%2B7WhpdWxH3xlnmLFOk0V4NTKvvtiL1lWo8ZojZXZrEl0XXD4ZpPK5jut4zz5%2BhiF76H7FsidJeaNrK%2B9FTBobHuJChbtXCUbLeTFgglywcdfv%2BSAbDpKrJRX7wOWMcB58wRtfXmfl%2BvihTUgQDhyTDDGcb671G%2FpfVIpGpU%2B69u9Y9GFuU63%2FwNCmnqq8c9mdAzMKIhsqWaN0Rx6W3vmQltLR3Czazf0GHtSuahpUuTdIC1dK2QFiOFEvK0J92tn8T8dCH0gpw%2BvOA%2FnBEm%2BCwnbBspZFhU1yECg%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.3
+ },
+ {
+  "id": "grtn",
+  "name": "GRTN生活频道",
+  "group": "广东频道",
+  "page": "https://www.gdtv.cn/tvChannelDetail/102",
+  "url": "https://tcdn.itouchtv.cn/live/life.m3u8?t_token=c11e5a323079f7dd20b0950c8d1b9292-F%2Fq90BkzT4X1nmGvnbAGY%2BhEJF568CZcfdASWoKO9cPUQ0ZChisYKFVvnT%2FmhZy%2F6Dem2aO83tjDe3qpS2GWKCKp%2BZXBEz9mj9ydqyt5ogLjT%2FaNRpz79bZszP6OoyirMAk00HnCCuNbdw7FoBPQ7Rq0BI2XQdgDsuD%2BjQuK3%2FokDoD7X4y8MYDZ3%2FJ7fc6cRTbEakcHVfYT%2BGHoXseV55aCuXVTuMLBg4TmzVsd0D6z77hLDxjjSoL4saRTTSZP94ERrdkA1cslIuuKIMsnPbsr7vy7PtK5WzWTIp5izyHwB2z0u5wLCWn2d8foAF5OY796rE26DxzJDtE5v69auj8MYaHvubYcjwMcwW5I9uTpP14pn%2B84zC5Qi3o3P6Ok2ePppaF3HVonHus7e1Fw6g%3D%3D",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.4
+ },
+ {
+  "id": "ch-575ab8",
+  "name": "深圳财经",
+  "group": "广东频道",
+  "page": "https://www.sztv.com.cn/dianshi.shtml?id=7871",
+  "url": "https://sztv-live.sztv.com.cn/R77mK1v/500/693Rl70.m3u8?sign=d8b35033fa34a1dfaa30022b6e7b1bdd&t=6ac22879",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.7
+ },
+ {
+  "id": "ch-3db814",
+  "name": "深圳少儿",
+  "group": "广东频道",
+  "page": "https://www.sztv.com.cn/dianshi.shtml?id=7881",
+  "url": "https://sztv-live.sztv.com.cn/1SIQj6s/500/i9r1lI0.m3u8?sign=5bb7b66baa211df210d018487902f149&t=6ac22879",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.9
+ },
+ {
+  "id": "ch-2ac509",
+  "name": "深圳移动",
+  "group": "广东频道",
+  "page": "https://www.sztv.com.cn/dianshi.shtml?id=7869",
+  "url": "https://sztv-live.sztv.com.cn/wDF6KJ3/500/673wlF0.m3u8?sign=b5bf985328dc0320a465d38de27b885c&t=6ac22879",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.0
+ },
+ {
+  "id": "ch-f0eef3",
+  "name": "深圳电视剧",
+  "group": "广东频道",
+  "page": "https://www.sztv.com.cn/dianshi.shtml?id=7880",
+  "url": "https://sztv-live.sztv.com.cn/4azbkoY/500/i5r4lz0.m3u8?sign=97f3e96e6d1bf64098188bf54432d5d4&t=6ac22879",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 7.7
+ },
+ {
+  "id": "ch-56a7a6",
+  "name": "深圳宜和购物",
+  "group": "广东频道",
+  "page": "https://www.sztv.com.cn/dianshi.shtml?id=7878",
+  "url": "https://sztv-live.sztv.com.cn/BJ5u5k2/500/d8wBl50.m3u8?sign=c5a977ff7b4b1071dd5d754f18bea433&t=6ac2287a",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.0
+ },
+ {
+  "id": "ch-aa5cc4",
+  "name": "洛阳文旅",
+  "group": "河南频道",
+  "page": "https://live.lytv.com.cn/live/LYTV3.m3u8",
+  "url": "https://live.lytv.com.cn/live/LYTV3.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 1.8
+ },
+ {
+  "id": "ch-954362",
+  "name": "来宾",
+  "group": "广西频道",
+  "page": "https://share-laibin.gxlbcloud.com/fhshare/#/live_detail?contentType=4&id=9",
+  "url": "http://zb.gxlbamc.com:1935/live/lbzh.stream/playlist.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 6.4
+ },
+ {
+  "id": "ch-7b585b",
+  "name": "黑龙江少儿",
+  "group": "黑龙江频道",
+  "page": "https://www.dbw.cn/zhibodan/zhibo_dan/hljse/",
+  "url": "https://idclive.hljtv.com:4430/live/hljse_hd.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 4.0
+ },
+ {
+  "id": "ch-7589e8",
+  "name": "黑龙江影视",
+  "group": "黑龙江频道",
+  "page": "https://www.dbw.cn/zhibodan/zhibo_dan/hljys/",
+  "url": "https://idclive.hljtv.com:4430/live/hljys_hd.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 10.3
+ },
+ {
+  "id": "ch-cba28f",
+  "name": "黑龙江卫视",
+  "group": "黑龙江频道",
+  "page": "https://www.dbw.cn/zhibodan/zhibo_dan/hljws/",
+  "url": "https://idclive.hljtv.com:4430/live/hljws_own.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 10.9
+ },
+ {
+  "id": "ch-ee2752",
+  "name": "黑龙江文体",
+  "group": "黑龙江频道",
+  "page": "https://www.dbw.cn/zhibodan/zhibo_dan/hljwt/",
+  "url": "https://idclive.hljtv.com:4430/live/hljwy_hd.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 10.9
+ },
+ {
+  "id": "ch-fa7146",
+  "name": "黑龙江都市",
+  "group": "黑龙江频道",
+  "page": "https://www.dbw.cn/zhibodan/zhibo_dan/hljds/",
+  "url": "https://idclive.hljtv.com:4430/live/dushi_hd.m3u8",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 9.7
+ },
+ {
+  "id": "ch-f1ae04",
+  "name": "东莞生活咨询",
+  "group": "广东频道",
+  "page": "https://dgrtv.sun0769.com/online/280.html",
+  "url": "https://tvonline.sun0769.com/dgrtv1/mp4tv2_1500/index.m3u8?timestamp=20261004162041&encrypt=677b9f1f8d54828c5b9f4c47364b5461",
+  "ok": true,
+  "cands": 1,
+  "signed": false,
+  "cost": 14.8
+ },
+ {
+  "id": "ch-8d7d58",
+  "name": "江苏卫视",
+  "group": "江苏频道",
+  "page": "https://live.jstv.com/?tag=江苏卫视",
+  "url": "https://litchi-play-encrypted-site.jstv.com/applive/jswspro.m3u8?txSecret=4185bc06961a65fb89140d45d8560308&txTime=6ac1ffa6",
+  "ok": true,
+  "reason": "",
+  "cost": 4.6,
+  "signed": true,
+  "stale": 1
+ },
+ {
+  "id": "4k-2",
+  "name": "江苏卫视4K超高清",
+  "group": "江苏频道",
+  "page": "https://live.jstv.com/?tag=江苏卫视4K超高清",
+  "url": "https://litchi-play-encrypted-site.jstv.com/applive/jswspro.m3u8?txSecret=bccc1ba1f573f2977dc0764e121c8811&txTime=6ac1ffa8",
+  "ok": true,
+  "reason": "",
+  "cost": 3.7,
+  "signed": true,
+  "stale": 1
+ },
+ {
+  "id": "ch-823766",
+  "name": "南昌新闻综合",
+  "group": "江西频道",
+  "page": "https://www.nctv.net.cn/live?channel=1",
+  "url": "https://live.nctv.net.cn/live/nctv1.m3u8?txSecret=9a92850b6311ff4f440607d89aa08203&txTime=6AC22545",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 4.1
+ },
+ {
+  "id": "ch-ae4c9d",
+  "name": "东方卫视",
+  "group": "上海频道",
+  "page": "https://live.kankanews.com/huikan?id=1",
+  "url": "https://volc-stream.kksmg.com/live/dfws4k/index.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHAiOiJsaXZlIiwiZG9tYWluIjoidm9sYy1zdHJlYW0ua2tzbWcuY29tIiwiZXhwIjoxNzkxMTAyNzgwLCJpYXQiOjE3OTExMDIwNTgsIm5vbmNlIjoiNHlocW44cGgiLCJwbGF0Zm9ybSI6InBjIiwic3RyZWFtX25hbWUiOiJkZndzNGsiLCJ1YV9oYXNoIjoiaWxiZHdYMWR4VGI0R2UzTU1tMWQ5ZyIsInVzZXJfaWQiOjAsInVzZXJfaXAiOiIxODMuNDQuNzYuMTczIiwidXVpZCI6InlqajRiRTNHOHJvOV9XUmVjVmNiUyIsInZlcnNpb24iOiIyLjQyLjIzIn0.RKRww6Qu2ZQBopcrulPde7vDt8rryzbEDM5G0tdiYEs&volcSecret=15e24603d034fb8919e0ed69aff64e6c&volcTime=1791102780",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.5
+ },
+ {
+  "id": "ch-ff6b7d",
+  "name": "哈哈炫动",
+  "group": "上海频道",
+  "page": "https://live.kankanews.com/huikan?id=9",
+  "url": "https://tencent-stream.kksmg.com/live/hhxd.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHAiOiJsaXZlIiwiZG9tYWluIjoidGVuY2VudC1zdHJlYW0ua2tzbWcuY29tIiwiZXhwIjoxNzkxMTAyNjAwLCJpYXQiOjE3OTExMDIwNTgsIm5vbmNlIjoibGdvMWl1ZGIiLCJwbGF0Zm9ybSI6InBjIiwic3RyZWFtX25hbWUiOiJoaHhkIiwidWFfaGFzaCI6ImlsYmR3WDFkeFRiNEdlM01NbTFkOWciLCJ1c2VyX2lkIjowLCJ1c2VyX2lwIjoiMTgzLjQ0Ljc2LjE3MyIsInV1aWQiOiJ5amo0YkUzRzhybzlfV1JlY1ZjYlMiLCJ2ZXJzaW9uIjoiMi40Mi4yMyJ9.pRhbNgnPVdMGSb-nectCfg99DND14QrUxTSl8KE7-Ug&txSecret=bfee77f8bd2291663f25ed6e436b6d50&txTime=6ac20e88",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.2
+ },
+ {
+  "id": "ch-fdc5fc",
+  "name": "内蒙古卫视",
+  "group": "内蒙古频道",
+  "page": "https://www.nmtv.cn/liveTv?tag=内蒙古卫视",
+  "url": "https://livestream-bt.nmtv.cn/nmtv/3621481general.m3u8?txSecret=a0b8cc66a1124cf66791a507195b9093&txTime=6D58FFD0&token=025a932c36a24a43a6aea54884856940",
+  "ok": true,
+  "reason": "",
+  "cost": 4.0,
+  "signed": true,
+  "stale": 1
+ },
+ {
+  "id": "ch-d8e590",
+  "name": "射洪综合",
   "group": "四川频道",
-  "page": "https://www.beiww.com/shiting",
-  "url": "",
-  "ok": false,
-  "reason": "页面未产生 m3u8 请求",
-  "cost": 34.6
+  "page": "https://web.guangdianyun.tv/tv/?id=391&uin=1743",
+  "url": "https://36504-live.hlsplay.aodianyun.com/guangdianyun_36504/tv_channel_391.m3u8?auth_key=1791188460-0-0-dbad4a44d550c886e00cc61b5932abf1&extra_key=SqqQU9jyip9ncqrJRphlq9ZWsuUeCZFiHGmkkOACqdOBlcfhTOVD1_Ylesf8qoA17aP9vKc1aafF-nrMQWmQkXt4xcNtW_Avbe8zPPWAZba-_6cIvc5YUT5qyXSgDaeB2STL5RRsxBaa497vUDX8shT1l3MtsZOC7ZzDU_iakfk",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 5.8
+ },
+ {
+  "id": "ch-12cfda",
+  "name": "绵竹综合",
+  "group": "四川频道",
+  "page": "https://web.guangdianyun.tv/tv/?id=1933&uin=3277",
+  "url": "https://46894-live.hlsplay.aodianyun.com/tv_radio_46894/tv_channel_1933.m3u8?auth_key=1791188460-0-0-f7791129850ed42863c4cc6e6776eff1&extra_key=q4nXcl2qKplqT_P8t7Us2TM9MGCknwGgiNPwfA_lszcL9vwWmaqkfws7Rp6OTPAy91PKTA0y2MXM91LVm87XvDHZYU7G8sD3WXdXRIDlPD8-fuqkt1hXRdU4BhsC6v3kyCrtdg30dc82hCdOn_-KJrzYmx0ykj8g_v65yKz1Uhc",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 6.7
+ },
+ {
+  "id": "ch-48bc58",
+  "name": "上海都市",
+  "group": "上海频道",
+  "page": "https://live.kankanews.com/huikan?id=4",
+  "url": "https://ws-channels.kksmg.com/live/ylpd/playlist.m3u8?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcHAiOiJsaXZlIiwiZG9tYWluIjoid3MtY2hhbm5lbHMua2tzbWcuY29tIiwiZXhwIjoxNzkxMTAyMTIwLCJpYXQiOjE3OTExMDIwNTgsIm5vbmNlIjoiOTgycGIzMmQiLCJwbGF0Zm9ybSI6InBjIiwic3RyZWFtX25hbWUiOiJ5bHBkIiwidWFfaGFzaCI6ImlsYmR3WDFkeFRiNEdlM01NbTFkOWciLCJ1c2VyX2lkIjowLCJ1c2VyX2lwIjoiMTgzLjQ0Ljc2LjE3MyIsInV1aWQiOiJ5amo0YkUzRzhybzlfV1JlY1ZjYlMiLCJ2ZXJzaW9uIjoiMi40Mi4yMyJ9.ORmX3glKQW6GPIyP4ZqR5yH-w13-8Vsl_7OS7t9w3H8&wsSecret=20b9b6be5b5d39a7d630d2a12a80588a&wsTime=1791102120",
+  "ok": true,
+  "cands": 1,
+  "signed": true,
+  "cost": 13.5
  }
 ]
