@@ -1,0 +1,53 @@
+name: 更新信宜广播直播源
+
+# 每天北京时间 07:30 与 17:30 各刷新一次
+# GitHub Actions 使用 UTC 时间：07:30 CST = 23:30 UTC(前一天)，17:30 CST = 09:30 UTC
+on:
+  schedule:
+    - cron: "30 23 * * *"
+    - cron: "30 9 * * *"
+  workflow_dispatch:        # 支持在网页上手动点击运行
+
+permissions:
+  contents: write           # 允许把更新后的 m3u 提交回仓库
+
+concurrency:
+  group: update-xinyi
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 检出仓库
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安装 Playwright 与 Chromium
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright
+          playwright install --with-deps chromium
+
+      - name: 抓取最新播放地址并生成 m3u
+        id: fetch
+        run: python scripts/fetch_stream.py
+
+      - name: 提交更新到仓库
+        if: steps.fetch.outputs.success == 'true'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- xinyi_radio_local.m3u; then
+            echo "播放地址无变化，无需提交"
+            exit 0
+          fi
+          git add xinyi_radio_local.m3u
+          git commit -m "auto: 刷新信宜广播直播源 $(TZ=Asia/Shanghai date '+%Y-%m-%d %H:%M') CST"
+          git push
