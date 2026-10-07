@@ -3,10 +3,10 @@
   "tvpage": "ok",
   "pages": "ok",
   "m3u": "ok",
-  "direct": "fail:URLError",
-  "tvdirect": "fail:URLError",
+  "direct": "ok",
+  "tvdirect": "ok",
   "webm3u": "ok",
   "relay": "ok",
   "relaytv": "ok",
-  "time": "2026-10-07 10:40"
+  "time": "2026-10-08 00:45"
 }
