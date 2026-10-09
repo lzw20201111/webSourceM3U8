@@ -170,7 +170,12 @@ async function serveChannel(chKey, url, base, head) {
 async function proxyPlaylist(src, base, head) {
   const r = await fetch(src, {
     method: head ? "HEAD" : "GET",
-    headers: { "User-Agent": UA, Accept: "*/*" },
+    headers: {
+      "User-Agent": UA,
+      "Accept": "*/*",
+      "Referer": "https://live.xytv.cc/",
+      "Origin": "https://live.xytv.cc"
+    },
     cf: { cacheTtl: 0 },
   });
 
@@ -343,3 +348,4 @@ function plain(msg, status, h) {
     headers: Object.assign({}, h, { "Content-Type": "text/plain; charset=utf-8" }),
   });
 }
+
