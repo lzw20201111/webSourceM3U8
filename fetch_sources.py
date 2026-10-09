@@ -14,17 +14,17 @@ from datetime import datetime
 CHANNELS = [
     {
         "name": "信宜广播电台",
+        "key": "xinyi-radio",
         "type": "radio",
         "id": 223,
-        "uin": 1629,
-        "group": "广东频道"
+        "uin": 1629
     },
     {
         "name": "信宜综合台",
+        "key": "xinyi-tv",
         "type": "tv",
         "id": 643,
-        "uin": 1629,
-        "group": "广东频道"
+        "uin": 1629
     }
 ]
 
@@ -58,25 +58,14 @@ def get_play_url(channel):
         return None
 
 
-def generate_m3u(channels_data):
-    """生成标准 m3u 播放列表"""
-    lines = ["#EXTM3U"]
+def generate_current_json(channels_data):
+    """生成 current.json 格式，供 Cloudflare Worker 读取"""
+    result = {}
     for ch in channels_data:
         if ch["url"]:
-            lines.append(
-                f'#EXTINF:-1 tvg-name="{ch["name"]}" group-title="{ch["group"]}",{ch["name"]}'
-            )
-            lines.append(ch["url"])
-    return "\n".join(lines) + "\n"
-
-
-def generate_txt(channels_data):
-    """生成 webview 格式的 txt 播放列表（兼容原有格式）"""
-    lines = ["广东频道,#genre#"]
-    for ch in channels_data:
-        if ch["url"]:
-            lines.append(f'{ch["name"]},{ch["url"]}')
-    return "\n".join(lines) + "\n"
+            result[ch["key"]] = ch["url"]
+    result["time"] = datetime.now().strftime("%Y-%m-%d %H:%M")
+    return result
 
 
 def main():
@@ -88,8 +77,7 @@ def main():
         play_url = get_play_url(ch)
         channels_data.append({
             "name": ch["name"],
-            "type": ch["type"],
-            "group": ch["group"],
+            "key": ch["key"],
             "url": play_url
         })
         if play_url:
@@ -97,26 +85,11 @@ def main():
         else:
             print(f"  ✗ 失败")
 
-    # 生成 m3u 文件
-    m3u_content = generate_m3u(channels_data)
-    with open("xinyi.m3u", "w", encoding="utf-8") as f:
-        f.write(m3u_content)
-    print(f"\n已生成 xinyi.m3u ({len([c for c in channels_data if c['url']])} 个有效频道)")
-
-    # 生成 txt 格式（兼容原 webview 格式的纯 m3u8 版本）
-    txt_content = generate_txt(channels_data)
-    with open("xinyi-m3u8.txt", "w", encoding="utf-8") as f:
-        f.write(txt_content)
-    print("已生成 xinyi-m3u8.txt")
-
-    # 生成元数据 JSON（方便调试和查看）
-    meta = {
-        "update_time": datetime.now().isoformat(),
-        "channels": channels_data
-    }
-    with open("xinyi-meta.json", "w", encoding="utf-8") as f:
-        json.dump(meta, f, ensure_ascii=False, indent=2)
-    print("已生成 xinyi-meta.json")
+    # 生成 current.json（Worker 读取的文件）
+    current = generate_current_json(channels_data)
+    with open("current.json", "w", encoding="utf-8") as f:
+        json.dump(current, f, ensure_ascii=False, indent=2)
+    print(f"\n已更新 current.json ({len([c for c in channels_data if c['url']])} 个有效频道)")
 
     print("=== 抓取完成 ===")
 
