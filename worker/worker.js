@@ -144,26 +144,11 @@ async function serveChannel(chKey, url, base, head) {
     return plain("# 无法获取当前有效地址：" + e.message, 502, base);
   }
 
-  // ?r=1 → 直接跳转（不使用改写，兼容少数不解析相对地址的播放器）
-  if (url.searchParams.get("r") === "1") {
-    return new Response(null, {
-      status: 302,
-      headers: Object.assign({}, base, { Location: target }),
-    });
-  }
-
-  let res = await proxyPlaylist(target, base, head);
-
-  // 上游报错通常是「地址刚轮换」导致的临时 403 —— 强取一次最新地址重试
-  if (res.status !== 200) {
-    try {
-      const fresh = await readCurrent(chKey, true);
-      if (fresh !== target) res = await proxyPlaylist(fresh, base, head);
-    } catch (e) {
-      /* 拿不到新地址就返回原来的错误 */
-    }
-  }
-  return res;
+  // 直接 302 跳转到真实地址（播放器在国内，直接访问 CDN 不会被拦截）
+  return new Response(null, {
+    status: 302,
+    headers: Object.assign({}, base, { Location: target }),
+  });
 }
 
 /** 拉取上游播放列表并把相对地址改写为绝对地址 */
