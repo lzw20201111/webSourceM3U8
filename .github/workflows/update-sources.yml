@@ -42,6 +42,6 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add xinyi.m3u xinyi-m3u8.txt xinyi-meta.json
+          git add current.json
           git diff --staged --quiet || git commit -m "chore: auto update live sources [$(date -u '+%Y-%m-%d %H:%M UTC')]"
           git push
