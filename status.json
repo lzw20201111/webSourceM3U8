@@ -3,10 +3,10 @@
   "tvpage": "ok",
   "pages": "ok",
   "m3u": "ok",
-  "direct": "fail:HTTP 403",
-  "tvdirect": "fail:HTTP 403",
+  "direct": "ok",
+  "tvdirect": "ok",
   "webm3u": "ok",
-  "relay": "fail:HTTP 403",
-  "relaytv": "fail:HTTP 403",
-  "time": "2026-10-10 10:35"
+  "relay": "ok",
+  "relaytv": "ok",
+  "time": "2026-10-10 23:30"
 }
