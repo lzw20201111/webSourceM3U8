@@ -1,6 +1,6 @@
 {
-  "page": "ok",
-  "tvpage": "ok",
+  "page": "fail:URLError",
+  "tvpage": "fail:URLError",
   "pages": "ok",
   "m3u": "ok",
   "direct": "fail:HTTP 403",
@@ -8,5 +8,5 @@
   "webm3u": "ok",
   "relay": "fail:HTTP 403",
   "relaytv": "fail:HTTP 403",
-  "time": "2026-10-18 21:25"
+  "time": "2026-10-19 09:37"
 }
