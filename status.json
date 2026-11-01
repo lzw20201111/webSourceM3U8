@@ -4,9 +4,9 @@
   "pages": "ok",
   "m3u": "ok",
   "direct": "fail:HTTP 403",
-  "tvdirect": "fail:HTTP 403",
+  "tvdirect": "fail:HTTP 404",
   "webm3u": "ok",
   "relay": "fail:HTTP 403",
-  "relaytv": "fail:HTTP 403",
-  "time": "2026-11-01 10:28"
+  "relaytv": "fail:HTTP 404",
+  "time": "2026-11-02 00:13"
 }
