@@ -1,5 +1,5 @@
 {
-  "xinyi-radio": "https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/radio_channel_223.m3u8?auth_key=1793656341-0-0-3c5e5cff6d099e6b97900b8ff697b016&extra_key=TDtlKvcL4htcnubGc7iCEQ5lw2oFMbzFLSttnq97PoJo9v01z4UAeoWMuSKGLVVIv8tNeuGUIziTDE4LbcIuob3KCsAfCSLkJXd6P9aQFVaucmW1X__hDvq8qBHqu1E1i5PWpiGi1pH3rxpePyi9PhTWThF76VTWV9JiYJNrrQk",
-  "xinyi-tv": "http://35781-live.hlsplay.aodianyun.com/tv_radio_35781/tv_channel_643.m3u8?auth_key=1793656341-0-0-2b1dd9915e2f0d54a57bc8d5285d97b0&extra_key=avCiG-HK6axyCXMpK1V1LESlRr-hGY2u5JRIRTGN9tr5UDEiwtt-eMKj41w61Kkb9rCb3Z3Iw5YRSPnco9Pnr-Fd2K-CR00mFbDMosmVVa1GjturNoAVuaype7Z-PXUsjTqLsovEJBAvW92F41E08OufnnNIHwmMxj9ig7VuiWM",
-  "time": "2026-11-01 21:52"
+  "xinyi-radio": "https://xinyi-relay.pages.dev/xinyi/radio.m3u8",
+  "xinyi-tv": "https://35781-live.hlsplay.aodianyun.com/tv_radio_35781/tv_channel_643.m3u8?auth_key=1793668795-0-0-b53b101b4aff1368d533a9fb9bdab5d1&extra_key=R5UZFckdertJkyMVoftf7UGZSY_km50qh2KdwqpSwF1kzFUFBStw0S795t8zaPpKE6D9Et2_ozUyjC18zQ9xiJ4XIHFVrvQQKuTf07dDL7E88AX1m2xS4FzVlXNuPGCt7Lh6_KFhVU5GrKu-sQ48-2fYQXvUnprBs-D5iuvBfzk",
+  "time": "2026-11-02 09:20"
 }
