@@ -1,6 +1,6 @@
 {
-  "page": "fail:URLError",
-  "tvpage": "fail:URLError",
+  "page": "ok",
+  "tvpage": "ok",
   "pages": "ok",
   "m3u": "ok",
   "direct": "ok",
@@ -8,5 +8,5 @@
   "webm3u": "ok",
   "relay": "ok",
   "relaytv": "ok",
-  "time": "2026-11-23 01:22"
+  "time": "2026-11-23 11:54"
 }
