@@ -6,7 +6,7 @@
   "direct": "fail:HTTP 403",
   "tvdirect": "fail:HTTP 403",
   "webm3u": "ok",
-  "relay": "fail:HTTP 403",
-  "relaytv": "fail:HTTP 403",
-  "time": "2026-11-25 13:36"
+  "relay": "fail:HTTP 404",
+  "relaytv": "fail:HTTP 404",
+  "time": "2026-11-26 03:30"
 }
