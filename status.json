@@ -1,12 +1,12 @@
 {
-  "page": "ok",
+  "page": "fail:URLError",
   "tvpage": "ok",
   "pages": "ok",
   "m3u": "ok",
   "direct": "fail:HTTP 403",
   "tvdirect": "fail:HTTP 403",
   "webm3u": "ok",
-  "relay": "fail:HTTP 404",
-  "relaytv": "fail:HTTP 404",
-  "time": "2026-11-27 03:13"
+  "relay": "fail:HTTP 403",
+  "relaytv": "fail:HTTP 403",
+  "time": "2026-11-27 13:18"
 }
