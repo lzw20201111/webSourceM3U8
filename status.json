@@ -6,7 +6,7 @@
   "direct": "ok",
   "tvdirect": "ok",
   "webm3u": "ok",
-  "relay": "fail:HTTP 404",
-  "relaytv": "fail:HTTP 404",
-  "time": "2026-11-28 03:07"
+  "relay": "ok",
+  "relaytv": "ok",
+  "time": "2026-11-28 12:53"
 }
